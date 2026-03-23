@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dua Collection — Dhikr | ذِكر · Authenticated Islamic Duas</title>
+<meta name="description" content="Comprehensive dua collection. Morning and evening adhkar, duas for every occasion. Every dua sourced from Quran and authenticated Sahih hadiths. Free."/>
+<meta name="keywords" content="dua, supplication, adhkar, morning dua, evening dua, Islamic prayer, أذكار, أدعية, hisn almuslim"/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/dua.html"/>
+<meta property="og:title" content="Dua Collection — Dhikr | ذِكر"/><meta property="og:description" content="Authenticated duas for every occasion. Sourced from Quran and Sahih hadiths."/><meta property="og:image" content="https://dhikrapp.org/logo.svg"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--surface-lowest:#170c04;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 2.5rem;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:0.5rem;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);max-width:520px;margin:0 auto;}
+main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+/* CATEGORIES */
+.cat-bar{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:2rem;}
+.cat-btn{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 0.9rem;border:1px solid var(--border);background:var(--surface-high);color:var(--muted);border-radius:3px;cursor:pointer;transition:all 0.2s;}
+.cat-btn.active,.cat-btn:hover{border-color:var(--primary);color:var(--primary);background:rgba(201,148,58,0.08);}
+/* DUA CARD */
+.dua-card{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.75rem;margin-bottom:1.25rem;position:relative;transition:border-color 0.2s;}
+.dua-card::before{content:'';position:absolute;top:6px;left:6px;width:9px;height:9px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.4;}
+.dua-card:hover{border-color:rgba(201,148,58,0.35);}
+.dc-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem;}
+.dc-title{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--cream);font-weight:600;}
+.dc-cat{font-family:'Inter',sans-serif;font-size:0.58rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;background:rgba(201,148,58,0.1);border:1px solid rgba(201,148,58,0.2);padding:0.18rem 0.5rem;border-radius:2px;}
+.dc-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.35rem;color:var(--cream);direction:rtl;text-align:right;line-height:2.1;margin-bottom:0.65rem;padding:0.75rem;background:rgba(201,148,58,0.03);border-radius:3px;border:1px solid rgba(201,148,58,0.08);}
+.dc-transliteration{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:rgba(201,148,58,0.7);font-style:italic;line-height:1.7;margin-bottom:0.5rem;}
+.dc-en{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);font-style:italic;line-height:1.7;margin-bottom:0.75rem;}
+.dc-footer{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;padding-top:0.75rem;border-top:1px solid rgba(201,148,58,0.08);}
+.dc-source{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.08em;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:0.3rem;}
+.dc-source:hover{text-decoration:underline;}
+.dc-source-badge{background:rgba(201,148,58,0.1);border:1px solid rgba(201,148,58,0.2);padding:0.2rem 0.5rem;border-radius:2px;}
+.dc-actions{display:flex;gap:0.5rem;}
+.dc-btn{font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 0.65rem;border-radius:2px;cursor:pointer;transition:all 0.15s;border:1px solid var(--border);background:transparent;color:var(--muted);}
+.dc-btn:hover{border-color:var(--primary);color:var(--primary);}
+.dc-btn.copied{border-color:var(--emerald-light);color:var(--emerald-light);}
+/* SEARCH */
+.search-bar{position:relative;margin-bottom:1.5rem;}
+.search-input{width:100%;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1rem;padding:0.75rem 1rem;outline:none;}
+.search-input:focus{border-color:var(--primary);}
+.search-input::placeholder{color:rgba(184,168,138,0.4);font-style:italic;}
+.section-title{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin:2rem 0 1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+footer{position:relative;z-index:1;padding:2rem 2rem 1rem;border-top:1px solid var(--border);background:var(--surface-lowest);}
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html" class="active">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">Authenticated · Sourced · Free</p>
+  <h1>Dua Collection</h1>
+  <p class="h1-ar">مجموعة الأدعية والأذكار</p>
+  <p class="sub">Every dua sourced from the Quran or authenticated Sahih and Hasan hadiths. Click any source to verify.</p>
+</div>
+
+<main>
+  <div class="search-bar">
+    <input class="search-input" type="text" placeholder="Search duas… e.g. morning, travel, forgiveness" id="dua-search" oninput="filterDuas()"/>
+  </div>
+
+  <div class="cat-bar" id="cat-bar"></div>
+
+  <div id="dua-list"></div>
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+
+<script>
+const DUAS=[
+  // Morning Adhkar
+  {id:'ayat-kursi',cat:'Morning',title:'Ayat al-Kursi',ar:'اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ',translit:'Allahu la ilaha illa huwal-Hayyul-Qayyum...',en:'Allah — there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither drowsiness overtakes Him nor sleep.',source:'Al-Quran 2:255',sourceUrl:'https://quran.com/2/255',grade:'Quran'},
+  {id:'morning-1',cat:'Morning',title:'Morning Remembrance (1)',ar:'أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ',translit:"Asbahna wa asbahal-mulku lillah, walhamdu lillah",en:'We have reached the morning and at this very time the dominion belongs to Allah, and all praise is due to Allah.',source:'Sahih Muslim 2723',sourceUrl:'https://sunnah.com/muslim/48/60',grade:'Sahih'},
+  {id:'morning-2',cat:'Morning',title:'Protection — Morning',ar:'اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ، وَإِلَيْكَ النُّشُورُ',translit:"Allahumma bika asbahna, wa bika amsayna, wa bika nahya, wa bika namutu, wa ilaikan-nushur",en:'O Allah, by You we have reached the morning, and by You we reach the evening, by You we live and by You we die, and unto You is the Resurrection.',source:'Sunan Abu Dawud 5068',sourceUrl:'https://sunnah.com/abudawud/43/296',grade:'Sahih'},
+  {id:'morning-sayyid',cat:'Morning',title:'Sayyid al-Istighfar',ar:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ',translit:"Allahumma anta Rabbi la ilaha illa anta, khalaqtani wa ana abduk",en:"O Allah, You are my Lord. There is no god but You. You created me and I am Your slave.",source:'Sahih al-Bukhari 6306',sourceUrl:'https://sunnah.com/bukhari/80/3',grade:'Sahih'},
+  // Evening Adhkar
+  {id:'evening-1',cat:'Evening',title:'Evening Remembrance',ar:'أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ',translit:"Amsayna wa amsal-mulku lillah, walhamdu lillah",en:'We have reached the evening and at this very time the dominion belongs to Allah, and all praise is due to Allah.',source:'Sahih Muslim 2723',sourceUrl:'https://sunnah.com/muslim/48/60',grade:'Sahih'},
+  {id:'evening-protection',cat:'Evening',title:'Evening Protection',ar:'أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ',translit:"A'udhu bikalimatillahit-tammati min sharri ma khalaq",en:'I seek refuge in the perfect words of Allah from the evil of what He has created.',source:'Sahih Muslim 2709',sourceUrl:'https://sunnah.com/muslim/48/44',grade:'Sahih'},
+  // Forgiveness
+  {id:'istighfar-1',cat:'Forgiveness',title:'Seeking Forgiveness',ar:'أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ',translit:"Astaghfirullahal-ladhi la ilaha illa huwal-Hayyul-Qayyumu wa atubu ilaih",en:"I seek the forgiveness of Allah, besides Whom none has the right to be worshipped except He, the Ever-Living, the Sustainer of all, and I repent to Him.",source:'Sunan Abu Dawud 1517',sourceUrl:'https://sunnah.com/abudawud/8/102',grade:'Sahih'},
+  {id:'tawbah',cat:'Forgiveness',title:'Complete Repentance',ar:'رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ',translit:"Rabbighfir li wa tub alayya innaka antat-Tawwabur-Rahim",en:'My Lord, forgive me and accept my repentance. Verily You are the Oft-Forgiving, the Most Merciful.',source:'Sunan Ibn Majah 3814',sourceUrl:'https://sunnah.com/ibnmajah/33/158',grade:'Sahih'},
+  // Travel
+  {id:'travel-1',cat:'Travel',title:'Dua for Travel',ar:'اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَى',translit:"Allahumma inna nas'aluka fi safarina hadhal birra wat-taqwa",en:"O Allah, we ask You on this journey for goodness and piety.",source:'Sahih Muslim 1342',sourceUrl:'https://sunnah.com/muslim/15/475',grade:'Sahih'},
+  {id:'entering-vehicle',cat:'Travel',title:'Upon Entering a Vehicle',ar:'سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ وَإِنَّا إِلَى رَبِّنَا لَمُنقَلِبُونَ',translit:"Subhanal-ladhi sakhkhara lana hadha wa ma kunna lahu muqrineen wa inna ila Rabbina lamunqaliboon",en:'Glory be to He Who has subjected this to us, and we could not have [otherwise] subdued it. And indeed, to our Lord we shall return.',source:'Al-Quran 43:13-14 · Sunan Abu Dawud 2602',sourceUrl:'https://quran.com/43/13',grade:'Quran'},
+  // Eating & Drinking
+  {id:'eating-1',cat:'Eating',title:'Before Eating',ar:'بِسْمِ اللَّهِ',translit:'Bismillah',en:'In the name of Allah.',source:'Sahih al-Bukhari 5376',sourceUrl:'https://sunnah.com/bukhari/70/4',grade:'Sahih'},
+  {id:'after-eating',cat:'Eating',title:'After Eating',ar:'الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ',translit:"Alhamdu lillahil-ladhi at'amani hadha wa razaqaniihi min ghayri hawlin minni wa la quwwah",en:'Praise be to Allah Who has fed me this and provided it for me without any power or strength on my part.',source:'Sunan Abu Dawud 4023',sourceUrl:'https://sunnah.com/abudawud/34/8',grade:'Hasan'},
+  // Entering Mosque
+  {id:'enter-mosque',cat:'Mosque',title:'Entering the Mosque',ar:'اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ',translit:"Allahumm-aftah li abwaba rahmatik",en:'O Allah, open the gates of Your mercy for me.',source:'Sahih Muslim 713',sourceUrl:'https://sunnah.com/muslim/5/339',grade:'Sahih'},
+  {id:'leave-mosque',cat:'Mosque',title:'Leaving the Mosque',ar:'اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ',translit:"Allahumma inni as'aluka min fadlik",en:"O Allah, I ask You for Your bounty.",source:'Sahih Muslim 713',sourceUrl:'https://sunnah.com/muslim/5/339',grade:'Sahih'},
+  // After Prayer
+  {id:'after-prayer-tasbih',cat:'After Prayer',title:'Tasbih After Prayer',ar:'سُبْحَانَ اللَّهِ — الْحَمْدُ لِلَّهِ — اللَّهُ أَكْبَرُ',translit:'SubhanAllah (×33) · Alhamdulillah (×33) · Allahu Akbar (×33)',en:"Glory be to Allah (×33) · All praise is due to Allah (×33) · Allah is the Greatest (×33) — then complete with: 'There is no god except Allah, alone, with no partner. His is the dominion, and His is all praise, and He is capable of all things.'",source:'Sahih Muslim 597',sourceUrl:'https://sunnah.com/muslim/5/146',grade:'Sahih'},
+  {id:'after-prayer-dua',cat:'After Prayer',title:'Dua After Each Prayer',ar:'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',translit:"Allahumma a'inni ala dhikrika wa shukrika wa husni ibadatik",en:'O Allah, help me to remember You, to give thanks to You, and to worship You in the best manner.',source:'Sunan Abu Dawud 1522',sourceUrl:'https://sunnah.com/abudawud/8/107',grade:'Sahih'},
+  // Sleep
+  {id:'before-sleep',cat:'Sleep',title:'Before Sleep',ar:'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا',translit:"Bismika Allahumma amutu wa ahya",en:"In Your name, O Allah, I die and I live.",source:'Sahih al-Bukhari 6312',sourceUrl:'https://sunnah.com/bukhari/80/9',grade:'Sahih'},
+  {id:'waking-up',cat:'Sleep',title:'Upon Waking Up',ar:'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ',translit:"Alhamdu lillahil-ladhi ahyana ba'da ma amatana wa ilayhin-nushur",en:'Praise be to Allah Who gave us life after death and unto Him is the resurrection.',source:'Sahih al-Bukhari 6312',sourceUrl:'https://sunnah.com/bukhari/80/9',grade:'Sahih'},
+  // Anxiety
+  {id:'anxiety-1',cat:'Anxiety & Hardship',title:'Dua for Anxiety',ar:'اللَّهُمَّ إِنِّي عَبْدُكَ وَابْنُ عَبْدِكَ وَابْنُ أَمَتِكَ، نَاصِيَتِي بِيَدِكَ',translit:"Allahumma inni abduka wabnu abdika wabnu amatika, nasiyati biyadik",en:'O Allah, I am Your slave and the son of Your slave. My forelock is in Your hand, Your command over me is forever...',source:'Musnad Ahmad 3712',sourceUrl:'https://sunnah.com/ahmad/5/254',grade:'Sahih'},
+  {id:'distress',cat:'Anxiety & Hardship',title:"Dua for Distress — Yunus' Prayer",ar:'لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ',translit:"La ilaha illa anta subhanaka inni kuntu minaz-zalimin",en:'There is no deity except You. Glory be to You! Indeed I have been of the wrongdoers.',source:'Al-Quran 21:87 · Jami al-Tirmidhi 3505',sourceUrl:'https://quran.com/21/87',grade:'Quran'},
+  // Laylat al-Qadar
+  {id:'laylat-dua',cat:'Ramadan',title:"Dua for Laylat al-Qadar",ar:'اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي',translit:"Allahumma innaka afuwwun karimun tuhibbul afwa fa'fu anni",en:'O Allah, You are All-Pardoning, You love to pardon, so pardon me.',source:'Jami al-Tirmidhi 3513',sourceUrl:'https://sunnah.com/tirmidhi/49/166',grade:'Sahih'},
+];
+
+const CATS=['All',...new Set(DUAS.map(d=>d.cat))];
+let activeCat='All', searchTerm='';
+
+function buildCats(){
+  document.getElementById('cat-bar').innerHTML=CATS.map(c=>`<button class="cat-btn${c===activeCat?' active':''}" onclick="setCat('${c}')">${c}</button>`).join('');
+}
+
+function setCat(c){activeCat=c;buildCats();renderDuas();}
+
+function filterDuas(){searchTerm=document.getElementById('dua-search').value.toLowerCase();renderDuas();}
+
+function renderDuas(){
+  const filtered=DUAS.filter(d=>{
+    const catMatch=activeCat==='All'||d.cat===activeCat;
+    const search=!searchTerm||d.title.toLowerCase().includes(searchTerm)||d.en.toLowerCase().includes(searchTerm)||d.ar.includes(searchTerm)||d.cat.toLowerCase().includes(searchTerm);
+    return catMatch&&search;
+  });
+  if(!filtered.length){document.getElementById('dua-list').innerHTML='<p style="text-align:center;color:var(--muted);font-style:italic;padding:2rem;">No duas found. Try a different search term.</p>';return;}
+  // Group by category if showing all
+  let html='';
+  if(activeCat==='All'){
+    CATS.slice(1).forEach(cat=>{
+      const catDuas=filtered.filter(d=>d.cat===cat);
+      if(catDuas.length){html+=`<div class="section-title">${cat}</div>`;catDuas.forEach(d=>{html+=renderDua(d);});}
+    });
+  } else {filtered.forEach(d=>{html+=renderDua(d);});}
+  document.getElementById('dua-list').innerHTML=html;
+}
+
+function renderDua(d){
+  const gradeColor=d.grade==='Quran'?'#93d697':d.grade==='Sahih'?'var(--primary)':'#f7bc5e';
+  return `<div class="dua-card" id="dua-${d.id}">
+    <div class="dc-header">
+      <span class="dc-title">${d.title}</span>
+      <span class="dc-cat">${d.cat}</span>
+    </div>
+    <div class="dc-ar">${d.ar}</div>
+    ${d.translit?`<div class="dc-transliteration">${d.translit}</div>`:''}
+    <div class="dc-en">"${d.en}"</div>
+    <div class="dc-footer">
+      <span class="dc-source" onclick="showSource('${d.source}','${d.grade}',this)">
+        <span class="dc-source-badge" style="border-color:${gradeColor};color:${gradeColor};">${d.grade}</span>
+        ${d.source}
+      </span>
+      <div class="dc-actions">
+        <button class="dc-btn" onclick="copyArabic('${d.id}')">Copy Arabic</button>
+        <button class="dc-btn" onclick="copyFull('${d.id}')">Copy Full</button>
+        <a href="books.html" class="dc-btn" style="text-decoration:none;">📕 Books</a>
+      </div>
+    </div>
+  </div>`;
+}
+
+function copyArabic(id){
+  const d=DUAS.find(x=>x.id===id);if(!d)return;
+  navigator.clipboard.writeText(d.ar).then(()=>{
+    const btn=document.querySelector(`#dua-${id} .dc-btn`);
+    if(btn){btn.textContent='Copied!';btn.classList.add('copied');setTimeout(()=>{btn.textContent='Copy Arabic';btn.classList.remove('copied');},2000);}
+  });
+}
+
+function copyFull(id){
+  const d=DUAS.find(x=>x.id===id);if(!d)return;
+  const text=`${d.ar}\n\n${d.en}\n\nSource: ${d.source} | dhikrapp.org`;
+  navigator.clipboard.writeText(text).then(()=>alert('Copied! JazakAllahu Khayran'));
+}
+
+function showSource(source,grade,el){
+  // Remove any existing tooltip
+  document.querySelectorAll('.source-tooltip').forEach(t=>t.remove());
+  const tip=document.createElement('div');
+  tip.className='source-tooltip';
+  tip.innerHTML=`<strong>Source:</strong> ${source}<br><strong>Grade:</strong> ${grade}<br><em style="font-size:0.8rem;color:var(--muted);">Authenticated hadith. See our Books page for full references.</em>`;
+  tip.style.cssText='position:absolute;bottom:100%;left:0;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:0.75rem 1rem;font-family:Inter,sans-serif;font-size:0.72rem;color:var(--cream);z-index:10;min-width:240px;line-height:1.6;box-shadow:0 8px 24px rgba(0,0,0,0.4);';
+  el.style.position='relative';
+  el.appendChild(tip);
+  setTimeout(()=>tip.remove(),4000);
+  tip.onclick=e=>e.stopPropagation();
+}
+
+buildCats();renderDuas();
+</script>
+</body>
+</html>

@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Laylat al-Qadar — Dhikr | ذِكر · The Night of Power</title>
+<meta name="description" content="Laylat al-Qadar countdown, dua, ibadah guide and image sharing. The Night of Power is better than a thousand months. Upload and share your night."/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/laylat-al-qadar.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);--emerald:#1a5c2a;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+/* Starfield */
+#stars{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+/* HERO */
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 3rem;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,rgba(201,148,58,0.08) 0%,transparent 70%);pointer-events:none;}
+.hero-moon{font-size:5rem;margin-bottom:1rem;display:block;animation:moon-glow 3s ease-in-out infinite;}
+@keyframes moon-glow{0%,100%{text-shadow:0 0 20px rgba(201,148,58,0.3);}50%{text-shadow:0 0 60px rgba(201,148,58,0.7);}}
+.hero-ar{font-family:'Noto Naskh Arabic',serif;font-size:clamp(2rem,6vw,4rem);font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;direction:rtl;margin-bottom:0.25rem;}
+.hero-en{font-family:'Cinzel',serif;font-size:clamp(1.2rem,3vw,2rem);color:var(--cream);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:1rem;}
+.hero-verse-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;color:var(--cream);direction:rtl;line-height:2;margin-bottom:0.5rem;}
+.hero-verse-en{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--muted);max-width:560px;margin:0 auto 0.35rem;line-height:1.7;}
+.hero-source{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--primary);letter-spacing:0.12em;text-transform:uppercase;border:1px solid rgba(201,148,58,0.25);padding:0.28rem 0.7rem;border-radius:2px;display:inline-block;margin-bottom:2rem;}
+main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 1.5rem 5rem;}
+/* COUNTDOWN */
+.countdown-section{background:linear-gradient(135deg,rgba(201,148,58,0.08),rgba(26,92,42,0.06));border:1px solid rgba(201,148,58,0.3);border-radius:4px;padding:2.5rem;text-align:center;margin-bottom:2.5rem;position:relative;}
+.countdown-section::before{content:'';position:absolute;top:6px;left:6px;width:12px;height:12px;border-top:2px solid var(--primary);border-left:2px solid var(--primary);opacity:0.5;}
+.countdown-section::after{content:'';position:absolute;bottom:6px;right:6px;width:12px;height:12px;border-bottom:2px solid var(--primary);border-right:2px solid var(--primary);opacity:0.5;}
+.cd-label{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;}
+.cd-nights{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:1rem;}
+.cd-night{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:0.85rem 1.25rem;min-width:80px;text-align:center;cursor:pointer;transition:all 0.2s;}
+.cd-night:hover,.cd-night.active{border-color:var(--primary);background:rgba(201,148,58,0.1);}
+.cd-night.passed{opacity:0.4;}
+.cd-n-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.5rem;color:var(--primary);direction:rtl;display:block;}
+.cd-n-en{font-family:'Inter',sans-serif;font-size:0.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
+.cd-timer{font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.25rem;}
+.cd-timer-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);}
+/* NIGHTS GUIDE */
+.nights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;margin-bottom:2.5rem;}
+.night-card{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;position:relative;transition:border-color 0.2s;}
+.night-card::before{content:'';position:absolute;top:6px;left:6px;width:8px;height:8px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.4;}
+.night-card:hover{border-color:rgba(201,148,58,0.4);}
+.nc-night{font-family:'Cinzel',serif;font-size:2rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.2rem;}
+.nc-label{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.65rem;}
+.nc-desc{font-family:'Cormorant Garamond',serif;font-size:0.97rem;color:var(--muted);font-style:italic;line-height:1.6;}
+/* DUA SECTION */
+.dua-box{background:var(--surface-high);border:1px solid rgba(201,148,58,0.35);border-radius:4px;padding:2rem;text-align:center;margin-bottom:2.5rem;position:relative;}
+.dua-box::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.5;}
+.dua-box::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.5;}
+.dua-label{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:1rem;font-weight:600;}
+.dua-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.8rem;color:var(--cream);direction:rtl;line-height:2;margin-bottom:0.75rem;}
+.dua-en{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:0.35rem;}
+.dua-source{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(201,148,58,0.6);text-transform:uppercase;letter-spacing:0.1em;}
+/* IBADAH CHECKLIST */
+.checklist{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.75rem;margin-bottom:2.5rem;}
+.cl-title{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--primary);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1.25rem;}
+.cl-item{display:flex;align-items:center;gap:0.85rem;padding:0.65rem 0;border-bottom:1px solid rgba(201,148,58,0.06);cursor:pointer;}
+.cl-item:last-child{border-bottom:none;}
+.cl-check{width:22px;height:22px;border-radius:3px;border:1.5px solid rgba(201,148,58,0.35);background:transparent;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s;font-size:0.75rem;}
+.cl-item.done .cl-check{background:var(--primary);border-color:var(--primary);color:#432c00;}
+.cl-text{font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:var(--muted);transition:color 0.2s;}
+.cl-item.done .cl-text{color:var(--cream);}
+.cl-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.85rem;color:rgba(201,148,58,0.55);direction:rtl;display:block;margin-left:auto;}
+/* PHOTO SHARE */
+.photo-section{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.75rem;margin-bottom:2.5rem;}
+.ps-title{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--primary);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.5rem;}
+.ps-sub{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-style:italic;color:var(--muted);margin-bottom:1.25rem;line-height:1.6;}
+.upload-area{border:2px dashed rgba(201,148,58,0.3);border-radius:4px;padding:2rem;text-align:center;cursor:pointer;transition:all 0.2s;margin-bottom:1rem;}
+.upload-area:hover{border-color:rgba(201,148,58,0.6);background:rgba(201,148,58,0.04);}
+.upload-icon{font-size:2.5rem;margin-bottom:0.5rem;display:block;}
+.upload-text{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:1rem;}
+.upload-input{display:none;}
+.photo-preview{display:none;text-align:center;}
+.photo-preview img{max-width:100%;max-height:400px;border-radius:4px;border:1px solid var(--border);margin-bottom:1rem;}
+.photo-caption-input{width:100%;background:var(--surface-low);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1rem;padding:0.65rem;outline:none;margin-bottom:0.75rem;}
+.photo-caption-input:focus{border-color:var(--primary);}
+.share-btns{display:flex;gap:0.75rem;flex-wrap:wrap;}
+.share-btn{flex:1;padding:0.65rem;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;cursor:pointer;border:none;min-width:120px;transition:all 0.2s;}
+.share-download{background:var(--primary-grad);color:#432c00;}
+.share-whatsapp{background:#25d366;color:#fff;}
+.share-copy{background:var(--surface-low);color:var(--primary);border:1px solid var(--border);}
+footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--border);text-align:center;font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.4);}
+footer a{color:var(--primary);text-decoration:none;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}}
+
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+/* SCORER */
+.scorer-group{margin-bottom:1.5rem;}
+.scorer-header{display:flex;align-items:baseline;gap:0.4rem;margin-bottom:0.3rem;}
+.scorer-name{font-family:'Cinzel',serif;font-size:0.78rem;color:var(--cream);font-weight:600;flex:1;}
+.scorer-val{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;color:var(--primary);}
+.scorer-max{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);}
+.scorer-desc{font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-style:italic;color:var(--muted);margin-bottom:0.5rem;}
+.scorer-slider{width:100%;height:6px;-webkit-appearance:none;appearance:none;background:rgba(201,148,58,0.15);border-radius:3px;outline:none;cursor:pointer;}
+.scorer-slider::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--primary-grad);border:2px solid var(--cream);cursor:pointer;box-shadow:0 2px 8px rgba(201,148,58,0.4);}
+.scorer-slider::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--primary);border:2px solid var(--cream);cursor:pointer;}
+.scorer-ends{display:flex;justify-content:space-between;font-family:'Inter',sans-serif;font-size:0.58rem;color:var(--muted);margin-top:0.3rem;}
+/* ANALYSIS NIGHT BTNS */
+.an-btn{padding:0.5rem 1rem;font-family:'Cinzel',serif;font-size:0.8rem;font-weight:600;border:1px solid var(--border);border-radius:3px;background:var(--surface-high);color:var(--muted);cursor:pointer;transition:all 0.2s;}
+.an-btn:hover,.an-btn.active{border-color:var(--primary);color:var(--primary);background:rgba(201,148,58,0.08);}
+.an-btn.has-score{border-color:rgba(147,214,151,0.3);color:var(--emerald-light);}
+/* HADITH STRIP in analysis */
+.hs-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.05rem;color:var(--cream);direction:rtl;line-height:2;margin-bottom:0.5rem;}
+.hs-en{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-style:italic;color:var(--muted);margin-bottom:0.35rem;}
+.hs-src{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;}
+/* ANALYSIS */
+.analysis-spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--primary);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.criteria-row{margin-bottom:1.25rem;padding-bottom:1rem;border-bottom:1px solid rgba(201,148,58,0.08);}
+.criteria-row:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+.cr-header{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:0.4rem;}
+.cr-name{font-family:'Cinzel',serif;font-size:0.78rem;color:var(--cream);font-weight:600;}
+.cr-score{font-family:'Cinzel',serif;font-size:1.1rem;font-weight:700;}
+.cr-bar{height:6px;background:rgba(201,148,58,0.1);border-radius:3px;overflow:hidden;margin-bottom:0.4rem;}
+.cr-fill{height:100%;border-radius:3px;transition:width 0.6s ease;}
+.cr-desc{font-family:'Cormorant Garamond',serif;font-size:0.88rem;font-style:italic;color:var(--muted);line-height:1.5;}
+</style>
+</head>
+<body>
+
+<!-- Starfield -->
+<div id="stars"></div>
+
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <span class="hero-moon">🌙</span>
+  <div class="hero-ar">لَيْلَةُ الْقَدْرِ</div>
+  <div class="hero-en">Laylat al-Qadar</div>
+  <div class="hero-verse-ar">لَيْلَةُ الْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ</div>
+  <div class="hero-verse-en">"The Night of Power is better than a thousand months."</div>
+  <span class="hero-source">Al-Qadr 97:3 · Sahih</span>
+</div>
+
+<main>
+  <!-- COUNTDOWN -->
+  <div class="countdown-section">
+    <div class="cd-label">The Odd Nights of the Last 10 Days of Ramadan</div>
+    <div class="cd-nights" id="cd-nights"></div>
+    <div class="cd-timer" id="cd-timer">--:--:--</div>
+    <div class="cd-timer-label" id="cd-label">Calculating next night…</div>
+    <p style="font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(184,168,138,0.35);margin-top:1rem;letter-spacing:0.07em;">Based on Dubai / UAE timezone · Ramadan 2026</p>
+  </div>
+
+  <!-- NIGHTS GUIDE -->
+  <p style="font-family:'Cinzel',serif;font-size:0.8rem;color:var(--primary);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1.25rem;">The Five Blessed Nights</p>
+  <div class="nights-grid">
+    <div class="night-card"><div class="nc-night">21st</div><div class="nc-label">First Odd Night</div><p class="nc-desc">The first of the five odd nights. Increase your prayers, Quran recitation, and dhikr from Maghrib until Fajr.</p></div>
+    <div class="night-card"><div class="nc-night">23rd</div><div class="nc-label">Second Odd Night</div><p class="nc-desc">Many scholars and companions would increase their worship especially on this night. Stay awake in prayer and supplication.</p></div>
+    <div class="night-card"><div class="nc-night">25th</div><div class="nc-label">Third Odd Night</div><p class="nc-desc">The middle of the five nights. The Prophet ﷺ would exert himself more in worship during these nights than any other.</p></div>
+    <div class="night-card"><div class="nc-night">27th</div><div class="nc-label">Most Likely Night</div><p class="nc-desc">The 27th night is considered the most likely Laylat al-Qadar by the majority of scholars, based on narrations from the Companions.</p></div>
+    <div class="night-card"><div class="nc-night">29th</div><div class="nc-label">Final Odd Night</div><p class="nc-desc">The last of the five odd nights. Do not let this night pass without maximum worship. Seek forgiveness abundantly.</p></div>
+  </div>
+
+  <!-- DUA -->
+  <div class="dua-box">
+    <div class="dua-label">The Dua of Laylat al-Qadar · Authenticated</div>
+    <div class="dua-ar">اللَّهُمَّ إِنَّكَ عَفُوٌّ كَرِيمٌ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</div>
+    <div class="dua-en">"O Allah, You are All-Pardoning, You love to pardon, so pardon me."</div>
+    <div class="dua-source">Jami al-Tirmidhi 3513 · Sahih · Taught by the Prophet ﷺ to Aisha رضي الله عنها</div>
+    <button onclick="copyDua()" style="margin-top:1rem;font-family:'Inter',sans-serif;font-size:0.68rem;padding:0.45rem 1rem;background:transparent;border:1px solid rgba(201,148,58,0.3);border-radius:3px;color:var(--primary);cursor:pointer;">Copy Dua</button>
+  </div>
+
+  <!-- IBADAH CHECKLIST -->
+  <div class="checklist">
+    <div class="cl-title">Ibadah Checklist — Track Each Night</div>
+    <div id="checklist-items"></div>
+    <button onclick="resetChecklist()" style="margin-top:1rem;font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);background:transparent;border:none;cursor:pointer;text-decoration:underline;">Reset for new night</button>
+  </div>
+
+  <!-- SUNRISE ANALYSIS -->
+  <div class="photo-section">
+    <div class="ps-title">🌅 Sunrise Sign Analysis</div>
+    <p class="ps-sub">The Prophet ﷺ described the sign of Laylat al-Qadr: <em>"The sun rises that morning white, without rays — as if it were a plate."</em> (Sahih Muslim 762). Upload your sunrise photo and rate it against the hadith criteria.</p>
+
+    <div class="hadith-strip" style="margin:1.5rem 0;">
+      <div class="hs-ar">وَعَلَامَتُهَا أَنْ تَطْلُعَ الشَّمْسُ فِي صَبِيحَتِهَا بَيْضَاءَ لَا شُعَاعَ لَهَا</div>
+      <div class="hs-en">"Its sign is that the sun rises that morning white, without rays."</div>
+      <div class="hs-src">Sahih Muslim 762 · Ubayy ibn Ka'b رضي الله عنه</div>
+    </div>
+
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);text-align:center;margin-bottom:1.5rem;line-height:1.7;">Only Allah knows when Laylat al-Qadr truly is. We observe. We reflect. We leave the knowledge with Allah. — نأمل. نلاحظ. نترك العلم لله.</p>
+
+    <!-- MODE TABS -->
+    <div style="display:flex;gap:0;border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:1.5rem;background:var(--surface-low);">
+      <button onclick="setAnalysisMode('single')" id="mode-single" style="flex:1;padding:0.65rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:none;background:var(--primary-grad);color:#432c00;cursor:pointer;">Single Night</button>
+      <button onclick="setAnalysisMode('collage')" id="mode-collage" style="flex:1;padding:0.65rem;font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border:none;background:transparent;color:var(--muted);cursor:pointer;">Compare Nights</button>
+    </div>
+
+    <!-- SINGLE NIGHT VIEW -->
+    <div id="single-view">
+      <!-- Night Selector -->
+      <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.5rem;" id="analysis-nights"></div>
+
+      <!-- Photo Upload -->
+      <div id="upload-zone" style="border:2px dashed rgba(201,148,58,0.3);border-radius:4px;padding:2rem;text-align:center;cursor:pointer;background:rgba(201,148,58,0.03);transition:all 0.2s;margin-bottom:1.5rem;" onclick="document.getElementById('photo-input').click()">
+        <div style="font-size:2.5rem;margin-bottom:0.5rem;">📸</div>
+        <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--cream);margin-bottom:0.3rem;">Upload Sunrise Photo</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:0.9rem;font-style:italic;color:var(--muted);">Take your photo at sunrise (Shuruq), facing east. No filters, no zoom.</div>
+      </div>
+      <img id="photo-preview" style="display:none;width:100%;max-height:300px;object-fit:cover;border-radius:4px;border:1px solid var(--border);margin-bottom:1.5rem;"/>
+
+      <!-- ANALYSIS STATUS -->
+      <div id="analysis-status" style="display:none;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:2rem;text-align:center;margin-bottom:1.5rem;">
+        <div style="margin-bottom:1rem;">
+          <div class="analysis-spinner"></div>
+        </div>
+        <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--primary);letter-spacing:0.08em;margin-bottom:0.5rem;">Analyzing Sunrise…</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-style:italic;color:var(--muted);">Examining sun color, ray intensity, disc definition, and atmosphere against the hadith of Ubayy ibn Ka'b رضي الله عنه</div>
+      </div>
+
+      <!-- 4 CRITERIA BREAKDOWN (shown after analysis) -->
+      <div id="criteria-breakdown" style="display:none;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin-bottom:1.5rem;">
+        <div style="font-family:'Cinzel',serif;font-size:0.8rem;color:var(--primary);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.25rem;">4 Hadith Criteria — Auto-Analysis</div>
+        <div class="criteria-row" id="cr-1"></div>
+        <div class="criteria-row" id="cr-2"></div>
+        <div class="criteria-row" id="cr-3"></div>
+        <div class="criteria-row" id="cr-4"></div>
+      </div>
+      <canvas id="analysis-canvas" style="display:none;"></canvas>
+
+      <!-- RESULT CARD -->
+      <div id="result-card" style="display:none;background:linear-gradient(135deg,rgba(201,148,58,0.1),rgba(201,148,58,0.04));border:1px solid rgba(201,148,58,0.4);border-radius:4px;padding:2rem;text-align:center;margin-bottom:1.5rem;position:relative;">
+        <div style="position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.5;"></div>
+        <div style="position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.5;"></div>
+        <div style="font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.5rem;">Your Score</div>
+        <div id="result-score" style="font-family:'Cinzel',serif;font-size:3.5rem;font-weight:700;line-height:1;margin-bottom:0.25rem;"></div>
+        <div id="result-verdict" style="font-family:'Cinzel',serif;font-size:0.72rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1rem;"></div>
+        <div id="result-text" style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);line-height:1.7;max-width:480px;margin:0 auto 1rem;"></div>
+        <div style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap;">
+          <button onclick="saveNightScore()" style="padding:0.55rem 1.2rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;">Save to Calendar</button>
+          <button onclick="shareResult()" style="padding:0.55rem 1.2rem;background:transparent;color:var(--primary);font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border:1px solid rgba(201,148,58,0.35);border-radius:3px;cursor:pointer;">Share</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- COMPARE NIGHTS VIEW -->
+    <div id="collage-view" style="display:none;">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);margin-bottom:1.25rem;text-align:center;">Compare your sunrise scores across all 5 odd nights side by side.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0.75rem;margin-bottom:1.5rem;" id="compare-grid"></div>
+      <button onclick="downloadCollage()" style="width:100%;padding:0.75rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;">⬇ Download Comparison</button>
+      <canvas id="collage-canvas" style="display:none;"></canvas>
+    </div>
+
+    <!-- HIDDEN FILE INPUT -->
+    <input type="file" id="photo-input" style="display:none;" accept="image/*" onchange="handlePhotoUpload(event)"/>
+    <p style="font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(184,168,138,0.35);text-align:center;margin-top:0.75rem;letter-spacing:0.07em;">All photos & scores stored locally on your device · Nothing uploaded to any server</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+
+<script>
+// ── STARFIELD ──
+(function(){
+  const stars=document.getElementById('stars');
+  for(let i=0;i<80;i++){
+    const s=document.createElement('div');
+    s.style.cssText=`position:absolute;width:${Math.random()*2+1}px;height:${Math.random()*2+1}px;background:rgba(201,148,58,${Math.random()*0.5+0.1});border-radius:50%;left:${Math.random()*100}%;top:${Math.random()*100}%;animation:twinkle ${Math.random()*3+2}s ease-in-out infinite ${Math.random()*3}s;`;
+    stars.appendChild(s);
+  }
+  const style=document.createElement('style');
+  style.textContent='@keyframes twinkle{0%,100%{opacity:0.2;}50%{opacity:1;}}';
+  document.head.appendChild(style);
+})();
+
+// ── COUNTDOWN ──
+const RAMADAN_START=new Date('2026-02-18');
+function getRamadanNight(n){const d=new Date(RAMADAN_START);d.setDate(d.getDate()+n-1);return d;}
+const ODD_NIGHTS=[21,23,25,27,29];
+
+function buildNightButtons(){
+  const now=new Date();let html='';
+  ODD_NIGHTS.forEach(n=>{
+    const d=getRamadanNight(n);const isPast=d<now;
+    const nums={21:'\u0662\u0661',23:'\u0662\u0663',25:'\u0662\u0665',27:'\u0662\u0667',29:'\u0662\u0669'};
+    html+=`<div class="cd-night${isPast?' passed':''}" onclick="selectNight(${n})"><span class="cd-n-ar">${nums[n]}</span><span class="cd-n-en">${n}th Night</span></div>`;
+  });
+  document.getElementById('cd-nights').innerHTML=html;
+}
+
+let countdownInterval=null;
+function selectNight(n){
+  if(countdownInterval)clearInterval(countdownInterval);
+  const target=getRamadanNight(n);target.setHours(18,30,0,0);
+  document.querySelectorAll('.cd-night').forEach((el,i)=>el.classList.toggle('active',ODD_NIGHTS[i]===n));
+  function tick(){
+    const now=new Date(),diff=target-now;
+    if(diff<=0){document.getElementById('cd-timer').textContent='Tonight!';document.getElementById('cd-label').textContent=`The ${n}th Night has begun`;return;}
+    const d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
+    document.getElementById('cd-timer').textContent=`${d>0?d+'d ':''}${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    document.getElementById('cd-label').textContent=`Until the ${n}th Night of Ramadan 1447 AH`;
+  }
+  tick();countdownInterval=setInterval(tick,1000);
+}
+
+// ── CHECKLIST ──
+const ITEMS=[
+  {id:'maghrib',text:'Prayed Maghrib with congregation',ar:'\u0635\u0644\u0627\u0629 \u0627\u0644\u0645\u063a\u0631\u0628 \u0645\u0639 \u0627\u0644\u062c\u0645\u0627\u0639\u0629'},
+  {id:'isha',text:"Prayed Isha' with congregation",ar:'\u0635\u0644\u0627\u0629 \u0627\u0644\u0639\u0634\u0627\u0621 \u0645\u0639 \u0627\u0644\u062c\u0645\u0627\u0639\u0629'},
+  {id:'tarawih',text:'Prayed Tarawih / Qiyam',ar:'\u0635\u0644\u0627\u0629 \u0627\u0644\u062a\u0631\u0627\u0648\u064a\u062d \u0623\u0648 \u0627\u0644\u0642\u064a\u0627\u0645'},
+  {id:'quran',text:'Read or listened to Quran',ar:'\u062a\u0644\u0627\u0648\u0629 \u0627\u0644\u0642\u0631\u0622\u0646 \u0627\u0644\u0643\u0631\u064a\u0645'},
+  {id:'dua-qadr',text:'Made the Dua of Laylat al-Qadar',ar:'\u062f\u0639\u0627\u0621 \u0644\u064a\u0644\u0629 \u0627\u0644\u0642\u062f\u0631'},
+  {id:'adhkar',text:'Morning and evening adhkar',ar:'\u0627\u0644\u0623\u0630\u0643\u0627\u0631 \u0627\u0644\u0635\u0628\u0627\u062d\u064a\u0629 \u0648\u0627\u0644\u0645\u0633\u0627\u0626\u064a\u0629'},
+  {id:'sadaqah',text:'Gave sadaqah tonight',ar:'\u062a\u0635\u062f\u0642\u062a \u0627\u0644\u0644\u064a\u0644\u0629'},
+  {id:'istighfar',text:'Made istighfar 100+ times',ar:'\u0627\u0644\u0627\u0633\u062a\u063a\u0641\u0627\u0631 \u0661\u0660\u0660 \u0645\u0631\u0629 \u0623\u0648 \u0623\u0643\u062b\u0631'},
+  {id:'tahajjud',text:'Prayed Tahajjud in last third',ar:'\u0642\u064a\u0627\u0645 \u0627\u0644\u0644\u064a\u0644 \u0641\u064a \u0627\u0644\u062b\u0644\u062b \u0627\u0644\u0623\u062e\u064a\u0631'},
+  {id:'fajr',text:'Prayed Fajr on time',ar:'\u0635\u0644\u0627\u0629 \u0627\u0644\u0641\u062c\u0631 \u0641\u064a \u0648\u0642\u062a\u0647'},
+];
+let checkState=JSON.parse(localStorage.getItem('qadr_check')||'{}');
+function renderChecklist(){
+  document.getElementById('checklist-items').innerHTML=ITEMS.map(item=>`
+    <div class="cl-item${checkState[item.id]?' done':''}" onclick="toggleCheck('${item.id}')">
+      <div class="cl-check">${checkState[item.id]?'\u2713':''}</div>
+      <div class="cl-text">${item.text}</div>
+      <span class="cl-ar">${item.ar}</span>
+    </div>`).join('');
+}
+function toggleCheck(id){checkState[id]=!checkState[id];localStorage.setItem('qadr_check',JSON.stringify(checkState));renderChecklist();}
+function resetChecklist(){checkState={};localStorage.removeItem('qadr_check');renderChecklist();}
+function copyDua(){navigator.clipboard.writeText('\u0627\u0644\u0644\u0651\u064e\u0647\u064f\u0645\u0651\u064e \u0625\u0650\u0646\u0651\u064e\u0643\u064e \u0639\u064e\u0641\u064f\u0648\u0651\u064c \u0643\u064e\u0631\u0650\u064a\u0645\u064c \u062a\u064f\u062d\u0650\u0628\u0651\u064f \u0627\u0644\u0639\u064e\u0641\u0652\u0648\u064e \u0641\u064e\u0627\u0639\u0652\u0641\u064f \u0639\u064e\u0646\u0651\u0650\u064a').then(()=>alert('Dua copied! May Allah accept.'));}
+
+// ══════════════════════════════════════════════
+// ── AUTOMATIC SUNRISE IMAGE ANALYSIS ──
+// ══════════════════════════════════════════════
+let analysisNight=27;
+let analysisData=JSON.parse(localStorage.getItem('qadr_analysis')||'{}');
+
+function buildAnalysisNights(){
+  const el=document.getElementById('analysis-nights');
+  const nums={21:'\u0662\u0661',23:'\u0662\u0663',25:'\u0662\u0665',27:'\u0662\u0667',29:'\u0662\u0669'};
+  el.innerHTML=ODD_NIGHTS.map(n=>{
+    const hasScore=analysisData[n]&&analysisData[n].total!==undefined;
+    return `<button class="an-btn${n===analysisNight?' active':''}${hasScore?' has-score':''}" onclick="selectAnalysisNight(${n})">${n}th ${nums[n]}${hasScore?' \u2713':''}</button>`;
+  }).join('');
+}
+
+function selectAnalysisNight(n){
+  analysisNight=n;
+  buildAnalysisNights();
+  const saved=analysisData[n];
+  if(saved&&saved.total!==undefined){
+    if(saved.photo){
+      document.getElementById('photo-preview').src=saved.photo;
+      document.getElementById('photo-preview').style.display='block';
+      document.getElementById('upload-zone').style.display='none';
+    }
+    showResults(saved.s1,saved.s2,saved.s3,saved.s4);
+  } else {
+    document.getElementById('photo-preview').style.display='none';
+    document.getElementById('upload-zone').style.display='block';
+    document.getElementById('criteria-breakdown').style.display='none';
+    document.getElementById('result-card').style.display='none';
+    document.getElementById('analysis-status').style.display='none';
+  }
+}
+
+function handlePhotoUpload(e){
+  const file=e.target.files[0];if(!file)return;
+  const reader=new FileReader();
+  reader.onload=ev=>{
+    const img=document.getElementById('photo-preview');
+    img.src=ev.target.result;
+    img.style.display='block';
+    document.getElementById('upload-zone').style.display='none';
+    // Save photo
+    if(!analysisData[analysisNight])analysisData[analysisNight]={};
+    analysisData[analysisNight].photo=ev.target.result;
+    // Auto-analyze
+    analyzeImage(ev.target.result);
+    e.target.value='';
+  };
+  reader.readAsDataURL(file);
+}
+
+// ── IMAGE ANALYSIS ENGINE ──
+// Analyzes sunrise photos against the 4 hadith criteria using pixel data
+function analyzeImage(dataUrl){
+  document.getElementById('analysis-status').style.display='block';
+  document.getElementById('criteria-breakdown').style.display='none';
+  document.getElementById('result-card').style.display='none';
+
+  const img=new Image();
+  img.onload=()=>{
+    const canvas=document.getElementById('analysis-canvas');
+    const ctx=canvas.getContext('2d');
+    // Scale down for performance
+    const maxW=400;
+    const scale=Math.min(maxW/img.width,1);
+    canvas.width=img.width*scale;
+    canvas.height=img.height*scale;
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+
+    const w=canvas.width,h=canvas.height;
+    const data=ctx.getImageData(0,0,w,h).data;
+
+    // ── CRITERION 1: SUN COLOR (white vs golden/orange) ──
+    // Find the brightest region (top 5% of pixels by luminance)
+    let pixels=[];
+    for(let i=0;i<data.length;i+=4){
+      const r=data[i],g=data[i+1],b=data[i+2];
+      const lum=0.299*r+0.587*g+0.114*b;
+      pixels.push({r,g,b,lum});
+    }
+    pixels.sort((a,b)=>b.lum-a.lum);
+    const top5pct=pixels.slice(0,Math.max(10,Math.floor(pixels.length*0.05)));
+    // Average color of brightest pixels
+    let avgR=0,avgG=0,avgB=0;
+    top5pct.forEach(p=>{avgR+=p.r;avgG+=p.g;avgB+=p.b;});
+    avgR/=top5pct.length;avgG/=top5pct.length;avgB/=top5pct.length;
+    // Whiteness = how close to pure white (equal RGB, high values)
+    const maxC=Math.max(avgR,avgG,avgB);
+    const minC=Math.min(avgR,avgG,avgB);
+    const saturation=(maxC>0)?(maxC-minC)/maxC:0;
+    const brightness=maxC/255;
+    // Low saturation + high brightness = white; high saturation + warm = golden
+    const colorScore=Math.round(Math.min(10, (1-saturation)*8 + (brightness>0.8?2:0)));
+
+    // ── CRITERION 2: RAY INTENSITY (absence of rays) ──
+    // Rays = high brightness gradient radiating from center of brightness
+    // Find center of mass of bright pixels
+    let cx=0,cy=0,totalLum=0;
+    for(let y=0;y<h;y++){
+      for(let x=0;x<w;x++){
+        const i=(y*w+x)*4;
+        const lum=0.299*data[i]+0.587*data[i+1]+0.114*data[i+2];
+        if(lum>180){cx+=x*lum;cy+=y*lum;totalLum+=lum;}
+      }
+    }
+    if(totalLum>0){cx/=totalLum;cy/=totalLum;}else{cx=w/2;cy=h/2;}
+    // Measure brightness falloff from center — sharp falloff = no rays, gradual = rays
+    let innerBright=0,innerCount=0,outerBright=0,outerCount=0;
+    const radius=Math.min(w,h)*0.15;
+    for(let y=0;y<h;y++){
+      for(let x=0;x<w;x++){
+        const dist=Math.sqrt((x-cx)**2+(y-cy)**2);
+        const i=(y*w+x)*4;
+        const lum=0.299*data[i]+0.587*data[i+1]+0.114*data[i+2];
+        if(dist<=radius){innerBright+=lum;innerCount++;}
+        else if(dist<=radius*3){outerBright+=lum;outerCount++;}
+      }
+    }
+    const innerAvg=innerCount>0?innerBright/innerCount:0;
+    const outerAvg=outerCount>0?outerBright/outerCount:0;
+    const falloff=(innerAvg>0)?(innerAvg-outerAvg)/innerAvg:0;
+    // Sharp falloff (>0.5) = no rays = high score; gradual (<0.2) = lots of rays = low score
+    const rayScore=Math.round(Math.min(10, falloff*15));
+
+    // ── CRITERION 3: DISC DEFINITION (clear disc vs blinding blaze) ──
+    // Clear disc = concentrated bright area; blaze = brightness spread everywhere
+    const brightPixels=pixels.filter(p=>p.lum>200).length;
+    const brightRatio=brightPixels/pixels.length;
+    // Small bright area (<10% of image) = clear disc; large (>40%) = blaze
+    const discScore=Math.round(Math.min(10, Math.max(0, (1-brightRatio*3)*10)));
+
+    // ── CRITERION 4: ATMOSPHERE (clear calm sky) ──
+    // Sample sky area (top 40% of image, excluding bright center)
+    let skyPixels=[];
+    for(let y=0;y<h*0.4;y++){
+      for(let x=0;x<w;x++){
+        const dist=Math.sqrt((x-cx)**2+(y-cy)**2);
+        if(dist>radius*2){
+          const i=(y*w+x)*4;
+          skyPixels.push({r:data[i],g:data[i+1],b:data[i+2],lum:0.299*data[i]+0.587*data[i+1]+0.114*data[i+2]});
+        }
+      }
+    }
+    // Clear sky = consistent color, moderate brightness; cloudy = high variance
+    let lumSum=0,lumSqSum=0;
+    skyPixels.forEach(p=>{lumSum+=p.lum;lumSqSum+=p.lum*p.lum;});
+    const skyAvg=skyPixels.length>0?lumSum/skyPixels.length:128;
+    const skyVar=skyPixels.length>1?(lumSqSum/skyPixels.length-skyAvg*skyAvg):0;
+    const skyStd=Math.sqrt(Math.max(0,skyVar));
+    // Low variance = clear; high variance = cloudy/hazy
+    const atmosScore=Math.round(Math.min(10, Math.max(0, (1-skyStd/80)*10)));
+
+    // Clamp all to 0-10
+    const s1=Math.max(0,Math.min(10,colorScore));
+    const s2=Math.max(0,Math.min(10,rayScore));
+    const s3=Math.max(0,Math.min(10,discScore));
+    const s4=Math.max(0,Math.min(10,atmosScore));
+
+    // Save
+    Object.assign(analysisData[analysisNight],{s1,s2,s3,s4,total:s1+s2+s3+s4,date:new Date().toISOString()});
+    localStorage.setItem('qadr_analysis',JSON.stringify(analysisData));
+
+    // Show results after brief delay for UX
+    setTimeout(()=>{
+      document.getElementById('analysis-status').style.display='none';
+      showResults(s1,s2,s3,s4);
+      buildAnalysisNights();
+    },1500);
+  };
+  img.src=dataUrl;
+}
+
+function showResults(s1,s2,s3,s4){
+  const total=s1+s2+s3+s4;
+  const criteria=[
+    {name:'Sun Color',score:s1,max:10,desc:s1>=7?'The sun appears pale/white — matches the hadith sign.':s1>=4?'Some warmth remains but leaning towards pale.':'The sun is golden/orange — typical sunrise, not the sign.'},
+    {name:'Ray Intensity',score:s2,max:10,desc:s2>=7?'Rays are absent or very faint — "la shu\'a\'a laha" (without rays).':s2>=4?'Some rays visible but reduced from normal.':'Strong rays present — the sun is radiating normally.'},
+    {name:'Disc Definition',score:s3,max:10,desc:s3>=7?'Clear disc shape visible — "like a plate" as described in the hadith.':s3>=4?'Disc partially visible through some glare.':'The sun is too bright to see as a defined disc.'},
+    {name:'Atmosphere',score:s4,max:10,desc:s4>=7?'Clear, calm sky — the hadith describes the night as calm and moderate.':s4>=4?'Moderate sky conditions.':'Heavy clouds or haze obscure the reading.'}
+  ];
+
+  const breakdown=document.getElementById('criteria-breakdown');
+  breakdown.style.display='block';
+  criteria.forEach((c,i)=>{
+    const pct=(c.score/c.max)*100;
+    const col=pct>=70?'#c9943a':pct>=40?'#8a7a5a':'#5a4a3a';
+    document.getElementById('cr-'+(i+1)).innerHTML=`
+      <div class="cr-header"><span class="cr-name">${i+1}. ${c.name}</span><span class="cr-score" style="color:${col};">${c.score}<span style="font-size:0.7rem;color:var(--muted);">/10</span></span></div>
+      <div class="cr-bar"><div class="cr-fill" style="width:${pct}%;background:${col};"></div></div>
+      <div class="cr-desc">${c.desc}</div>`;
+  });
+
+  // Result card
+  const rc=document.getElementById('result-card');
+  rc.style.display='block';
+  document.getElementById('result-score').innerHTML=`${total}<span style="font-size:1.2rem;color:var(--muted);">/40</span>`;
+  let verdictText,verdictColor,text;
+  if(total>=32){
+    verdictText='STRONG SIGN \u2014 MAY HAVE BEEN LAYLAT AL-QADR';
+    verdictColor='#e2b86a';
+    text="The sunrise closely matches the hadith description: white, rayless, like a plate. This is a meaningful sign. Reflect with gratitude and hope. And Allah knows best.";
+  }else if(total>=20){
+    verdictText='PARTIAL SIGN \u2014 SOME INDICATORS PRESENT';
+    verdictColor='#9aa8b8';
+    text="Some elements of the hadith sign are present but not all criteria are fully met. The Prophet \uFDFA said to seek Laylat al-Qadr in all the odd nights of the last ten.";
+  }else{
+    verdictText='WEAK SIGN \u2014 DOES NOT STRONGLY MATCH';
+    verdictColor='#5a6a7a';
+    text='The sunrise does not strongly match the hadith sign. This does not mean the night was absent of blessings \u2014 only Allah knows. Continue striving in all ten nights.';
+  }
+  document.getElementById('result-verdict').textContent=verdictText;
+  document.getElementById('result-verdict').style.color=verdictColor;
+  document.getElementById('result-score').style.color=verdictColor;
+  document.getElementById('result-text').textContent=text;
+  rc.scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function saveNightScore(){
+  alert(`Night ${analysisNight} saved! Score: ${analysisData[analysisNight]?.total||0}/40. JazakAllahu Khayran.`);
+}
+
+function shareResult(){
+  const d=analysisData[analysisNight];
+  if(!d)return;
+  const text=`My Laylat al-Qadr sunrise analysis (Night ${analysisNight}): ${d.total}/40\n\nCriteria:\n\u2022 Sun Color: ${d.s1}/10\n\u2022 Ray Intensity: ${d.s2}/10\n\u2022 Disc Definition: ${d.s3}/10\n\u2022 Atmosphere: ${d.s4}/10\n\n"The sun rises that morning white, without rays." \u2014 Sahih Muslim 762\n\nAnalyze yours: dhikrapp.org/laylat-al-qadar.html`;
+  if(navigator.share){navigator.share({title:'Laylat al-Qadr Analysis',text});}
+  else{navigator.clipboard?.writeText(text).then(()=>alert('Copied to clipboard!'));}
+}
+
+// ── COMPARE MODE ──
+function setAnalysisMode(mode){
+  document.getElementById('single-view').style.display=mode==='single'?'block':'none';
+  document.getElementById('collage-view').style.display=mode==='collage'?'block':'none';
+  document.getElementById('mode-single').style.background=mode==='single'?'var(--primary-grad)':'transparent';
+  document.getElementById('mode-single').style.color=mode==='single'?'#432c00':'var(--muted)';
+  document.getElementById('mode-collage').style.background=mode==='collage'?'var(--primary-grad)':'transparent';
+  document.getElementById('mode-collage').style.color=mode==='collage'?'#432c00':'var(--muted)';
+  if(mode==='collage')renderCompare();
+}
+function renderCompare(){
+  const grid=document.getElementById('compare-grid');
+  grid.innerHTML=ODD_NIGHTS.map(n=>{
+    const d=analysisData[n];
+    const hasScore=d&&d.total!==undefined;
+    const pct=hasScore?d.total/40:0;
+    const col=pct>=0.8?'#e2b86a':pct>=0.5?'#9aa8b8':'#5a6a7a';
+    const verdict=pct>=0.8?'STRONG':pct>=0.5?'PARTIAL':'WEAK';
+    return `<div style="background:var(--surface-high);border:1px solid ${hasScore?'rgba(201,148,58,0.4)':'var(--border)'};border-radius:4px;overflow:hidden;text-align:center;">
+      ${d&&d.photo?`<img src="${d.photo}" style="width:100%;height:100px;object-fit:cover;"/>`:`<div style="height:100px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;background:var(--surface-low);">\u{1F305}</div>`}
+      <div style="padding:0.75rem;">
+        <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--cream);font-weight:600;">Night ${n}</div>
+        ${hasScore?`
+          <div style="font-family:'Cinzel',serif;font-size:1.6rem;font-weight:700;color:${col};margin:0.3rem 0;">${d.total}<span style="font-size:0.7rem;color:var(--muted);">/40</span></div>
+          <div style="font-family:'Inter',sans-serif;font-size:0.55rem;color:${col};letter-spacing:0.1em;text-transform:uppercase;">${verdict}</div>
+        `:`<div style="font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-style:italic;color:var(--muted);margin:0.5rem 0;">Not scored</div>
+          <button class="an-btn" style="font-size:0.6rem;padding:0.3rem 0.8rem;" onclick="setAnalysisMode('single');selectAnalysisNight(${n});">Score \u2192</button>`}
+      </div>
+    </div>`;
+  }).join('');
+}
+function downloadCollage(){
+  const canvas=document.getElementById('collage-canvas');
+  const ctx=canvas.getContext('2d');
+  const W=1000,H=320;canvas.width=W;canvas.height=H;
+  ctx.fillStyle='#1d1107';ctx.fillRect(0,0,W,H);
+  ctx.fillStyle='#c9943a';ctx.font='bold 14px serif';ctx.textAlign='center';
+  ctx.fillText('Laylat al-Qadr Sunrise Analysis 1447 AH \u00b7 dhikrapp.org',W/2,22);
+  const cellW=(W-60)/5;let drawn=0;
+  ODD_NIGHTS.forEach((n,i)=>{
+    const x=10+i*(cellW+10),y=36,d=analysisData[n];
+    const finish=()=>{drawn++;if(drawn===5){const a=document.createElement('a');a.href=canvas.toDataURL('image/jpeg',0.92);a.download='laylat-al-qadr-1447.jpg';a.click();}};
+    if(d&&d.photo){
+      const img=new Image();img.onload=()=>{
+        ctx.drawImage(img,x,y,cellW,200);
+        ctx.fillStyle='rgba(29,17,7,0.75)';ctx.fillRect(x,y+200,cellW,80);
+        ctx.fillStyle='#c9943a';ctx.font='bold 12px serif';ctx.textAlign='center';
+        ctx.fillText(`Night ${n}`,x+cellW/2,y+220);
+        if(d.total!==undefined)ctx.fillText(`${d.total}/40`,x+cellW/2,y+240);
+        finish();
+      };img.src=d.photo;
+    }else{
+      ctx.fillStyle='#26190e';ctx.fillRect(x,y,cellW,280);
+      ctx.fillStyle='#c9943a';ctx.font='bold 12px serif';ctx.textAlign='center';
+      ctx.fillText(`Night ${n}`,x+cellW/2,y+140);
+      if(d&&d.total!==undefined)ctx.fillText(`${d.total}/40`,x+cellW/2,y+160);
+      finish();
+    }
+  });
+}
+
+// ── INIT ──
+buildNightButtons();selectNight(27);renderChecklist();buildAnalysisNights();selectAnalysisNight(27);
+</script>
+</body>
+</html>

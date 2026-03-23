@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Planting in Jannah — Dhikr | ذِكر · Sadaqah Jariyah Tracker</title>
+<meta name="description" content="Track your sadaqah jariyah and good deeds that continue after death. Plant trees in Jannah through SubhanAllah, ongoing charity, and spreading knowledge."/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/jannah.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--surface-lowest:#170c04;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald:#1a5c2a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 2.5rem;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:500px;height:400px;background:radial-gradient(ellipse,rgba(26,92,42,0.1) 0%,transparent 70%);pointer-events:none;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:0.5rem;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);max-width:560px;margin:0 auto;}
+main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+/* JANNAH GARDEN */
+.garden{background:linear-gradient(135deg,rgba(26,92,42,0.15),rgba(201,148,58,0.05));border:1px solid rgba(147,214,151,0.2);border-radius:4px;padding:2rem;text-align:center;margin-bottom:2.5rem;position:relative;overflow:hidden;}
+.garden-title{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--emerald-light);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.5rem;}
+.garden-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;color:var(--cream);direction:rtl;margin-bottom:1.5rem;line-height:1.8;}
+.tree-display{font-size:2.5rem;margin-bottom:0.5rem;min-height:60px;word-break:break-all;line-height:1.4;}
+.tree-count{font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.25rem;}
+.tree-label{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--emerald-light);text-transform:uppercase;letter-spacing:0.12em;}
+.plant-btn{margin-top:1.25rem;padding:0.85rem 2.5rem;background:linear-gradient(135deg,#1a5c2a,#2d8a43);color:var(--emerald-light);font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:1px solid rgba(147,214,151,0.3);border-radius:3px;cursor:pointer;transition:opacity 0.2s,transform 0.2s;box-shadow:0 6px 20px rgba(26,92,42,0.3);}
+.plant-btn:hover{opacity:0.9;transform:translateY(-2px);}
+.hadith-ref{font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(147,214,151,0.5);margin-top:0.75rem;text-transform:uppercase;letter-spacing:0.08em;}
+/* JARIYAH TRACKER */
+.sec-title{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin:2.5rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+.jariyah-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.25rem;}
+.jariyah-card{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;position:relative;transition:border-color 0.2s;}
+.jariyah-card::before{content:'';position:absolute;top:6px;left:6px;width:9px;height:9px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.4;}
+.jariyah-card:hover{border-color:rgba(201,148,58,0.35);}
+.jc-icon{font-size:2rem;margin-bottom:0.65rem;display:block;}
+.jc-title{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--cream);font-weight:600;margin-bottom:0.2rem;}
+.jc-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.82rem;color:var(--primary);direction:rtl;display:block;margin-bottom:0.5rem;}
+.jc-desc{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.6;margin-bottom:1rem;}
+.jc-count-row{display:flex;align-items:center;justify-content:space-between;padding-top:0.75rem;border-top:1px solid rgba(201,148,58,0.08);}
+.jc-count{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.jc-btns{display:flex;gap:0.4rem;}
+.jc-btn{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;padding:0.35rem 0.75rem;border-radius:3px;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--primary);transition:all 0.15s;}
+.jc-btn:hover{background:rgba(201,148,58,0.1);}
+.jc-source{font-family:'Inter',sans-serif;font-size:0.57rem;color:rgba(201,148,58,0.45);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.4rem;display:block;text-decoration:none;}
+.jc-source:hover{color:var(--primary);}
+/* CUSTOM ADD */
+.add-box{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin-top:1.5rem;}
+.add-title{font-family:'Cinzel',serif;font-size:0.82rem;color:var(--primary);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:1rem;}
+.add-row{display:flex;gap:0.75rem;flex-wrap:wrap;}
+.add-input{flex:1;background:var(--surface-low);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1rem;padding:0.6rem 0.8rem;outline:none;min-width:160px;}
+.add-input:focus{border-color:var(--primary);}
+.add-input::placeholder{color:rgba(184,168,138,0.4);font-style:italic;}
+.add-submit{padding:0.6rem 1.25rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;}
+footer{position:relative;z-index:1;padding:2rem 2rem 1rem;border-top:1px solid var(--border);background:var(--surface-lowest);}
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">Ongoing Rewards · Sadaqah Jariyah</p>
+  <h1>Planting in Jannah</h1>
+  <p class="h1-ar">زرع الجنة — الصدقة الجارية</p>
+  <p class="sub">Every SubhanAllah plants a tree in Jannah. Every act of sadaqah jariyah continues to reward you after death. Track your garden here.</p>
+</div>
+
+<main>
+  <!-- SUBHANALLAH TREE GARDEN -->
+  <div class="garden">
+    <div class="garden-title">Your Garden in Jannah 🌿</div>
+    <div class="garden-ar">سُبْحَانَ اللَّهِ وَبِحَمْدِهِ — غُرِسَتْ لَهُ نَخْلَةٌ فِي الْجَنَّةِ</div>
+    <div class="tree-display" id="tree-display">🌴</div>
+    <div class="tree-count" id="tree-count">0</div>
+    <div class="tree-label">Trees Planted in Jannah</div>
+    <button class="plant-btn" onclick="plantTree()">🌴 SubhanAllah wa Bihamdihi — Plant a Tree</button>
+    <div class="hadith-ref">Jami al-Tirmidhi 3464 · Sahih — "For whoever says 'SubhanAllah wa Bihamdihi' a palm tree is planted for him in Jannah"</div>
+  </div>
+
+  <!-- SADAQAH JARIYAH TRACKER -->
+  <div class="sec-title">Sadaqah Jariyah Tracker</div>
+  <div class="jariyah-grid" id="jariyah-grid"></div>
+
+  <!-- ADD CUSTOM -->
+  <div class="add-box">
+    <div class="add-title">Add Your Own Sadaqah Jariyah</div>
+    <div class="add-row">
+      <input class="add-input" type="text" id="custom-name" placeholder="e.g. Donated Quran to a library…"/>
+      <button class="add-submit" onclick="addCustom()">Add</button>
+    </div>
+    <div id="custom-list" style="margin-top:1rem;"></div>
+  </div>
+
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);text-align:center;margin-top:2.5rem;line-height:1.7;max-width:560px;margin-left:auto;margin-right:auto;">"When a person dies, his deeds are cut off except from three: a continuous sadaqah, knowledge that people benefit from, and a righteous child who prays for him."<br/><span style="font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;">Sahih Muslim 1631</span></p>
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+
+<script>
+// TREE PLANTING
+let trees=parseInt(localStorage.getItem('jannah_trees')||'0');
+const TREE_EMOJIS=['🌴','🌿','🌳','🌱','🌲','🍃','🌾'];
+
+function renderTrees(){
+  const c=Math.min(trees,28);
+  const display=Array.from({length:c},(_,i)=>TREE_EMOJIS[i%TREE_EMOJIS.length]).join('');
+  document.getElementById('tree-display').textContent=display+(trees>28?` +${trees-28} more`:'') || '🌱 Plant your first tree';
+  document.getElementById('tree-count').textContent=trees.toLocaleString();
+}
+
+function plantTree(){
+  trees++;localStorage.setItem('jannah_trees',trees);
+  renderTrees();
+  if(navigator.vibrate)navigator.vibrate(50);
+  // Show flash
+  const btn=document.querySelector('.plant-btn');
+  btn.style.background='linear-gradient(135deg,#2d8a43,#4ab85a)';
+  setTimeout(()=>{btn.style.background='';},300);
+}
+
+// JARIYAH CATEGORIES
+const JARIYAH=[
+  {id:'quran-share',icon:'📖',title:'Shared the Dhikr App',ar:'نشر التطبيق',desc:'Every Muslim who benefits from this app — their reward is also yours, without diminishing theirs.',source:'Sahih Muslim 1631',sourceUrl:'https://sunnah.com/muslim/25/75'},
+  {id:'quran-teach',icon:'🎓',title:'Taught Someone Quran',ar:'علّم شخصاً القرآن',desc:'"The best of you is the one who learns the Quran and teaches it." — Sahih al-Bukhari 5027.',source:'Sahih al-Bukhari 5027',sourceUrl:'https://sunnah.com/bukhari/66/2'},
+  {id:'tree-plant',icon:'🌳',title:'Planted a Tree',ar:'زرع شجرة',desc:'"If a Muslim plants a tree or sows seeds, and then a bird, or a person, or an animal eats from it, it is regarded as a charitable gift." — Sahih al-Bukhari.',source:'Sahih al-Bukhari 2320',sourceUrl:'https://sunnah.com/bukhari/41/33'},
+  {id:'sadaqah-water',icon:'💧',title:'Donated Water/Well',ar:'تصدّق بالماء',desc:'Water sadaqah is among the most beloved acts. The Prophet ﷺ was asked about the best charity — he said water.',source:'Sunan Abu Dawud 1681',sourceUrl:'https://sunnah.com/abudawud/9/26'},
+  {id:'mosque-build',icon:'🕌',title:'Contributed to Building a Mosque',ar:'المساهمة في بناء مسجد',desc:'"Whoever builds a mosque for Allah, Allah will build for him a house in Paradise." — Agreed upon.',source:'Sahih al-Bukhari 450',sourceUrl:'https://sunnah.com/bukhari/8/108'},
+  {id:'knowledge',icon:'📚',title:'Shared Islamic Knowledge',ar:'نشر العلم الشرعي',desc:'Sharing a hadith, a reminder, a verse — if someone benefits and acts on it, the reward continues indefinitely.',source:'Sahih Muslim 2674',sourceUrl:'https://sunnah.com/muslim/47/34'},
+];
+
+let jariyahCounts=JSON.parse(localStorage.getItem('jariyah_counts')||'{}');
+
+function renderJariyah(){
+  document.getElementById('jariyah-grid').innerHTML=JARIYAH.map(j=>`
+    <div class="jariyah-card">
+      <span class="jc-icon">${j.icon}</span>
+      <div class="jc-title">${j.title}</div>
+      <span class="jc-ar">${j.ar}</span>
+      <div class="jc-desc">${j.desc}</div>
+      <div class="jc-count-row">
+        <span class="jc-count">${(jariyahCounts[j.id]||0).toLocaleString()}</span>
+        <div class="jc-btns">
+          <button class="jc-btn" onclick="addJariyah('${j.id}',1)">+ 1</button>
+          <button class="jc-btn" onclick="addJariyah('${j.id}',10)">+ 10</button>
+        </div>
+      </div>
+      <a href="${j.sourceUrl}" target="_blank" rel="noopener" class="jc-source">${j.source} · Verified ↗</a>
+    </div>`).join('');
+}
+
+function addJariyah(id,n){
+  jariyahCounts[id]=(jariyahCounts[id]||0)+n;
+  localStorage.setItem('jariyah_counts',JSON.stringify(jariyahCounts));
+  renderJariyah();
+}
+
+// Custom list
+let customList=JSON.parse(localStorage.getItem('custom_jariyah')||'[]');
+
+function addCustom(){
+  const v=document.getElementById('custom-name').value.trim();
+  if(!v)return;
+  customList.unshift({text:v,date:new Date().toLocaleDateString(),count:1});
+  localStorage.setItem('custom_jariyah',JSON.stringify(customList));
+  document.getElementById('custom-name').value='';
+  renderCustom();
+}
+
+function renderCustom(){
+  document.getElementById('custom-list').innerHTML=customList.map((c,i)=>`
+    <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 0;border-bottom:1px solid rgba(201,148,58,0.06);">
+      <span style="font-size:1rem;">🤲</span>
+      <span style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--cream);flex:1;">${c.text}</span>
+      <span style="font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);">${c.date}</span>
+      <button onclick="removeCustom(${i})" style="font-size:0.65rem;background:transparent;border:none;color:rgba(184,168,138,0.35);cursor:pointer;">✕</button>
+    </div>`).join('') || '<p style="font-family:\'Cormorant Garamond\',serif;font-style:italic;color:var(--muted);font-size:0.95rem;">Your sadaqah jariyah will appear here.</p>';
+}
+
+function removeCustom(i){customList.splice(i,1);localStorage.setItem('custom_jariyah',JSON.stringify(customList));renderCustom();}
+
+renderTrees();renderJariyah();renderCustom();
+</script>
+</body>
+</html>

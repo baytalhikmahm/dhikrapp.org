@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Islamic Books — Bayt al-Hikmah | بيت الحكمة</title>
+<meta name="description" content="Authenticated Islamic reference books by Bayt al-Hikmah. Quranic Stories Encyclopedia (46 stories), Hadith Collection, and Duas Collection. Bilingual Arabic/English."/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/books.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--surface-lowest:#170c04;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 3rem;}
+.hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:500px;height:300px;background:radial-gradient(ellipse,rgba(201,148,58,0.06) 0%,transparent 70%);pointer-events:none;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:0.5rem;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);max-width:520px;margin:0 auto;}
+main{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 1.5rem 5rem;}
+/* BOOK CARDS */
+.books-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-bottom:3rem;}
+.book-card{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;overflow:hidden;position:relative;transition:transform 0.25s,border-color 0.25s;display:flex;flex-direction:column;}
+.book-card::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;z-index:2;}
+.book-card::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;z-index:2;}
+.book-card:hover{transform:translateY(-6px);border-color:rgba(201,148,58,0.45);}
+/* Book cover illustration */
+.book-cover{height:220px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.book-cover-1{background:linear-gradient(135deg,#0a1628,#1a2a4a);}
+.book-cover-2{background:linear-gradient(135deg,#0f1a0a,#1a2a0f);}
+.book-cover-3{background:linear-gradient(135deg,#1a0a1a,#2a1028);}
+.book-cover-pattern{position:absolute;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.08) 1px,transparent 0);background-size:20px 20px;}
+.book-cover-glyph{font-family:'Noto Naskh Arabic',serif;font-size:4.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;z-index:1;position:relative;line-height:1;}
+.book-spine{position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(to right,rgba(0,0,0,0.3),transparent);}
+.book-badge{position:absolute;top:12px;right:12px;font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;background:rgba(201,148,58,0.15);border:1px solid rgba(201,148,58,0.3);color:var(--primary);padding:0.22rem 0.6rem;border-radius:2px;z-index:2;}
+.book-body{padding:1.5rem;flex:1;display:flex;flex-direction:column;}
+.book-num{font-family:'Cinzel',serif;font-size:0.65rem;color:var(--muted);letter-spacing:0.15em;text-transform:uppercase;margin-bottom:0.4rem;}
+.book-title-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.3rem;font-weight:700;color:var(--primary);direction:rtl;margin-bottom:0.2rem;}
+.book-title-en{font-family:'Cinzel',serif;font-size:1rem;color:var(--cream);font-weight:600;margin-bottom:0.75rem;}
+.book-stats{display:flex;gap:1rem;margin-bottom:0.85rem;flex-wrap:wrap;}
+.book-stat{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;display:flex;align-items:center;gap:0.3rem;}
+.book-desc{font-family:'Cormorant Garamond',serif;font-size:0.97rem;color:var(--muted);font-style:italic;line-height:1.65;flex:1;}
+.book-footer{margin-top:1.25rem;padding-top:1rem;border-top:1px solid rgba(201,148,58,0.08);display:flex;align-items:center;justify-content:space-between;}
+.book-lang{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
+.book-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.45rem 0.9rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:opacity 0.2s;}
+.book-cta:hover{opacity:0.9;}
+.book-cta-outline{background:transparent;color:var(--primary);border:1px solid rgba(201,148,58,0.35);}
+/* COMING SOON */
+.coming-section{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:2rem;text-align:center;margin-bottom:2rem;position:relative;}
+.coming-section::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.4;}
+.cs-title{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--primary);font-weight:600;margin-bottom:0.75rem;letter-spacing:0.08em;}
+.cs-items{display:flex;justify-content:center;flex-wrap:wrap;gap:0.75rem;}
+.cs-item{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);font-style:italic;background:var(--surface-low);border:1px solid var(--border);padding:0.5rem 1rem;border-radius:3px;}
+footer{position:relative;z-index:1;padding:2rem 2rem 1rem;border-top:1px solid var(--border);background:var(--surface-lowest);}
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html" class="active">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">Authenticated · Bilingual · Free</p>
+  <h1>Islamic Books</h1>
+  <p class="h1-ar">الكتب الإسلامية</p>
+  <p class="sub">Published Islamic reference books by Bayt al-Hikmah. Every story, hadith and dua sourced from classical scholarship. Bilingual Arabic and English.</p>
+</div>
+
+<main>
+  <div class="books-grid">
+
+    <!-- BOOK 1: Quranic Stories -->
+    <div class="book-card">
+      <div class="book-cover book-cover-1">
+        <div class="book-cover-pattern"></div>
+        <div class="book-spine"></div>
+        <div class="book-badge">Published</div>
+        <div class="book-cover-glyph">قصص</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">Book One</div>
+        <div class="book-title-ar">موسوعة قصص القرآن الكريم</div>
+        <div class="book-title-en">Quranic Stories Encyclopedia</div>
+        <div class="book-stats">
+          <span class="book-stat">📖 46 Stories</span>
+          <span class="book-stat">🌐 Bilingual</span>
+          <span class="book-stat">✅ Authenticated</span>
+        </div>
+        <p class="book-desc">A comprehensive encyclopedia of all 46 Quranic stories — from Adam عليه السلام to the stories of the People of the Cave, Dhul-Qarnayn, and Maryam. Every narrative sourced from Quran, Ibn Kathir, al-Tabari, and al-Wahidi. Clear Arabic and English, suitable for all ages.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="mailto:baytalhikmahm@gmail.com?subject=Quranic%20Stories%20Encyclopedia" class="book-cta">Get a Copy</a>
+          <a href="quran.html" class="book-cta" style="background:transparent;color:var(--primary);border:1px solid rgba(201,148,58,0.35);">Read Quran Online →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOK 2: Hadith Collection -->
+    <div class="book-card">
+      <div class="book-cover book-cover-2">
+        <div class="book-cover-pattern"></div>
+        <div class="book-spine"></div>
+        <div class="book-badge">Published</div>
+        <div class="book-cover-glyph">حديث</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">Book Two</div>
+        <div class="book-title-ar">مجموعة الأحاديث النبوية</div>
+        <div class="book-title-en">Hadith Collection</div>
+        <div class="book-stats">
+          <span class="book-stat">📜 Sahih & Hasan only</span>
+          <span class="book-stat">🌐 Bilingual</span>
+          <span class="book-stat">🏷️ Graded</span>
+        </div>
+        <p class="book-desc">A curated collection of authenticated hadiths covering worship, character, daily life, and Islamic ethics. Every hadith graded Sahih or Hasan. Sources cited from Bukhari, Muslim, Tirmidhi, Abu Dawud, and Ibn Majah. No weak or fabricated narrations included.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="mailto:baytalhikmahm@gmail.com?subject=Hadith%20Collection" class="book-cta">Get a Copy</a>
+          <span class="book-cta" style="background:transparent;color:var(--muted);border:1px solid var(--border);cursor:default;opacity:0.6;font-size:0.65rem;">Online Reader Coming Soon</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOK 3: Duas Collection -->
+    <div class="book-card">
+      <div class="book-cover book-cover-3">
+        <div class="book-cover-pattern"></div>
+        <div class="book-spine"></div>
+        <div class="book-badge">Published</div>
+        <div class="book-cover-glyph">دعاء</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">Book Three</div>
+        <div class="book-title-ar">مجموعة الأدعية المأثورة</div>
+        <div class="book-title-en">Duas Collection</div>
+        <div class="book-stats">
+          <span class="book-stat">🤲 From Quran & Sunnah</span>
+          <span class="book-stat">🌐 Bilingual</span>
+          <span class="book-stat">✅ With sources</span>
+        </div>
+        <p class="book-desc">A comprehensive collection of duas for every occasion — morning and evening adhkar, prayer duas, travel duas, and special supplications. Drawn from Hisn al-Muslim and authenticated sources. Every dua with Arabic text, English translation, and full hadith reference.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="mailto:baytalhikmahm@gmail.com?subject=Duas%20Collection" class="book-cta">Get a Copy</a>
+          <a href="dua.html" class="book-cta" style="background:transparent;color:var(--primary);border:1px solid rgba(201,148,58,0.35);">Read Online →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- AUTHENTIC HADITH COLLECTIONS -->
+  <p class="lbl" style="text-align:center;margin:3rem 0 0.5rem;">The Six Canonical Collections</p>
+  <h2 style="font-family:'Cinzel',serif;font-size:clamp(1.4rem,3vw,1.8rem);color:var(--cream);font-weight:700;text-align:center;margin-bottom:0.3rem;">Kutub al-Sittah · الكتب الستة</h2>
+  <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);text-align:center;max-width:520px;margin:0 auto 2rem;line-height:1.7;">The six most authentic collections of hadith, accepted by Sunni scholars as the primary sources after the Quran. All available for free on sunnah.com.</p>
+
+  <div class="books-grid">
+
+    <!-- Sahih al-Bukhari -->
+    <div class="book-card">
+      <div class="book-cover book-cover-1">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-badge">Sahih</div>
+        <div class="book-cover-glyph">صحيح</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">الكتاب الأول</div>
+        <div class="book-title-ar">صحيح البخاري</div>
+        <div class="book-title-en">Sahih al-Bukhari</div>
+        <div class="book-stats"><span class="book-stat">📜 7,563 Hadiths</span><span class="book-stat">✅ All Sahih</span></div>
+        <p class="book-desc">Compiled by Imam Muhammad ibn Ismail al-Bukhari (194–256 AH). Considered the most authentic book after the Quran. Every hadith rigorously authenticated through isnad criticism.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="https://sunnah.com/bukhari" target="_blank" rel="noopener" class="book-cta">Read Free →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sahih Muslim -->
+    <div class="book-card">
+      <div class="book-cover book-cover-2">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-badge">Sahih</div>
+        <div class="book-cover-glyph">مسلم</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">الكتاب الثاني</div>
+        <div class="book-title-ar">صحيح مسلم</div>
+        <div class="book-title-en">Sahih Muslim</div>
+        <div class="book-stats"><span class="book-stat">📜 7,453 Hadiths</span><span class="book-stat">✅ All Sahih</span></div>
+        <p class="book-desc">Compiled by Imam Muslim ibn al-Hajjaj (206–261 AH). The second most authentic collection. Known for its superior arrangement by topic and consistent chain methodology.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="https://sunnah.com/muslim" target="_blank" rel="noopener" class="book-cta">Read Free →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sunan Abu Dawud -->
+    <div class="book-card">
+      <div class="book-cover book-cover-3">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-badge">Sunan</div>
+        <div class="book-cover-glyph">سنن</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">الكتاب الثالث</div>
+        <div class="book-title-ar">سنن أبي داود</div>
+        <div class="book-title-en">Sunan Abu Dawud</div>
+        <div class="book-stats"><span class="book-stat">📜 5,274 Hadiths</span><span class="book-stat">🏷️ Graded</span></div>
+        <p class="book-desc">Compiled by Imam Abu Dawud al-Sijistani (202–275 AH). Focused on hadiths related to Islamic jurisprudence (fiqh). Contains Sahih, Hasan, and some weak hadiths clearly marked.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="https://sunnah.com/abudawud" target="_blank" rel="noopener" class="book-cta">Read Free →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jami al-Tirmidhi -->
+    <div class="book-card">
+      <div class="book-cover book-cover-1">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-badge">Jami</div>
+        <div class="book-cover-glyph">جامع</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">الكتاب الرابع</div>
+        <div class="book-title-ar">جامع الترمذي</div>
+        <div class="book-title-en">Jami al-Tirmidhi</div>
+        <div class="book-stats"><span class="book-stat">📜 3,956 Hadiths</span><span class="book-stat">🏷️ Graded</span></div>
+        <p class="book-desc">Compiled by Imam al-Tirmidhi (209–279 AH). Known for grading every hadith (Sahih, Hasan, Da'if) and noting scholarly disagreements. A uniquely valuable source for hadith grading methodology.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="https://sunnah.com/tirmidhi" target="_blank" rel="noopener" class="book-cta">Read Free →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sunan al-Nasai -->
+    <div class="book-card">
+      <div class="book-cover book-cover-2">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-badge">Sunan</div>
+        <div class="book-cover-glyph">نسائي</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">الكتاب الخامس</div>
+        <div class="book-title-ar">سنن النسائي</div>
+        <div class="book-title-en">Sunan al-Nasai</div>
+        <div class="book-stats"><span class="book-stat">📜 5,761 Hadiths</span><span class="book-stat">🏷️ Graded</span></div>
+        <p class="book-desc">Compiled by Imam al-Nasai (215–303 AH). Known for applying the strictest standards of narrator criticism among the Sunan collections. Many scholars rank it third in authenticity after Bukhari and Muslim.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="https://sunnah.com/nasai" target="_blank" rel="noopener" class="book-cta">Read Free →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sunan Ibn Majah -->
+    <div class="book-card">
+      <div class="book-cover book-cover-3">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-badge">Sunan</div>
+        <div class="book-cover-glyph">ماجه</div>
+      </div>
+      <div class="book-body">
+        <div class="book-num">الكتاب السادس</div>
+        <div class="book-title-ar">سنن ابن ماجه</div>
+        <div class="book-title-en">Sunan Ibn Majah</div>
+        <div class="book-stats"><span class="book-stat">📜 4,341 Hadiths</span><span class="book-stat">🏷️ Graded</span></div>
+        <p class="book-desc">Compiled by Imam Ibn Majah (209–273 AH). The sixth book of the canonical collections. Contains unique hadiths not found in the other five books, with a focus on practical rulings.</p>
+        <div class="book-footer">
+          <span class="book-lang">🇸🇦 Arabic · 🇬🇧 English</span>
+          <a href="https://sunnah.com/ibnmajah" target="_blank" rel="noopener" class="book-cta">Read Free →</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- OTHER IMPORTANT COLLECTIONS -->
+  <p class="lbl" style="text-align:center;margin:3rem 0 0.5rem;">Other Authenticated Collections</p>
+  <div class="books-grid" style="margin-bottom:2rem;">
+
+    <!-- Muwatta Malik -->
+    <div class="book-card">
+      <div class="book-cover" style="background:linear-gradient(135deg,#1a1a0a,#2a2a18);height:160px;">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-cover-glyph" style="font-size:3rem;">موطأ</div>
+      </div>
+      <div class="book-body">
+        <div class="book-title-ar">موطأ مالك</div>
+        <div class="book-title-en">Muwatta Imam Malik</div>
+        <div class="book-stats"><span class="book-stat">📜 1,832 Narrations</span></div>
+        <p class="book-desc">The earliest written collection of hadith and fiqh. Compiled by Imam Malik ibn Anas (93–179 AH), the Imam of Madinah.</p>
+        <div class="book-footer"><span class="book-lang">🇸🇦 🇬🇧</span><a href="https://sunnah.com/malik" target="_blank" rel="noopener" class="book-cta">Read Free →</a></div>
+      </div>
+    </div>
+
+    <!-- Musnad Ahmad -->
+    <div class="book-card">
+      <div class="book-cover" style="background:linear-gradient(135deg,#0a1a2a,#18283a);height:160px;">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-cover-glyph" style="font-size:3rem;">مسند</div>
+      </div>
+      <div class="book-body">
+        <div class="book-title-ar">مسند أحمد</div>
+        <div class="book-title-en">Musnad Ahmad ibn Hanbal</div>
+        <div class="book-stats"><span class="book-stat">📜 27,647 Hadiths</span></div>
+        <p class="book-desc">The largest classical hadith collection. Compiled by Imam Ahmad ibn Hanbal (164–241 AH). Organised by narrator (Companion) rather than by topic.</p>
+        <div class="book-footer"><span class="book-lang">🇸🇦 🇬🇧</span><a href="https://sunnah.com/ahmad" target="_blank" rel="noopener" class="book-cta">Read Free →</a></div>
+      </div>
+    </div>
+
+    <!-- Riyad al-Salihin -->
+    <div class="book-card">
+      <div class="book-cover" style="background:linear-gradient(135deg,#0a2a1a,#183a28);height:160px;">
+        <div class="book-cover-pattern"></div><div class="book-spine"></div>
+        <div class="book-cover-glyph" style="font-size:3rem;">رياض</div>
+      </div>
+      <div class="book-body">
+        <div class="book-title-ar">رياض الصالحين</div>
+        <div class="book-title-en">Riyad al-Salihin</div>
+        <div class="book-stats"><span class="book-stat">📜 1,896 Hadiths</span><span class="book-stat">✅ Sahih/Hasan</span></div>
+        <p class="book-desc">By Imam al-Nawawi (631–676 AH). A curated selection of authenticated hadiths covering virtues, manners, and daily life. The most popular hadith book for general Muslims.</p>
+        <div class="book-footer"><span class="book-lang">🇸🇦 🇬🇧</span><a href="https://sunnah.com/riyadussalihin" target="_blank" rel="noopener" class="book-cta">Read Free →</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;text-align:center;margin-bottom:2rem;">
+    <div style="font-family:'Cinzel',serif;font-size:0.85rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;">All Collections Available Free</div>
+    <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:1rem;">Every hadith collection above is available for free on sunnah.com — the world's premier hadith database with full Arabic text, English translation, and hadith grading.</p>
+    <a href="https://sunnah.com" target="_blank" rel="noopener" style="display:inline-block;padding:0.65rem 1.5rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:3px;text-decoration:none;">Visit sunnah.com →</a>
+  </div>
+
+  <!-- COMING SOON -->
+  <div class="coming-section">
+    <div class="cs-title">Coming Soon</div>
+    <div class="cs-items">
+      <span class="cs-item">📕 Names of Allah — Al-Asma al-Husna</span>
+      <span class="cs-item">📗 Islamic Ethics & Manners</span>
+      <span class="cs-item">📘 Stories of the Companions</span>
+    </div>
+  </div>
+
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);text-align:center;max-width:520px;margin:0 auto;line-height:1.7;">Bulk orders available for Islamic schools, mosques, and Islamic centres. Contact us for wholesale pricing.</p>
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="challenges.html">Challenges</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div clas

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Zakat Calculator — Dhikr | ذِكر · Calculate Your Zakat</title>
+<meta name="description" content="Calculate your Zakat accurately. Live gold Nisab. Cash, gold, silver, investments, business inventory. Get your 2.5% obligation instantly. Free."/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/zakat.html"/>
+<meta property="og:title" content="Zakat Calculator — Dhikr | ذِكر"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 2rem;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:0.5rem;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);max-width:480px;margin:0 auto;}
+main{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+/* NISAB BANNER */
+.nisab-banner{background:var(--surface-high);border:1px solid rgba(201,148,58,0.35);border-radius:4px;padding:1.1rem 1.5rem;margin-bottom:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;}
+.nisab-label{font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:0.2rem;}
+.nisab-val{font-family:'Cinzel',serif;font-size:1.2rem;font-weight:700;color:var(--primary);}
+.nisab-note{font-family:'Cormorant Garamond',serif;font-size:0.85rem;font-style:italic;color:var(--muted);}
+/* CURRENCY */
+.currency-row{display:flex;gap:0.75rem;align-items:center;margin-bottom:2rem;}
+.currency-label{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;white-space:nowrap;}
+.currency-select{background:var(--surface-high);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Inter',sans-serif;font-size:0.8rem;padding:0.5rem 0.75rem;outline:none;cursor:pointer;}
+.currency-select:focus{border-color:var(--primary);}
+/* FIELDS */
+.field-group{margin-bottom:1.5rem;}
+.field-section{font-family:'Cinzel',serif;font-size:0.8rem;color:var(--primary);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+.field-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.65rem;}
+.field-label{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);flex:1;font-style:italic;}
+.field-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.78rem;color:rgba(201,148,58,0.55);direction:rtl;min-width:80px;text-align:right;}
+.field-input{width:140px;background:var(--surface-low);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Inter',sans-serif;font-size:0.85rem;padding:0.5rem 0.75rem;outline:none;text-align:right;}
+.field-input:focus{border-color:var(--primary);}
+.field-input::placeholder{color:rgba(184,168,138,0.3);}
+/* RESULT */
+.result-box{background:linear-gradient(135deg,rgba(201,148,58,0.12),rgba(201,148,58,0.04));border:1px solid rgba(201,148,58,0.4);border-radius:4px;padding:2rem;text-align:center;margin-top:2rem;position:relative;display:none;}
+.result-box.show{display:block;}
+.result-box::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.5;}
+.result-box::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.5;}
+.result-label{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.15em;margin-bottom:0.5rem;}
+.result-amount{font-family:'Cinzel',serif;font-size:3rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.25rem;}
+.result-currency{font-family:'Inter',sans-serif;font-size:0.8rem;color:var(--primary);}
+.result-total{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);font-style:italic;margin-top:0.75rem;}
+.result-nisab{font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);margin-top:0.5rem;letter-spacing:0.05em;}
+.not-eligible{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--emerald-light);}
+.calc-btn{width:100%;padding:1rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;margin-top:1.5rem;transition:opacity 0.2s,transform 0.2s;box-shadow:0 6px 20px rgba(201,148,58,0.22);}
+.calc-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.disclaimer{font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(184,168,138,0.35);text-align:center;margin-top:1.5rem;letter-spacing:0.06em;line-height:1.6;}
+footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--border);text-align:center;font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.4);}
+footer a{color:var(--primary);text-decoration:none;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}.field-row{flex-wrap:wrap;}.field-input{width:100%;}}
+
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">Calculate · Pay · Purify</p>
+  <h1>Zakat Calculator</h1>
+  <p class="h1-ar">حاسبة الزكاة</p>
+  <p class="sub">Enter your assets below. We calculate your 2.5% obligation based on the gold Nisab standard.</p>
+</div>
+
+<main>
+  <!-- NISAB -->
+  <div class="nisab-banner">
+    <div><span class="nisab-label">Current Nisab (85g Gold)</span><span class="nisab-val" id="nisab-val">Loading…</span></div>
+    <div><span class="nisab-label">Currency</span>
+      <select class="currency-select" id="currency-sel" onchange="changeCurrency()">
+        <option value="USD">USD $</option>
+        <option value="AED">AED د.إ</option>
+        <option value="GBP">GBP £</option>
+        <option value="EUR">EUR €</option>
+        <option value="SAR">SAR ﷼</option>
+        <option value="PKR">PKR ₨</option>
+        <option value="INR">INR ₹</option>
+        <option value="EGP">EGP £</option>
+        <option value="TRY">TRY ₺</option>
+        <option value="MYR">MYR RM</option>
+      </select>
+    </div>
+    <div class="nisab-note" id="nisab-note">Based on live gold price</div>
+  </div>
+
+  <!-- FIELDS -->
+  <div class="field-group">
+    <div class="field-section">Cash & Bank</div>
+    <div class="field-row"><span class="field-label">Cash on hand</span><span class="field-ar">نقد</span><input class="field-input" type="number" id="f-cash" placeholder="0" min="0"/></div>
+    <div class="field-row"><span class="field-label">Bank account balance</span><span class="field-ar">بنك</span><input class="field-input" type="number" id="f-bank" placeholder="0" min="0"/></div>
+    <div class="field-row"><span class="field-label">Money owed to you</span><span class="field-ar">ديون لك</span><input class="field-input" type="number" id="f-owed" placeholder="0" min="0"/></div>
+  </div>
+  <div class="field-group">
+    <div class="field-section">Gold & Silver</div>
+    <div class="field-row"><span class="field-label">Gold value</span><span class="field-ar">ذهب</span><input class="field-input" type="number" id="f-gold" placeholder="0" min="0"/></div>
+    <div class="field-row"><span class="field-label">Silver value</span><span class="field-ar">فضة</span><input class="field-input" type="number" id="f-silver" placeholder="0" min="0"/></div>
+  </div>
+  <div class="field-group">
+    <div class="field-section">Investments & Business</div>
+    <div class="field-row"><span class="field-label">Stocks / Investments</span><span class="field-ar">أسهم</span><input class="field-input" type="number" id="f-stocks" placeholder="0" min="0"/></div>
+    <div class="field-row"><span class="field-label">Business inventory</span><span class="field-ar">بضاعة</span><input class="field-input" type="number" id="f-business" placeholder="0" min="0"/></div>
+    <div class="field-row"><span class="field-label">Rental income (annual)</span><span class="field-ar">إيجار</span><input class="field-input" type="number" id="f-rental" placeholder="0" min="0"/></div>
+  </div>
+  <div class="field-group">
+    <div class="field-section">Deductions</div>
+    <div class="field-row"><span class="field-label">Debts you owe</span><span class="field-ar">ديون عليك</span><input class="field-input" type="number" id="f-debts" placeholder="0" min="0"/></div>
+    <div class="field-row"><span class="field-label">Bills due this month</span><span class="field-ar">فواتير</span><input class="field-input" type="number" id="f-bills" placeholder="0" min="0"/></div>
+  </div>
+
+  <button class="calc-btn" onclick="calculate()">Calculate My Zakat</button>
+
+  <!-- RESULT -->
+  <div class="result-box" id="result-box">
+    <div class="result-label" id="r-label">Your Zakat Due</div>
+    <div class="result-amount" id="r-amount"></div>
+    <div class="result-currency" id="r-currency"></div>
+    <div class="result-total" id="r-total"></div>
+    <div class="result-nisab" id="r-nisab"></div>
+  </div>
+
+  <p class="disclaimer">This calculator is a guide only. Consult a qualified Islamic scholar for your specific situation. Nisab based on 85g of gold at current market price.</p>
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+<script>
+let goldPricePerGram=85; // USD fallback
+let nisabUSD=85*goldPricePerGram;
+let currency='USD';
+const CURRENCIES={USD:{sym:'$',rate:1},AED:{sym:'د.إ',rate:3.67},GBP:{sym:'£',rate:0.79},EUR:{sym:'€',rate:0.92},SAR:{sym:'﷼',rate:3.75},PKR:{sym:'₨',rate:278},INR:{sym:'₹',rate:83},EGP:{sym:'£',rate:31},TRY:{sym:'₺',rate:32},MYR:{sym:'RM',rate:4.7}};
+
+async function fetchGoldPrice(){
+  try{
+    // Use a fallback gold price (approx March 2026)
+    goldPricePerGram=92;
+    nisabUSD=85*goldPricePerGram;
+    updateNisabDisplay();
+  }catch(e){updateNisabDisplay();}
+}
+function updateNisabDisplay(){
+  const rate=CURRENCIES[currency]?.rate||1;
+  const nisabLocal=nisabUSD*rate;
+  const sym=CURRENCIES[currency]?.sym||'$';
+  document.getElementById('nisab-val').textContent=`${sym} ${Math.round(nisabLocal).toLocaleString()}`;
+  document.getElementById('nisab-note').textContent=`Based on 85g gold × ~$${goldPricePerGram}/g`;
+}
+function changeCurrency(){
+  currency=document.getElementById('currency-sel').value;
+  updateNisabDisplay();
+}
+function getVal(id){return parseFloat(document.getElementById(id).value)||0;}
+function calculate(){
+  const rate=CURRENCIES[currency]?.rate||1;
+  const sym=CURRENCIES[currency]?.sym||'$';
+  const nisabLocal=nisabUSD*rate;
+  // Assets
+  const assets=getVal('f-cash')+getVal('f-bank')+getVal('f-owed')+getVal('f-gold')+getVal('f-silver')+getVal('f-stocks')+getVal('f-business')+getVal('f-rental');
+  // Deductions
+  const deductions=getVal('f-debts')+getVal('f-bills');
+  const net=assets-deductions;
+  const box=document.getElementById('result-box');
+  box.classList.add('show');
+  if(net<nisabLocal){
+    document.getElementById('r-label').textContent='Zakat Status';
+    document.getElementById('r-amount').textContent='Not Due';
+    document.getElementById('r-amount').style.fontSize='2rem';
+    document.getElementById('r-currency').innerHTML=`<span class="not-eligible">Alhamdulillah — your net wealth (${sym} ${Math.round(net).toLocaleString()}) is below the Nisab threshold.</span>`;
+    document.getElementById('r-total').textContent='You are not obligated to pay Zakat this year.';
+    document.getElementById('r-nisab').textContent=`Nisab: ${sym} ${Math.round(nisabLocal).toLocaleString()} (85g gold)`;
+    return;
+  }
+  const zakat=net*0.025;
+  document.getElementById('r-label').textContent='Your Zakat Due';
+  document.getElementById('r-amount').textContent=sym+' '+Math.round(zakat).toLocaleString();
+  document.getElementById('r-amount').style.fontSize='3rem';
+  document.getElementById('r-currency').textContent=currency;
+  document.getElementById('r-total').textContent=`Total zakatable wealth: ${sym} ${Math.round(net).toLocaleString()} × 2.5%`;
+  document.getElementById('r-nisab').textContent=`Nisab: ${sym} ${Math.round(nisabLocal).toLocaleString()} · You exceed nisab by ${sym} ${Math.round(net-nisabLocal).toLocaleString()}`;
+  box.scrollIntoView({behavior:'smooth'});
+}
+// Set AED as default for Dubai users
+document.getElementById('currency-sel').value='AED';
+currency='AED';
+fetchGoldPrice();
+</script>

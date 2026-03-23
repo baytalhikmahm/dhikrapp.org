@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- PRIMARY SEO -->
+<title>Dhikr | ذِكر — Free Islamic Companion App · Prayer Times, Quran, Tasbih</title>
+<meta name="description" content="Dhikr is a free Islamic companion app by Bayt al-Hikmah. Accurate prayer times for every country, full Quran with audio, Tasbih counter, 50,000+ authenticated hadiths, Qibla finder, Zakat calculator and more. Free forever."/>
+<meta name="keywords" content="Islamic app, prayer times, Quran app, Muslim app, Tasbih, Dhikr, أوقات الصلاة, القرآن الكريم, تسبيح, تطبيق إسلامي, free Muslim app, hadith app, Qibla direction, Zakat calculator, Islamic reminder, Bayt al-Hikmah, بيت الحكمة"/>
+<meta name="author" content="Bayt al-Hikmah"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/"/>
+
+<!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://dhikrapp.org/"/>
+<meta property="og:title" content="Dhikr | ذِكر — Free Islamic Companion App"/>
+<meta property="og:description" content="Prayer times, Quran, Tasbih, Hadith and more. Free for every Muslim, forever. By Bayt al-Hikmah."/>
+<meta property="og:image" content="https://dhikrapp.org/logo.svg"/>
+<meta property="og:image:alt" content="Dhikr app logo — open Quran with crescent moon"/>
+<meta property="og:site_name" content="Dhikr · ذِكر"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:locale:alternate" content="ar_AE"/>
+
+<!-- TWITTER / X CARD -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:url" content="https://dhikrapp.org/"/>
+<meta name="twitter:title" content="Dhikr | ذِكر — Free Islamic Companion App"/>
+<meta name="twitter:description" content="Prayer times, Quran, Tasbih, Hadith and more. Free for every Muslim, forever. By Bayt al-Hikmah."/>
+<meta name="twitter:image" content="https://dhikrapp.org/logo.svg"/>
+
+<!-- FAVICON -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="apple-touch-icon" href="logo.svg"/>
+
+<!-- STRUCTURED DATA (Google Rich Results) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Dhikr | ذِكر",
+  "alternateName": "ذِكر",
+  "description": "Free Islamic companion app with prayer times, Quran, Tasbih, Hadith library, Qibla finder and Zakat calculator.",
+  "url": "https://dhikrapp.org",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS, Android",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Bayt al-Hikmah",
+    "url": "https://dhikrapp.org/about.html"
+  },
+  "inLanguage": ["en", "ar", "ur", "id", "tr", "fr", "ms", "bn"]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --surface:#1d1107; --surface-low:#26190e; --surface-high:#36271b;
+  --surface-lowest:#170c04; --primary:#c9943a; --primary-light:#f7bc5e;
+  --primary-grad:linear-gradient(135deg,#c9943a 0%,#f7bc5e 100%);
+  --cream:#f0e8d6; --muted:#b8a88a; --emerald:#1a5c2a;
+  --emerald-light:#93d697; --border:rgba(201,148,58,0.18);
+  --shadow:0 20px 40px rgba(0,0,0,0.45);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',Georgia,serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+.arabic{font-family:'Noto Naskh Arabic',serif;direction:rtl;}
+.material-symbols-outlined{font-family:'Material Symbols Outlined';font-variation-settings:'FILL' 0,'wght' 300,'GRAD' 0,'opsz' 24;font-size:24px;line-height:1;vertical-align:middle;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(29,17,7,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.6rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.82rem;letter-spacing:0.25em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;align-items:center;gap:1.75rem;list-style:none;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.76rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.6rem 1.35rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:opacity 0.2s,transform 0.2s;}
+.nav-cta:hover{opacity:0.9;transform:translateY(-1px);}
+
+/* HERO */
+#hero{position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:8rem 2rem 5rem;z-index:1;overflow:hidden;}
+#hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(201,148,58,0.07) 0%,transparent 70%);pointer-events:none;}
+.hero-badge{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);border:1px solid rgba(201,148,58,0.35);padding:0.4rem 1.2rem;border-radius:2px;margin-bottom:2.5rem;display:inline-block;background:rgba(201,148,58,0.05);}
+.hero-logo-wrap{position:relative;width:160px;height:160px;display:flex;align-items:center;justify-content:center;margin:0 auto 2.5rem;}
+.ring{position:absolute;border-radius:50%;border:1px solid rgba(201,148,58,0.2);}
+.ring-1{width:160px;height:160px;}
+.ring-2{width:130px;height:130px;border-color:rgba(201,148,58,0.3);}
+.ring-3{width:100px;height:100px;background:radial-gradient(135deg,rgba(201,148,58,0.12),rgba(26,92,42,0.12));border-color:rgba(201,148,58,0.4);}
+.hero-glyph{font-family:'Noto Naskh Arabic',serif;font-size:3rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;z-index:2;position:relative;}
+.hero-name-ar{font-family:'Noto Naskh Arabic',serif;font-size:clamp(4rem,10vw,7rem);font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.3rem;direction:rtl;}
+.hero-name-en{font-family:'Cinzel',serif;font-size:clamp(1.2rem,3vw,1.8rem);letter-spacing:0.5em;color:var(--muted);text-transform:uppercase;margin-bottom:2rem;}
+.divider{width:80px;height:1px;background:var(--primary-grad);margin:0 auto 2rem;opacity:0.5;}
+.hero-tag-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;color:var(--cream);direction:rtl;margin-bottom:0.5rem;}
+.hero-tag-en{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--muted);margin-bottom:0.4rem;}
+.hero-feat{font-family:'Inter',sans-serif;font-size:0.7rem;color:rgba(201,148,58,0.6);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2rem;}
+.cs-badge{display:inline-flex;align-items:center;gap:0.5rem;font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--primary);border:1px solid rgba(201,148,58,0.45);padding:0.45rem 1.25rem;border-radius:2px;margin-bottom:1.25rem;background:rgba(201,148,58,0.06);animation:pulse-border 2.5s ease-in-out infinite;}
+.cs-dot{width:6px;height:6px;background:var(--primary);border-radius:50%;display:inline-block;animation:blink 1.4s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.2;}}
+@keyframes pulse-border{0%,100%{border-color:rgba(201,148,58,0.4);}50%{border-color:rgba(201,148,58,0.85);}}
+.free-pill{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--emerald-light);background:rgba(26,92,42,0.15);border:1px solid rgba(147,214,151,0.2);padding:0.5rem 1.5rem;border-radius:2px;margin-bottom:2rem;display:inline-block;}
+.hero-btns{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;}
+.btn-p{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 8px 24px rgba(201,148,58,0.25);}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(201,148,58,0.35);}
+.btn-s{display:inline-flex;align-items:center;gap:0.6rem;padding:0.9rem 2rem;background:transparent;color:var(--primary);font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;border:1px solid rgba(201,148,58,0.35);border-radius:3px;cursor:pointer;text-decoration:none;transition:background 0.2s,transform 0.2s;}
+.btn-s:hover{background:rgba(201,148,58,0.08);transform:translateY(-2px);}
+.scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.4rem;color:var(--muted);font-family:'Inter',sans-serif;font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;opacity:0.45;animation:bounce 2.5s ease-in-out infinite;}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0);}50%{transform:translateX(-50%) translateY(6px);}}
+
+/* PHONE MOCKUPS */
+.phones-section{position:relative;z-index:1;padding:5rem 2rem;display:flex;justify-content:center;align-items:flex-end;gap:2rem;flex-wrap:wrap;}
+.phone{width:220px;height:440px;border-radius:28px;border:1.5px solid rgba(201,148,58,0.3);background:var(--surface-low);overflow:hidden;box-shadow:0 32px 64px rgba(0,0,0,0.6);position:relative;}
+.phone.main{width:240px;height:480px;}
+.phone-side{opacity:0.65;transform:scale(0.88);margin-bottom:-2rem;}
+.ph-notch{width:80px;height:22px;background:var(--surface-lowest);border-radius:0 0 14px 14px;margin:0 auto 0.5rem;}
+.ph-screen{padding:0 0.75rem 0.75rem;}
+.ph-h{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);letter-spacing:0.1em;text-align:center;padding:0.75rem 0 0.35rem;text-transform:uppercase;}
+.ph-s{font-family:'Inter',sans-serif;font-size:0.44rem;color:var(--muted);text-align:center;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.6rem;}
+.ph-row{display:flex;align-items:center;justify-content:space-between;padding:0.28rem 0.5rem;border-radius:3px;margin-bottom:0.18rem;}
+.ph-row.cur{background:rgba(201,148,58,0.12);border-left:2px solid var(--primary);}
+.ph-en{font-family:'Inter',sans-serif;font-size:0.5rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.06em;}
+.ph-row.cur .ph-en{color:var(--primary);}
+.ph-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.62rem;color:var(--cream);}
+.ph-time{font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:600;color:var(--muted);}
+.ph-row.cur .ph-time{color:var(--primary);}
+.ph-verse-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.72rem;color:var(--cream);direction:rtl;text-align:right;line-height:1.9;padding:0.5rem;border:1px solid var(--border);border-radius:3px;margin-bottom:0.35rem;background:rgba(201,148,58,0.03);}
+.ph-verse-en{font-family:'Cormorant Garamond',serif;font-size:0.54rem;color:var(--muted);font-style:italic;padding:0 0.4rem;line-height:1.5;}
+.bead-wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;padding:0.5rem;}
+.bead{width:7px;height:7px;border-radius:50%;background:rgba(201,148,58,0.2);border:1px solid rgba(201,148,58,0.3);}
+.bead.done{background:var(--primary);border-color:var(--primary-light);}
+
+/* SECTION HELPERS */
+.sec-wrap{position:relative;z-index:1;}
+.sec-label{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);text-align:center;margin-bottom:0.75rem;}
+.sec-title{font-family:'Cinzel',serif;font-size:clamp(1.6rem,4vw,2.4rem);color:var(--cream);text-align:center;margin-bottom:0.5rem;font-weight:600;line-height:1.2;}
+.sec-title-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.1rem;color:var(--muted);text-align:center;direction:rtl;margin-bottom:2.75rem;}
+.sec-sub{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);text-align:center;max-width:540px;margin:0 auto 2.75rem;line-height:1.7;}
+
+/* LIVE PRAYER WIDGET */
+#prayer-widget{padding:5rem 2rem;}
+.widget-box{max-width:540px;margin:0 auto;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;}
+.widget-box::before{content:'';position:absolute;top:7px;left:7px;width:12px;height:12px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.5;}
+.widget-box::after{content:'';position:absolute;bottom:7px;right:7px;width:12px;height:12px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.5;}
+.widget-title{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--primary);text-align:center;margin-bottom:0.2rem;letter-spacing:0.1em;text-transform:uppercase;}
+.widget-sub{font-family:'Inter',sans-serif;font-size:0.63rem;color:var(--muted);text-align:center;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;}
+.pr-row{display:flex;align-items:center;justify-content:space-between;padding:0.55rem 0.7rem;border-radius:3px;margin-bottom:0.35rem;border:1px solid transparent;transition:all 0.3s;}
+.pr-row.cur{background:rgba(201,148,58,0.1);border-color:rgba(201,148,58,0.3);}
+.pr-names{display:flex;flex-direction:column;gap:2px;}
+.pr-en{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);}
+.pr-row.cur .pr-en{color:var(--primary);}
+.pr-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.8rem;color:var(--cream);}
+.pr-time{font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;color:var(--muted);}
+.pr-row.cur .pr-time{color:var(--primary);}
+.widget-loc{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(184,168,138,0.4);text-align:center;margin-top:1rem;letter-spacing:0.08em;}
+.widget-loading{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);text-align:center;padding:2rem 0;}
+
+/* FEATURES GRID */
+#features{padding:5rem 2rem;max-width:1100px;margin:0 auto;}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+.feat{background:var(--surface-high);padding:1.75rem;border-radius:4px;border:1px solid var(--border);position:relative;transition:transform 0.25s,border-color 0.25s;overflow:hidden;}
+.feat::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.feat::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;}
+.feat:hover{transform:translateY(-4px);border-color:rgba(201,148,58,0.4);}
+.feat-icon{width:42px;height:42px;background:rgba(201,148,58,0.1);border-radius:4px;display:flex;align-items:center;justify-content:center;margin-bottom:1.1rem;color:var(--primary);}
+.feat-en{font-family:'Cinzel',serif;font-size:0.93rem;color:var(--cream);margin-bottom:0.2rem;font-weight:600;}
+.feat-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.8rem;color:var(--primary);direction:rtl;margin-bottom:0.65rem;}
+.feat-desc{font-family:'Cormorant Garamond',serif;font-size:0.97rem;color:var(--muted);line-height:1.6;}
+.badge{font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.18rem 0.45rem;border-radius:2px;margin-left:0.4rem;vertical-align:middle;}
+.badge.web{background:rgba(26,92,42,0.3);color:var(--emerald-light);border:1px solid rgba(147,214,151,0.2);}
+.badge.app{background:rgba(201,148,58,0.1);color:var(--primary);border:1px solid rgba(201,148,58,0.2);}
+
+/* SYNC */
+#sync{padding:5rem 2rem;background:var(--surface-low);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sync-inner{max-width:900px;margin:0 auto;}
+.sync-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.5rem;margin-top:3rem;}
+.sync-step{background:var(--surface-high);padding:1.5rem;border-radius:4px;border:1px solid var(--border);text-align:center;}
+.sync-num{font-family:'Cinzel',serif;font-size:2rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.65rem;}
+.sync-step-t{font-family:'Cinzel',serif;font-size:0.82rem;color:var(--cream);margin-bottom:0.35rem;font-weight:600;}
+.sync-step-d{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.5;}
+
+/* THEMES */
+#themes{padding:5rem 2rem;background:var(--surface-low);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.themes-inner{max-width:680px;margin:0 auto;text-align:center;}
+.swatches{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2.5rem;}
+.swatch{width:64px;height:64px;border-radius:4px;border:1.5px solid rgba(201,148,58,0.2);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer;transition:transform 0.2s,border-color 0.2s;}
+.swatch:hover{transform:scale(1.1);border-color:rgba(201,148,58,0.5);}
+.swatch.on{border-color:var(--primary);box-shadow:0 0 16px rgba(201,148,58,0.25);}
+.sw-dot{width:20px;height:20px;border-radius:50%;}
+.sw-name{font-family:'Inter',sans-serif;font-size:0.47rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);}
+
+/* HONEST */
+#honest{padding:5rem 2rem;max-width:860px;margin:0 auto;}
+.honest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem;margin-top:3rem;}
+.h-card{background:var(--surface-high);padding:1.5rem;border-radius:4px;border:1px solid var(--border);}
+.h-icon{font-size:1.5rem;margin-bottom:0.65rem;}
+.h-title{font-family:'Cinzel',serif;font-size:0.82rem;color:var(--cream);margin-bottom:0.35rem;font-weight:600;}
+.h-desc{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.55;}
+
+/* STATS */
+#stats{padding:4rem 2rem;max-width:800px;margin:0 auto;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2rem;text-align:center;}
+.stat-v{font-family:'Cinzel',serif;font-size:2.2rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.35rem;}
+.stat-l{font-family:'Inter',sans-serif;font-size:0.68rem;text-transform:uppercase;letter-spacing:0.15em;color:var(--muted);}
+
+/* SOURCES */
+#sources{padding:4rem 2rem;background:var(--surface-low);border-top:1px solid var(--border);}
+.sources-inner{max-width:780px;margin:0 auto;text-align:center;}
+.src-tags{display:flex;flex-wrap:wrap;justify-content:center;gap:0.6rem;margin-top:2rem;}
+.src-tag{font-family:'Cinzel',serif;font-size:0.67rem;letter-spacing:0.07em;padding:0.42rem 0.85rem;border:1px solid rgba(201,148,58,0.2);border-radius:2px;color:var(--muted);background:rgba(201,148,58,0.04);transition:all 0.2s;cursor:default;}
+.src-tag:hover{border-color:rgba(201,148,58,0.5);color:var(--primary);}
+
+/* DOWNLOAD */
+#download{position:relative;z-index:1;padding:7rem 2rem;text-align:center;overflow:hidden;}
+#download::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:300px;background:radial-gradient(ellipse,rgba(201,148,58,0.05) 0%,transparent 70%);pointer-events:none;}
+.dl-inner{max-width:560px;margin:0 auto;}
+.dl-ar{font-family:'Noto Naskh Arabic',serif;font-size:2.2rem;font-weight:700;color:var(--cream);direction:rtl;margin-bottom:0.65rem;}
+.dl-en{font-family:'Cinzel',serif;font-size:1.65rem;color:var(--cream);margin-bottom:0.65rem;font-weight:600;}
+.dl-sub{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);margin-bottom:0.5rem;line-height:1.7;}
+.free-box{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.25rem 1.5rem;margin:1.5rem 0 2rem;position:relative;}
+.free-box::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.5;}
+.free-box::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.5;}
+.fr-row{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.7rem;text-align:left;}
+.fr-row:last-of-type{margin-bottom:0;}
+.fr-icon{font-size:1rem;min-width:22px;color:var(--primary);}
+.fr-t{font-family:'Cinzel',serif;font-size:0.8rem;color:var(--cream);font-weight:600;}
+.fr-d{font-family:'Cormorant Garamond',serif;font-size:0.92rem;color:var(--muted);font-style:italic;}
+.fr-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.93rem;color:var(--muted);direction:rtl;border-top:1px solid var(--border);padding-top:0.7rem;margin-top:0.7rem;}
+.wl-form{max-width:460px;margin:0 auto 1rem;}
+.wl-wrap{display:flex;border:1px solid rgba(201,148,58,0.35);border-radius:4px;overflow:hidden;background:var(--surface-high);transition:border-color 0.2s;}
+.wl-wrap:focus-within{border-color:var(--primary);box-shadow:0 0 0 3px rgba(201,148,58,0.1);}
+.wl-input{flex:1;background:transparent;border:none;outline:none;padding:0.85rem 1rem;color:var(--cream);font-family:'Inter',sans-serif;font-size:0.85rem;}
+.wl-input::placeholder{color:var(--muted);opacity:0.5;}
+.wl-btn{display:flex;align-items:center;gap:0.4rem;padding:0.85rem 1.15rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.76rem;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;border:none;cursor:pointer;white-space:nowrap;transition:opacity 0.2s;}
+.wl-btn:hover{opacity:0.9;}
+.wl-note{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(184,168,138,0.4);text-align:center;margin-top:0.55rem;}
+.wl-ok{max-width:460px;margin:0 auto;background:rgba(26,92,42,0.15);border:1px solid rgba(147,214,151,0.25);border-radius:4px;padding:1.25rem 1.5rem;display:none;align-items:center;gap:1rem;}
+.store-btns{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2rem;opacity:0.36;pointer-events:none;}
+.st-btn{display:inline-flex;align-items:center;gap:0.7rem;padding:0.82rem 1.55rem;border-radius:4px;text-decoration:none;}
+.st-apple{background:var(--surface-high);border:1px solid rgba(201,148,58,0.28);color:var(--cream);}
+.st-google{background:var(--primary-grad);color:#432c00;}
+.st-sub{font-family:'Inter',sans-serif;font-size:0.57rem;text-transform:uppercase;letter-spacing:0.08em;opacity:0.65;display:block;}
+.st-name{font-family:'Cinzel',serif;font-size:0.87rem;font-weight:700;display:block;}
+.store-note{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(184,168,138,0.3);margin-top:0.5rem;letter-spacing:0.08em;text-transform:uppercase;}
+
+/* FOOTER */
+footer{position:relative;z-index:1;padding:3rem 2rem 2rem;border-top:1px solid var(--border);background:var(--surface-lowest);}
+.footer-inner{max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
+.fb-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;font-weight:700;color:var(--primary);direction:rtl;display:block;}
+.fb-en{font-family:'Cinzel',serif;font-size:0.62rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.footer-links{display:flex;gap:1.5rem;list-style:none;flex-wrap:wrap;}
+.footer-links a{font-family:'Inter',sans-serif;font-size:0.72rem;color:var(--muted);text-decoration:none;letter-spacing:0.05em;transition:color 0.2s;}
+.footer-links a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+
+/* CHALLENGES */
+#challenges{padding:5rem 2rem;max-width:1000px;margin:0 auto;}
+.challenges-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:3rem;}
+.ch-card{background:var(--surface-high);padding:1.75rem;border-radius:4px;border:1px solid var(--border);position:relative;transition:transform 0.25s,border-color 0.25s;cursor:pointer;}
+.ch-card::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.ch-card::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;}
+.ch-card:hover{transform:translateY(-4px);border-color:rgba(201,148,58,0.45);}
+.ch-card.featured{border-color:rgba(201,148,58,0.5);background:linear-gradient(135deg,rgba(201,148,58,0.06),var(--surface-high));}
+.ch-badge-wrap{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;}
+.ch-type{font-family:'Inter',sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.22rem 0.55rem;border-radius:2px;}
+.ch-type.free{background:rgba(26,92,42,0.3);color:var(--emerald-light);border:1px solid rgba(147,214,151,0.2);}
+.ch-type.pro{background:rgba(201,148,58,0.15);color:var(--primary);border:1px solid rgba(201,148,58,0.3);}
+.ch-sponsor-tag{font-family:'Inter',sans-serif;font-size:0.55rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase;}
+.ch-days{font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.25rem;}
+.ch-title-en{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--cream);font-weight:600;margin-bottom:0.2rem;}
+.ch-title-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.85rem;color:var(--primary);direction:rtl;margin-bottom:0.75rem;}
+.ch-desc{font-family:'Cormorant Garamond',serif;font-size:0.97rem;color:var(--muted);font-style:italic;line-height:1.55;margin-bottom:1rem;}
+.ch-meta{display:flex;gap:1rem;flex-wrap:wrap;}
+.ch-meta-item{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;display:flex;align-items:center;gap:0.25rem;}
+.ch-join{display:flex;align-items:center;justify-content:space-between;margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--border);}
+.ch-join-btn{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;transition:opacity 0.2s;}
+.ch-join-btn:hover{opacity:0.9;}
+.ch-join-btn.outline{background:transparent;color:var(--primary);border:1px solid rgba(201,148,58,0.35);}
+.ch-users{font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);}
+
+/* SPONSORS */
+#sponsors{padding:5rem 2rem;background:var(--surface-low);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.sponsors-inner{max-width:900px;margin:0 auto;}
+.sponsor-strip{display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap;margin:2.5rem 0;}
+.sponsor-slot{width:180px;height:80px;border:1px dashed rgba(201,148,58,0.25);border-radius:4px;display:flex;align-items:center;justify-content:center;background:rgba(201,148,58,0.03);transition:all 0.2s;cursor:pointer;position:relative;}
+.sponsor-slot:hover{border-color:rgba(201,148,58,0.5);background:rgba(201,148,58,0.06);}
+.sponsor-slot.filled{border-style:solid;border-color:rgba(201,148,58,0.3);}
+.sponsor-slot-label{font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(201,148,58,0.4);letter-spacing:0.12em;text-transform:uppercase;text-align:center;padding:0.5rem;}
+.sponsor-slot-name{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--primary);text-align:center;}
+.sponsor-slot-sub{font-family:'Inter',sans-serif;font-size:0.55rem;color:var(--muted);text-align:center;margin-top:0.2rem;letter-spacing:0.08em;text-transform:uppercase;}
+.sponsor-cta{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem 2rem;margin-top:2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;position:relative;}
+.sponsor-cta::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.sponsor-cta::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;}
+.sponsor-cta-text{}
+.sct-title{font-family:'Cinzel',serif;font-size:1rem;color:var(--cream);font-weight:600;margin-bottom:0.3rem;}
+.sct-desc{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);font-style:italic;line-height:1.5;}
+.sct-btn{font-family:'Inter',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.7rem 1.5rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;white-space:nowrap;transition:opacity 0.2s,transform 0.2s;display:inline-block;}
+.sct-btn:hover{opacity:0.9;transform:translateY(-1px);}
+
+/* CHALLENGES */
+.ch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.5rem;margin-top:0;}
+.ch-card{background:var(--surface-high);padding:1.75rem;border-radius:4px;border:1px solid var(--border);position:relative;transition:transform 0.25s,border-color 0.25s;}
+.ch-card::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.ch-card::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;}
+.ch-card:hover{transform:translateY(-3px);border-color:rgba(201,148,58,0.4);}
+.ch-card.ch-featured{border-color:rgba(201,148,58,0.45);background:linear-gradient(160deg,rgba(201,148,58,0.05),var(--surface-high));}
+.ch-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.85rem;}
+.ch-days-num{font-family:'Cinzel',serif;font-size:2.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.ch-free-tag{font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.6rem;border-radius:2px;background:rgba(26,92,42,0.3);color:var(--emerald-light);border:1px solid rgba(147,214,151,0.2);}
+.ch-title-en{font-family:'Cinzel',serif;font-size:0.92rem;color:var(--cream);font-weight:600;margin-bottom:0.2rem;}
+.ch-title-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.82rem;color:var(--primary);direction:rtl;margin-bottom:0.65rem;}
+.ch-desc{font-family:'Cormorant Garamond',serif;font-size:0.97rem;color:var(--muted);font-style:italic;line-height:1.55;margin-bottom:0.85rem;}
+.ch-icons{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.1rem;}
+.ch-ic{font-family:'Inter',sans-serif;font-size:0.58rem;color:var(--muted);background:rgba(201,148,58,0.07);border:1px solid var(--border);padding:0.2rem 0.55rem;border-radius:2px;letter-spacing:0.05em;}
+.ch-footer{display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--border);padding-top:1rem;margin-top:auto;}
+.ch-btn{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:0.55rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;transition:opacity 0.2s,transform 0.2s;}
+.ch-btn:hover{opacity:0.9;transform:translateY(-1px);}
+.ch-btn.joined{background:rgba(26,92,42,0.3);color:var(--emerald-light);border:1px solid rgba(147,214,151,0.2);}
+.ch-count{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--primary);letter-spacing:0.06em;font-weight:600;}
+
+/* SPONSORS */
+.sp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin:2.5rem 0 2rem;}
+.sp-slot{border-radius:4px;border:1.5px dashed rgba(201,148,58,0.22);aspect-ratio:2.5/1;display:flex;align-items:center;justify-content:center;transition:all 0.2s;cursor:pointer;background:rgba(201,148,58,0.02);}
+.sp-slot.empty:hover{border-color:rgba(201,148,58,0.45);background:rgba(201,148,58,0.05);}
+.sp-slot-inner{text-align:center;}
+.sp-plus{font-family:'Cinzel',serif;font-size:1.5rem;color:rgba(201,148,58,0.3);line-height:1;margin-bottom:0.25rem;}
+.sp-slot-label{font-family:'Inter',sans-serif;font-size:0.62rem;font-weight:600;color:rgba(201,148,58,0.4);text-transform:uppercase;letter-spacing:0.1em;}
+.sp-slot-sub{font-family:'Inter',sans-serif;font-size:0.52rem;color:rgba(184,168,138,0.3);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.15rem;}
+.sp-cta{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.75rem 2rem;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;position:relative;}
+.sp-cta::before{content:'';position:absolute;top:7px;left:7px;width:12px;height:12px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.sp-cta::after{content:'';position:absolute;bottom:7px;right:7px;width:12px;height:12px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;}
+.sp-cta-title{font-family:'Cinzel',serif;font-size:1.05rem;color:var(--cream);font-weight:600;margin-bottom:0.5rem;}
+.sp-cta-desc{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);font-style:italic;line-height:1.6;max-width:520px;margin-bottom:1rem;}
+.sp-packages{display:flex;flex-wrap:wrap;gap:0.5rem;}
+.sp-pkg{background:rgba(201,148,58,0.07);border:1px solid var(--border);border-radius:3px;padding:0.35rem 0.75rem;display:flex;flex-direction:column;gap:1px;}
+.sp-pkg-name{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--cream);font-weight:600;}
+.sp-pkg-price{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--primary);letter-spacing:0.06em;}
+.sp-btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 1.5rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;text-decoration:none;transition:opacity 0.2s,transform 0.2s;white-space:nowrap;align-self:center;}
+.sp-btn:hover{opacity:0.9;transform:translateY(-1px);}
+
+/* SOCIAL LINKS */
+.social-link{display:flex;align-items:center;gap:0.85rem;text-decoration:none;padding:0.6rem 0.85rem;border-radius:4px;border:1px solid var(--border);background:var(--surface-high);transition:border-color 0.2s,transform 0.2s;min-width:260px;}
+.social-link:hover{border-color:rgba(201,148,58,0.4);transform:translateX(3px);}
+.social-icon-wrap{width:34px;height:34px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.social-text{flex:1;}
+.social-name{font-family:'Cinzel',serif;font-size:0.8rem;color:var(--cream);font-weight:600;display:block;}
+.social-handle{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);letter-spacing:0.05em;display:block;margin-top:1px;}
+.social-arrow{font-family:'Inter',sans-serif;font-size:0.9rem;color:rgba(201,148,58,0.4);}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:1rem 1.25rem;}
+  .nav-links{display:none;}
+  .phone-side{display:none;}
+  .sync-steps{grid-template-columns:1fr 1fr;}
+  .footer-inner{flex-direction:column;text-align:center;}
+  .footer-links{justify-content:center;}
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+.fu{animation:fadeUp 0.8s ease both;}
+.d1{animation-delay:0.1s;}.d2{animation-delay:0.22s;}.d3{animation-delay:0.36s;}.d4{animation-delay:0.5s;}.d5{animation-delay:0.65s;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <img src="logo.svg" alt="Dhikr logo" style="width:36px;height:36px;border-radius:50%;"/>
+    <span class="nav-logo-ar">ذِكر</span>
+    <span class="nav-logo-en">Dhikr</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="#download" class="nav-cta">Notify Me</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-badge fu">Bayt al-Hikmah · بيت الحكمة</div>
+  <div class="hero-logo-wrap fu d1">
+    <div class="ring ring-1"></div><div class="ring ring-2"></div><div class="ring ring-3"></div>
+    <span class="hero-glyph">ذ</span>
+  </div>
+  <h1 class="hero-name-ar fu d2">ذِكر</h1>
+  <p class="hero-name-en fu d2">DHIKR</p>
+  <div class="divider fu d3"></div>
+  <p class="hero-tag-ar fu d3">رفيقك الإسلامي الشامل</p>
+  <p class="hero-tag-en fu d3">Your Complete Islamic Companion</p>
+  <p class="hero-feat fu d3">Prayer · Quran · Tasbih · Hadith · Qibla · Zakat</p>
+  <div class="cs-badge fu d4"><span class="cs-dot"></span> App Coming Soon <span class="cs-dot"></span></div>
+  <div class="free-pill fu d4">✦ &nbsp; Free to Download · $0 Cost · Always &nbsp; ✦</div>
+  <div class="hero-btns fu d5">
+    <a href="#download" class="btn-p">
+      <span class="material-symbols-outlined" style="font-size:17px">notifications</span>
+      Notify Me at Launch
+    </a>
+    <a href="#prayer-widget" class="btn-s">
+      <span class="material-symbols-outlined" style="font-size:17px">mosque</span>
+      Today's Prayer Times
+    </a>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <span class="material-symbols-outlined" style="font-size:15px">keyboard_arrow_down</span>
+  </div>
+</section>
+
+<!-- PHONE MOCKUPS -->
+<div class="phones-section sec-wrap">
+  <div class="phone-side">
+    <div class="phone">
+      <div class="ph-notch"></div>
+      <div class="ph-screen">
+        <div class="ph-h">القرآن الكريم</div>
+        <div class="ph-s">Al-Fatiha · 1:1–3</div>
+        <div class="ph-verse-ar">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <div class="ph-verse-en">In the name of Allah, the Most Gracious, the Most Merciful</div><br/>
+        <div class="ph-verse-ar">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ</div>
+        <div class="ph-verse-en">All praise is due to Allah, Lord of all worlds</div><br/>
+        <div class="ph-verse-ar">الرَّحْمَٰنِ الرَّحِيمِ</div>
+        <div class="ph-verse-en">The Most Gracious, the Most Merciful</div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="phone main">
+      <div class="ph-notch"></div>
+      <div class="ph-screen">
+        <div class="ph-h">مواقيت الصلاة</div>
+        <div class="ph-s">Prayer Times · Dubai</div>
+        <div class="ph-row"><div><div class="ph-en">Fajr</div><div class="ph-ar">الفجر</div></div><div class="ph-time">04:52</div></div>
+        <div class="ph-row"><div><div class="ph-en">Sunrise</div><div class="ph-ar">الشروق</div></div><div class="ph-time">06:19</div></div>
+        <div class="ph-row cur"><div><div class="ph-en">Jumu'ah ★</div><div class="ph-ar">الجمعة</div></div><div class="ph-time">12:32</div></div>
+        <div style="padding:0.28rem 0.5rem;background:rgba(201,148,58,0.07);border-radius:3px;margin:0.15rem 0 0.3rem;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-family:'Inter',sans-serif;font-size:0.42rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;">🎙️ Khutba · GAIAE</span>
+          <span style="font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:700;color:var(--primary);">12:45 PM</span>
+        </div>
+        <div class="ph-row"><div><div class="ph-en">Asr</div><div class="ph-ar">العصر</div></div><div class="ph-time">15:54</div></div>
+        <div class="ph-row"><div><div class="ph-en">Maghrib</div><div class="ph-ar">المغرب</div></div><div class="ph-time">18:28</div></div>
+        <div class="ph-row"><div><div class="ph-en">Isha</div><div class="ph-ar">العشاء</div></div><div class="ph-time">19:57</div></div>
+        <div style="margin-top:0.55rem;font-family:'Inter',sans-serif;font-size:0.41rem;color:var(--muted);text-align:center;letter-spacing:0.07em;text-transform:uppercase;">IACAD Method · Auto GPS · UAE</div>
+      </div>
+    </div>
+  </div>
+  <div class="phone-side">
+    <div class="phone">
+      <div class="ph-notch"></div>
+      <div class="ph-screen">
+        <div class="ph-h">التسبيح</div>
+        <div class="ph-s">Tasbih Counter</div>
+        <div style="text-align:center;padding:0.7rem 0.5rem 0.2rem;">
+          <div style="font-family:'Noto Naskh Arabic',serif;font-size:1rem;color:var(--primary);direction:rtl;margin-bottom:0.35rem;">سُبْحَانَ اللَّهِ</div>
+          <div style="font-family:'Cinzel',serif;font-size:2rem;font-weight:700;color:var(--cream);line-height:1;">23</div>
+          <div style="font-family:'Inter',sans-serif;font-size:0.43rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.15em;">of 33</div>
+        </div>
+        <div class="bead-wrap">
+          <div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div><div class="bead done"></div>
+          <div class="bead"></div><div class="bead"></div><div class="bead"></div><div class="bead"></div><div class="bead"></div><div class="bead"></div><div class="bead"></div><div class="bead"></div><div class="bead"></div><div class="bead"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LIVE PRAYER TIMES -->
+<section id="prayer-widget" class="sec-wrap" style="padding:5rem 2rem;">
+  <p class="sec-label">Live Right Now — Works on Web</p>
+  <h2 class="sec-title">Today's Prayer Times</h2>
+  <p class="sec-title-ar">مواقيت الصلاة اليوم</p>
+  <div class="widget-box">
+    <div class="widget-title">مواقيت الصلاة</div>
+    <div class="widget-sub" id="wloc">Detecting your location…</div>
+    <div id="prayer-list"><div class="widget-loading">Calculating prayer times…</div></div>
+    <div class="widget-loc" id="wmethod"></div>
+  </div>
+  <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);text-align:center;margin-top:1.5rem;max-width:520px;margin-left:auto;margin-right:auto;">This exact feature is in the app — with notifications, countdown timer, Jumu'ah times, and offline support. No account needed.</p>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="sec-wrap" style="padding:5rem 2rem;max-width:1100px;margin:0 auto;">
+  <p class="sec-label">Everything Included</p>
+  <h2 class="sec-title">Every Feature. Zero Cost.</h2>
+  <p class="sec-title-ar" style="margin-bottom:0.5rem;">كل الميزات · بلا تكلفة</p>
+  <p class="sec-sub">Features marked <span class="badge web">Web ✓</span> work right now in your browser. <span class="badge app">App</span> features arrive with the app launch.</p>
+  <div class="feat-grid">
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">mosque</span></div><div class="feat-en">Prayer Times <span class="badge web">Web ✓</span></div><div class="feat-ar">مواقيت الصلاة</div><p class="feat-desc">Astronomically precise times using official Awqaf methods for every country. UAE Jumu'ah times update live from GAIAE decree. Offline after first load.</p></div>
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">auto_stories</span></div><div class="feat-en">Quran Reader <span class="badge app">App</span></div><div class="feat-ar">القرآن الكريم</div><p class="feat-desc">Full Uthmani script with English translation by Mufti Taqi Usmani. Audio by 20 Qaris. Hifz tracker. Works fully offline. Progress syncs across web and app.</p></div>
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">prayer_times</span></div><div class="feat-en">Tasbih Counter <span class="badge web">Web ✓</span></div><div class="feat-ar">عداد التسبيح</div><p class="feat-desc">Haptic bead counter with 3-set system. SubhanAllah · Alhamdulillah · Allahu Akbar. Count syncs to your account so you never lose your place between devices.</p></div>
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">menu_book</span></div><div class="feat-en">Hadith Library <span class="badge app">App</span></div><div class="feat-ar">مكتبة الحديث</div><p class="feat-desc">50,000+ hadiths from Bukhari, Muslim, Tirmidhi, Abu Dawud, Ibn Majah. Sahih and Hasan only. Every hadith graded, sourced, and verified. No fabricated hadiths.</p></div>
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">explore</span></div><div class="feat-en">Qibla Finder <span class="badge web">Web ✓</span></div><div class="feat-ar">اتجاه القبلة</div><p class="feat-desc">Real-time Qibla using exact Haversine formula and your GPS. Works on web and app. Shows bearing in degrees and distance to Makkah in km. No API needed.</p></div>
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">calculate</span></div><div class="feat-en">Zakat Calculator <span class="badge web">Web ✓</span></div><div class="feat-ar">حاسبة الزكاة</div><p class="feat-desc">Complete Nisab calculation with live gold price. Cash, gold, silver, investments, business inventory. Calculates your 2.5% obligation. Suggests trusted Islamic charities.</p></div>
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">calendar_month</span></div><div class="feat-en">Hijri Calendar <span class="badge web">Web ✓</span></div><div class="feat-ar">التقويم الهجري</div><p class="feat-desc">Full Hijri calendar with Islamic events, Ramadan dates, Laylat al-Qadr calculator, and moon sighting predictions per country. Pure math — works offline forever.</p></div>
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">location_on</span></div><div class="feat-en">Mosque Finder <span class="badge web">Web ✓</span></div><div class="feat-ar">أقرب المساجد</div><p class="feat-desc">Find mosques near you via OpenStreetMap. Name, distance, directions. Works worldwide — no API key, no cost, forever. UAE Iqama times shown where available.</p></div>
+    <div class="feat"><div class="feat-icon"><span class="material-symbols-outlined">sync</span></div><div class="feat-en">Cross-Device Sync <span class="badge app">App + Web</span></div><div class="feat-ar">المزامنة بين الأجهزة</div><p class="feat-desc">One free account. Start reading Quran on your laptop. Continue on your phone. Tasbih count, prayer history, bookmarks, and Quran progress all sync instantly.</p></div>
+  </div>
+</section>
+
+<!-- SYNC -->
+<section id="sync" class="sec-wrap">
+  <div class="sync-inner">
+    <p class="sec-label">One Account · All Devices</p>
+    <h2 class="sec-title" style="text-align:center;">Start on Web. Continue on App.</h2>
+    <p class="sec-title-ar">ابدأ على الويب · استمر على التطبيق</p>
+    <p class="sec-sub">No more losing Quran progress when you switch devices. One free account syncs everything — instantly and automatically.</p>
+    <div class="sync-steps">
+      <div class="sync-step"><div class="sync-num">١</div><div class="sync-step-t">Create Free Account</div><p class="sync-step-d">Sign up with email or Google. 10 seconds. Free forever.</p></div>
+      <div class="sync-step"><div class="sync-num">٢</div><div class="sync-step-t">Use on Web</div><p class="sync-step-d">Read Quran, count Tasbih, check prayer times. All saved.</p></div>
+      <div class="sync-step"><div class="sync-num">٣</div><div class="sync-step-t">Open the App</div><p class="sync-step-d">Log in on your phone. Everything is exactly where you left it.</p></div>
+      <div class="sync-step"><div class="sync-num">٤</div><div class="sync-step-t">Continue Seamlessly</div><p class="sync-step-d">Quran page, Tasbih count, bookmarks, prayer streak — all synced.</p></div>
+    </div>
+    <p style="font-family:'Inter',sans-serif;font-size:0.68rem;color:rgba(184,168,138,0.4);text-align:center;margin-top:2rem;letter-spacing:0.08em;text-transform:uppercase;">Powered by Supabase · End-to-end encrypted · Your data is yours · No tracking</p>
+  </div>
+</section>
+
+<!-- ── WORSHIP CHALLENGES ─────────────────────────────────────────── -->
+<!-- CHALLENGES HIDDEN FOR NOW -->
+<section id="challenges" style="display:none;">
+  <p class="sec-label">Join the Community · انضم إلى الأمة</p>
+  <h2 class="sec-title">Worship Challenges</h2>
+  <p class="sec-title-ar" style="margin-bottom:0.5rem;">تحديات العبادة</p>
+  <p class="sec-sub">Free challenges to help you build consistent worship habits. Track your own progress — honestly, privately, for the sake of Allah alone. No points. No prizes. No leaderboards.</p>
+
+  <!-- HIDDEN AD PLACEHOLDER — uncomment when ready
+  <div style="display:none;" id="challenge-ad-slot">
+    [Ad slot: appears between challenges header and grid — 728x90 leaderboard format]
+  </div>
+  -->
+
+  <div class="ch-grid">
+
+    <div class="ch-card">
+      <div class="ch-top"><div class="ch-days-num">30</div><span class="ch-free-tag">Free</span></div>
+      <div class="ch-title-en">Prayer Streak</div>
+      <div class="ch-title-ar">تحدي المحافظة على الصلاة</div>
+      <p class="ch-desc">Pray all 5 prayers on time, every day, for 30 days. Tick each prayer in the app. Miss a day — restart with fresh niyyah. The goal is consistency, not perfection.</p>
+      <div class="ch-icons">
+        <span class="ch-ic">🕌 5 prayers daily</span>
+        <span class="ch-ic">📅 30 days</span>
+        <span class="ch-ic">📱 Web + App</span>
+      </div>
+      <div class="ch-footer">
+        <button class="ch-btn" onclick="joinChallenge('prayer30')">Join Challenge</button>
+        <span class="ch-count" id="count-prayer30"></span>
+      </div>
+      <!-- HIDDEN SPONSOR SLOT — uncomment when sponsor confirmed
+      <div style="display:none;" class="ch-sponsor-badge">Supported by [Sponsor Name]</div>
+      -->
+    </div>
+
+    <div class="ch-card ch-featured">
+      <div class="ch-top"><div class="ch-days-num">40</div><span class="ch-free-tag">Free</span></div>
+      <div class="ch-title-en">Fajr on Time — 40 Days</div>
+      <div class="ch-title-ar">تحدي الفجر في وقته — ٤٠ يوماً</div>
+      <p class="ch-desc">40 days of waking for Fajr before sunrise. The Prophet ﷺ said the two rakats of Fajr are better than the world and everything in it. Just 40 mornings. Just you and Allah.</p>
+      <div class="ch-icons">
+        <span class="ch-ic">🌅 Before sunrise</span>
+        <span class="ch-ic">📅 40 days</span>
+        <span class="ch-ic">🔔 App notification</span>
+      </div>
+      <div class="ch-footer">
+        <button class="ch-btn" onclick="joinChallenge('fajr40')">Join Challenge</button>
+        <span class="ch-count" id="count-fajr40"></span>
+      </div>
+    </div>
+
+    <div class="ch-card">
+      <div class="ch-top"><div class="ch-days-num">21</div><span class="ch-free-tag">Free</span></div>
+      <div class="ch-title-en">Daily Adhkar — 21 Days</div>
+      <div class="ch-title-ar">تحدي الأذكار اليومية</div>
+      <p class="ch-desc">Morning and evening adhkar from Hisn al-Muslim, every day for 21 days — the time it takes to build a lasting habit. Authenticated duas only. No weak narrations.</p>
+      <div class="ch-icons">
+        <span class="ch-ic">🌅 Morning adhkar</span>
+        <span class="ch-ic">🌙 Evening adhkar</span>
+        <span class="ch-ic">📅 21 days</span>
+      </div>
+      <div class="ch-footer">
+        <button class="ch-btn" onclick="joinChallenge('adhkar21')">Join Challenge</button>
+        <span class="ch-count" id="count-adhkar21"></span>
+      </div>
+    </div>
+
+    <div class="ch-card">
+      <div class="ch-top"><div class="ch-days-num">10</div><span class="ch-free-tag">Free</span></div>
+      <div class="ch-title-en">Tahajjud — 10 Nights</div>
+      <div class="ch-title-ar">تحدي قيام الليل</div>
+      <p class="ch-desc">Pray Tahajjud — even just 2 rakats — in the last third of the night, for 10 consecutive nights. The app shows the exact time for your location, every night.</p>
+      <div class="ch-icons">
+        <span class="ch-ic">🌌 Last third of night</span>
+        <span class="ch-ic">🙏 Minimum 2 rakats</span>
+        <span class="ch-ic">📅 10 nights</span>
+      </div>
+      <div class="ch-footer">
+        <button class="ch-btn" onclick="joinChallenge('tahajjud10')">Join Challenge</button>
+        <span class="ch-count" id="count-tahajjud10"></span>
+      </div>
+    </div>
+
+    <div class="ch-card">
+      <div class="ch-top"><div class="ch-days-num">30</div><span class="ch-free-tag">Free</span></div>
+      <div class="ch-title-en">Daily Sadaqah — 30 Days</div>
+      <div class="ch-title-ar">تحدي الصدقة اليومية</div>
+      <p class="ch-desc">Give sadaqah every single day for 30 days. A smile, a kind word, helping someone, or any amount of money. Every good deed counts. Log it. Track your streak.</p>
+      <div class="ch-icons">
+        <span class="ch-ic">🤲 Any sadaqah</span>
+        <span class="ch-ic">📅 30 days</span>
+        <span class="ch-ic">💛 Habit building</span>
+      </div>
+      <div class="ch-footer">
+        <button class="ch-btn" onclick="joinChallenge('sadaqah30')">Join Challenge</button>
+        <span class="ch-count" id="count-sadaqah30"></span>
+      </div>
+    </div>
+
+    <div class="ch-card ch-featured">
+      <div class="ch-top"><div class="ch-days-num">30</div><span class="ch-free-tag" style="background:rgba(26,92,42,0.3);color:var(--emerald-light);border-color:rgba(147,214,151,0.2);">Ramadan</span></div>
+      <div class="ch-title-en">Ramadan Complete</div>
+      <div class="ch-title-ar">تحدي رمضان الكامل</div>
+      <p class="ch-desc">All 5 prayers · Morning and evening adhkar · At least 1 act of sadaqah — every day of Ramadan. The complete ibadah package for the blessed month.</p>
+      <div class="ch-icons">
+        <span class="ch-ic">🌙 Ramadan only</span>
+        <span class="ch-ic">⭐ Full ibadah</span>
+        <span class="ch-ic">📅 30 days</span>
+      </div>
+      <div class="ch-footer">
+        <button class="ch-btn" onclick="joinChallenge('ramadan30')">Join Challenge</button>
+        <span class="ch-count" id="count-ramadan30"></span>
+      </div>
+    </div>
+
+  </div>
+
+  <p style="font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.32);text-align:center;margin-top:2.5rem;letter-spacing:0.08em;text-transform:uppercase;">All challenges are free · No data sold · No leaderboards · For the sake of Allah only</p>
+</section>
+
+<!-- ── SPONSOR SECTION — hidden until you have sponsors ─────────────
+     To activate: remove the style="display:none" from this section
+     To add a sponsor: replace sp-slot.empty with filled slot
+     ─────────────────────────────────────────────────────────────── -->
+<section id="sponsors" class="sec-wrap" style="display:none;padding:5rem 2rem;background:var(--surface-low);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div style="max-width:860px;margin:0 auto;">
+    <p class="sec-label">Halal Sponsors · شركاء الخير</p>
+    <h2 class="sec-title" style="font-size:1.75rem;">Supported By</h2>
+    <p class="sec-title-ar" style="margin-bottom:1.5rem;">بدعم من شركائنا الكرام</p>
+    <p class="sec-sub">Dhikr is supported by halal brands and Islamic organisations. Every sponsor manually reviewed. No haram content — ever.</p>
+    <div class="sp-grid">
+      <div class="sp-slot empty"><div class="sp-slot-inner"><div class="sp-plus">+</div><div class="sp-slot-label">Your Brand Here</div><div class="sp-slot-sub">Sponsor Dhikr</div></div></div>
+      <div class="sp-slot empty"><div class="sp-slot-inner"><div class="sp-plus">+</div><div class="sp-slot-label">Your Brand Here</div><div class="sp-slot-sub">Sponsor Dhikr</div></div></div>
+      <div class="sp-slot empty"><div class="sp-slot-inner"><div class="sp-plus">+</div><div class="sp-slot-label">Your Brand Here</div><div class="sp-slot-sub">Sponsor Dhikr</div></div></div>
+      <div class="sp-slot empty"><div class="sp-slot-inner"><div class="sp-plus">+</div><div class="sp-slot-label">Your Brand Here</div><div class="sp-slot-sub">Sponsor Dhikr</div></div></div>
+    </div>
+    <div class="sp-cta">
+      <div>
+        <div class="sp-cta-title">Become a Sponsor</div>
+        <p class="sp-cta-desc">Reach engaged Muslim users on web and app. Halal brands, Islamic services, and charitable organisations welcome.</p>
+        <div class="sp-packages">
+          <div class="sp-pkg"><span class="sp-pkg-name">App Banner</span><span class="sp-pkg-price">from $200/mo</span></div>
+          <div class="sp-pkg"><span class="sp-pkg-name">Website Feature</span><span class="sp-pkg-price">from $150/mo</span></div>
+          <div class="sp-pkg"><span class="sp-pkg-name">Challenge Partner</span><span class="sp-pkg-price">from $300/mo</span></div>
+          <div class="sp-pkg"><span class="sp-pkg-name">Full Package</span><span class="sp-pkg-price">from $500/mo</span></div>
+        </div>
+      </div>
+      <a href="mailto:baytalhikmahm@gmail.com" class="sp-btn">
+        <span class="material-symbols-outlined" style="font-size:16px">mail</span>
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── WEB AD SLOT — hidden until ready ────────────────────────────
+     To activate: remove style="display:none"
+     Dimensions: 728×90 leaderboard (web) / 320×50 banner (mobile)
+     ─────────────────────────────────────────────────────────────── -->
+<div id="web-ad-slot" style="display:none;padding:1.5rem 2rem;text-align:center;">
+  <!-- Insert ad code here when ready (Google AdSense or Yodo1 web) -->
+  <div style="width:728px;height:90px;background:var(--surface-low);border:1px dashed rgba(201,148,58,0.2);margin:0 auto;display:flex;align-items:center;justify-content:center;">
+    <span style="font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(184,168,138,0.3);letter-spacing:0.1em;text-transform:uppercase;">Ad Slot · 728×90 · Halal Only</span>
+  </div>
+</div>
+
+
+<section id="themes" class="sec-wrap">
+  <div class="themes-inner">
+    <p class="sec-label">Five Worlds</p>
+    <h2 class="sec-title" style="font-size:1.75rem;">Choose Your Atmosphere</h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);">اختر مظهرك المفضل · Each theme inspired by Islamic heritage</p>
+    <div class="swatches">
+      <div class="swatch on"><div class="sw-dot" style="background:#c9943a;"></div><span class="sw-name">Classic</span></div>
+      <div class="swatch"><div class="sw-dot" style="background:#1a2a4a;border:1px solid #4a6a9a;"></div><span class="sw-name">Madinah</span></div>
+      <div class="swatch"><div class="sw-dot" style="background:#2a1a0a;border:1px solid #8b5a2b;"></div><span class="sw-name">Andalus</span></div>
+      <div class="swatch"><div class="sw-dot" style="background:#4a3010;border:1px solid #c8860a;"></div><span class="sw-name">Desert</span></div>
+      <div class="swatch"><div class="sw-dot" style="background:#0a0a0f;border:1px solid #5a4a8a;"></div><span class="sw-name">Makkah</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- HONEST -->
+<section id="honest" class="sec-wrap">
+  <p class="sec-label">Transparent & Halal</p>
+  <h2 class="sec-title">How Dhikr Stays Free</h2>
+  <p class="sec-title-ar" style="margin-bottom:0.5rem;">كيف يبقى التطبيق مجانياً</p>
+  <p class="sec-sub">We believe in complete honesty. Here is exactly how this app is funded — nothing hidden.</p>
+  <div class="honest-grid">
+    <div class="h-card"><div class="h-icon">🤝</div><div class="h-title">Halal Sponsors</div><p class="h-desc">Islamic brands and halal businesses sponsor the app. Every sponsor manually reviewed. No haram content displayed — ever.</p></div>
+    <div class="h-card"><div class="h-icon">⭐</div><div class="h-title">Dhikr Pro (Future)</div><p class="h-desc">A one-time purchase for users who want extra features. No subscription. Pay once, own it forever. Core features always free.</p></div>
+    <div class="h-card"><div class="h-icon">🤲</div><div class="h-title">Charity Partners</div><p class="h-desc">Trusted Islamic charities featured in the app and website. A portion of sponsor revenue goes to sadaqah every month.</p></div>
+    <div class="h-card"><div class="h-icon">📢</div><div class="h-title">Filtered Ads (Future)</div><p class="h-desc">When the app scales, filtered ads may be shown. Gambling, dating, alcohol, and music permanently blocked. Halal only.</p></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats" class="sec-wrap">
+  <div class="stats-grid">
+    <div><div class="stat-v">25+</div><div class="stat-l">Awqaf Methods</div></div>
+    <div><div class="stat-v">50K+</div><div class="stat-l">Authenticated Hadiths</div></div>
+    <div><div class="stat-v">20</div><div class="stat-l">Quran Reciters</div></div>
+    <div><div class="stat-v">$0</div><div class="stat-l">Cost Forever</div></div>
+    <div><div class="stat-v">7</div><div class="stat-l">UAE Emirates</div></div>
+    <div><div class="stat-v">∞</div><div class="stat-l">Reward In Sha Allah</div></div>
+  </div>
+</section>
+
+<!-- SOURCES -->
+<section id="sources" class="sec-wrap">
+  <div class="sources-inner">
+    <p class="sec-label">Authenticated Sources Only</p>
+    <h2 class="sec-title" style="font-size:1.65rem;">Sahih & Hasan Only</h2>
+    <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);max-width:460px;margin:0.5rem auto 0;">No weak or fabricated hadiths — ever. Every fact sourced and verified.</p>
+    <div class="src-tags">
+      <span class="src-tag">Sahih al-Bukhari</span><span class="src-tag">Sahih Muslim</span>
+      <span class="src-tag">Jami al-Tirmidhi</span><span class="src-tag">Sunan Abu Dawud</span>
+      <span class="src-tag">Sunan Ibn Majah</span><span class="src-tag">Riyad as-Salihin</span>
+      <span class="src-tag">Hisn al-Muslim</span><span class="src-tag">Tafseer Ibn Kathir</span>
+      <span class="src-tag">Al-Tabari</span><span class="src-tag">Nawawi 40</span>
+      <span class="src-tag">Umm al-Qura</span><span class="src-tag">GAIAE — UAE Awqaf</span>
+      <span class="src-tag">IACAD — Dubai</span>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="sec-wrap">
+  <div class="dl-inner">
+    <div class="cs-badge" style="margin-bottom:1.2rem;"><span class="cs-dot"></span> App Coming Soon <span class="cs-dot"></span></div>
+    <div class="dl-ar">قريباً — حمّل التطبيق مجاناً</div>
+    <h2 class="dl-en">Free to Download. Always.</h2>
+    <div class="free-box">
+      <div class="fr-row"><span class="fr-icon">$</span><div><div class="fr-t">$0 Cost Forever</div><div class="fr-d">Free to download. No paywall. No subscription required to use the app.</div></div></div>
+      <div class="fr-row"><span class="fr-icon">🤲</span><div><div class="fr-t">Just the Remembrance of Allah</div><div class="fr-d">Built for the Ummah. Sustained by halal sponsors and an optional Pro version.</div></div></div>
+      <div class="fr-ar">بلا اشتراك إجباري · بلا حجب للمحتوى · مجاني للأبد</div>
+    </div>
+    <p class="dl-sub">Be the first to know when Dhikr launches.</p>
+    <p style="font-family:'Noto Naskh Arabic',serif;font-size:1rem;color:var(--muted);direction:rtl;margin-bottom:1.75rem;">أدخل بريدك الإلكتروني لتعلم عند إطلاق التطبيق</p>
+    <form class="wl-form" onsubmit="handleWL(event)">
+      <div class="wl-wrap">
+        <input type="email" class="wl-input" placeholder="your@email.com" required id="wl-email"/>
+        <button type="submit" class="wl-btn">
+          <span class="material-symbols-outlined" style="font-size:15px">notifications_active</span>
+          Notify Me
+        </button>
+      </div>
+      <p class="wl-note">No spam. One email at launch. Unsubscribe anytime.</p>
+    </form>
+    <div class="wl-ok" id="wl-ok">
+      <span style="font-size:1.4rem;">🤲</span>
+      <div>
+        <div style="font-family:'Cinzel',serif;font-size:0.95rem;color:var(--primary);margin-bottom:0.2rem;">JazakAllahu Khayran</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:0.92rem;color:var(--muted);">You're on the list. We'll notify you the moment Dhikr launches — إن شاء الله</div>
+      </div>
+    </div>
+    <div class="store-btns">
+      <div class="st-btn st-apple"><span style="font-size:20px;">🍎</span><div><span class="st-sub">Coming soon on</span><span class="st-name">App Store</span></div></div>
+      <div class="st-btn st-google"><span style="font-size:20px;">▶</span><div><span class="st-sub">Coming soon on</span><span class="st-name">Google Play</span></div></div>
+    </div>
+    <p class="store-note">Store buttons activate at launch</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <!-- ABOUT BAYT AL-HIKMAH -->
+  <div style="max-width:900px;margin:0 auto 2.5rem;padding-top:3rem;border-bottom:1px solid var(--border);padding-bottom:2.5rem;">
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:2rem;">
+
+      <!-- Brand block -->
+      <div style="max-width:340px;">
+        <span class="fb-ar">بيت الحكمة</span>
+        <span class="fb-en" style="display:block;margin-bottom:0.75rem;">Bayt al-Hikmah</span>
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:1.25rem;">An Islamic media and technology company building educational content, apps, and tools for Muslims worldwide. Sadaqah jariyah in every line of code.</p>
+        <p style="font-family:'Noto Naskh Arabic',serif;font-size:0.9rem;color:rgba(184,168,138,0.5);direction:rtl;line-height:1.7;">بيت الحكمة — محتوى إسلامي وتقنية للمسلمين حول العالم</p>
+      </div>
+
+      <!-- Social / Channel links -->
+      <div>
+        <p style="font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--primary);margin-bottom:1.25rem;">Follow Bayt al-Hikmah</p>
+        <div style="display:flex;flex-direction:column;gap:0.85rem;">
+
+          <!-- YouTube -->
+          <a href="https://www.youtube.com/@BaytAlHikmahMedia" target="_blank" rel="noopener" class="social-link">
+            <div class="social-icon-wrap" style="background:#ff0000;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/>
+              </svg>
+            </div>
+            <div class="social-text">
+              <span class="social-name">YouTube</span>
+              <span class="social-handle">@BaytAlHikmahMedia</span>
+            </div>
+            <span class="social-arrow">→</span>
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@baytalhikmahmedia" target="_blank" rel="noopener" class="social-link">
+            <div class="social-icon-wrap" style="background:#000000;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/>
+              </svg>
+            </div>
+            <div class="social-text">
+              <span class="social-name">TikTok</span>
+              <span class="social-handle">@baytalhikmahmedia</span>
+            </div>
+            <span class="social-arrow">→</span>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/baytalhikmahm/" target="_blank" rel="noopener" class="social-link">
+            <div class="social-icon-wrap" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="white">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </div>
+            <div class="social-text">
+              <span class="social-name">Instagram</span>
+              <span class="social-handle">@baytalhikmahm</span>
+            </div>
+            <span class="social-arrow">→</span>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER SITEMAP -->
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <!-- FOOTER BOTTOM -->
+  <div class="footer-inner">
+    <div>
+      <span class="fb-ar">بيت الحكمة</span>
+      <span class="fb-en">Bayt al-Hikmah · dhikrapp.org</span>
+    </div>
+    <div style="display:flex;gap:1rem;align-items:center;">
+      <a href="https://www.youtube.com/@BaytAlHikmahMedia" target="_blank" rel="noopener" style="color:var(--muted);font-family:'Inter',sans-serif;font-size:0.68rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--muted)'">YouTube</a>
+      <a href="https://www.tiktok.com/@baytalhikmahmedia" target="_blank" rel="noopener" style="color:var(--muted);font-family:'Inter',sans-serif;font-size:0.68rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--muted)'">TikTok</a>
+      <a href="https://www.instagram.com/baytalhikmahm/" target="_blank" rel="noopener" style="color:var(--muted);font-family:'Inter',sans-serif;font-size:0.68rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--muted)'">Instagram</a>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 Bayt al-Hikmah · dhikrapp.org · Free for every Muslim, forever · Made with إخلاص in Dubai, UAE</p>
+</footer>
+
+<script>
+// WAITLIST
+function handleWL(e) {
+  e.preventDefault();
+  const email = document.getElementById('wl-email').value;
+  if (!email) return;
+  const list = JSON.parse(localStorage.getItem('dhikr_wl') || '[]');
+  if (!list.includes(email)) { list.push(email); localStorage.setItem('dhikr_wl', JSON.stringify(list)); }
+  document.querySelector('.wl-form').style.display = 'none';
+  const ok = document.getElementById('wl-ok');
+  ok.style.display = 'flex';
+}
+
+// CHALLENGES — 10K RULE
+// IMPORTANT: All start at 0 — real counts come from Supabase backend when live
+// Rule: only show count to user if >= 10,000 (so it doesn't look empty at launch)
+// To connect real counts: fetch from Supabase and replace CHALLENGE_COUNTS values
+
+const CHALLENGE_COUNTS = {
+  prayer30:   0,
+  fajr40:     0,
+  adhkar21:   0,
+  tahajjud10: 0,
+  sadaqah30:  0,
+  ramadan30:  0,
+};
+
+const MIN_SHOW = 10000; // only show count publicly if >= 10,000 users joined
+
+function formatCount(n) {
+  if (n >= 1000000) return (n/1000000).toFixed(1) + 'M';
+  if (n >= 1000) return (n/1000).toFixed(1) + 'K';
+  return n.toString();
+}
+
+function joinChallenge(id) {
+  const btn = document.querySelector(`[onclick="joinChallenge('${id}')"]`);
+  const countEl = document.getElementById(`count-${id}`);
+  const joined = JSON.parse(localStorage.getItem('dhikr_challenges') || '[]');
+
+  if (joined.includes(id)) {
+    // Already joined — show confirmation
+    if (btn) { btn.textContent = '✓ Joined'; btn.classList.add('joined'); }
+    return;
+  }
+
+  // Mark as joined
+  joined.push(id);
+  localStorage.setItem('dhikr_challenges', JSON.stringify(joined));
+
+  // Update button
+  if (btn) { btn.textContent = '✓ Joined'; btn.classList.add('joined'); }
+
+  // Increment count locally
+  CHALLENGE_COUNTS[id] = (CHALLENGE_COUNTS[id] || 0) + 1;
+
+  // Show count only if >= 10,000
+  if (countEl && CHALLENGE_COUNTS[id] >= MIN_SHOW) {
+    countEl.textContent = formatCount(CHALLENGE_COUNTS[id]) + ' Muslims joined';
+    countEl.style.display = 'inline';
+  }
+}
+
+// On load: restore joined state + show counts >= 10k
+document.addEventListener('DOMContentLoaded', () => {
+  const joined = JSON.parse(localStorage.getItem('dhikr_challenges') || '[]');
+
+  Object.entries(CHALLENGE_COUNTS).forEach(([id, count]) => {
+    const btn = document.querySelector(`[onclick="joinChallenge('${id}')"]`);
+    const countEl = document.getElementById(`count-${id}`);
+
+    // Restore joined button state
+    if (joined.includes(id) && btn) {
+      btn.textContent = '✓ Joined';
+      btn.classList.add('joined');
+    }
+
+    // Show count only if >= 10,000
+    if (countEl && count >= MIN_SHOW) {
+      countEl.textContent = formatCount(count) + ' Muslims joined';
+      countEl.style.display = 'inline';
+    }
+  });
+});
+
+const PRAYERS = [
+  { key:'Fajr',    en:'Fajr',    ar:'الفجر'  },
+  { key:'Sunrise', en:'Sunrise', ar:'الشروق' },
+  { key:'Dhuhr',   en:'Dhuhr',   ar:'الظهر'  },
+  { key:'Asr',     en:'Asr',     ar:'العصر'  },
+  { key:'Maghrib', en:'Maghrib', ar:'المغرب' },
+  { key:'Isha',    en:'Isha',    ar:'العشاء' },
+];
+function fmt12(t) {
+  if (!t) return '--:--';
+  const [h,m] = t.split(':').map(Number);
+  const ap = h>=12?'PM':'AM'; const h12=h%12||12;
+  return `${h12}:${String(m).padStart(2,'0')} ${ap}`;
+}
+function currentPrayer(times) {
+  const now = new Date(); const mins = now.getHours()*60+now.getMinutes();
+  let cur = 'Isha';
+  for (const p of PRAYERS) {
+    const t = times[p.key]; if(!t) continue;
+    const [h,m] = t.split(':').map(Number);
+    if (mins >= h*60+m) cur = p.key;
+  }
+  return cur;
+}
+async function loadPrayers(lat, lon, city) {
+  try {
+    const d = new Date();
+    const url = `https://api.aladhan.com/v1/timings/${d.getDate()}-${d.getMonth()+1}-${d.getFullYear()}?latitude=${lat}&longitude=${lon}&method=16`;
+    const res = await fetch(url);
+    const json = await res.json();
+    const T = json.data.timings;
+    // Strip DST suffix like " (DST)" from times
+    const clean = (t) => t ? t.split(' ')[0] : '--:--';
+    const fmt = (t) => {
+      const c = clean(t); if(!c||c==='--:--') return '--:--';
+      const [h,m] = c.split(':').map(Number);
+      if(isNaN(h)||isNaN(m)) return '--:--';
+      const ap = h>=12?'PM':'AM'; const h12=h%12||12;
+      return `${h12}:${String(m).padStart(2,'0')} ${ap}`;
+    };
+    const toM = (t) => { const c=clean(t); if(!c) return 0; const [h,m]=c.split(':').map(Number); return isNaN(h)?0:h*60+m; };
+    const cur = currentPrayer(T);
+    const isFri = new Date().getDay() === 5;
+    let html = '';
+    for (const p of PRAYERS) {
+      const isC = p.key === cur;
+      const isFD = isFri && p.key === 'Dhuhr';
+      const label = isFD ? "Jumu'ah ★" : p.en;
+      const arLabel = isFD ? 'الجمعة' : p.ar;
+      html += `<div class="pr-row${isC?' cur':''}">
+        <div class="pr-names">
+          <span class="pr-en">${label}</span>
+          <span class="pr-ar">${arLabel}</span>
+        </div>
+        <span class="pr-time">${fmt(T[p.key])}</span>
+      </div>`;
+      if (isFD) {
+        html += `<div style="padding:0.38rem 0.7rem;background:rgba(201,148,58,0.07);border-radius:3px;margin-bottom:0.35rem;display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);letter-spacing:0.07em;">🎙️ Khutba · GAIAE Decree</span>
+          <span style="font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;color:var(--primary);">12:45 PM</span>
+        </div>`;
+      }
+    }
+    document.getElementById('prayer-list').innerHTML = html;
+    document.getElementById('wloc').textContent = city || 'Your Location';
+    document.getElementById('wmethod').textContent = 'IACAD / Dubai Method · Auto-detected · Refreshes daily';
+  } catch(e) {
+    document.getElementById('prayer-list').innerHTML = '<div class="widget-loading">Allow location access to see prayer times.</div>';
+  }
+}
+function initWidget() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const {latitude:lat, longitude:lon} = pos.coords;
+      fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`)        .then(r=>r.json()).then(d=>{
+          const city = d.address?.city || d.address?.town || d.address?.village || 'Your Location';
+          loadPrayers(lat, lon, city);
+        }).catch(()=>loadPrayers(lat, lon, 'Your Location'));
+    }, () => {
+      // Fallback to Dubai
+      loadPrayers(25.2048, 55.2708, 'Dubai, UAE');
+    });
+  } else {
+    loadPrayers(25.2048, 55.2708, 'Dubai, UAE');
+  }
+}
+initWidget();
+</script>
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Login — Dhikr | ذِكر</title>
+<meta name="description" content="Sign in to Dhikr to sync your Quran progress, Tasbih count, challenges, and prayer history across all your devices."/>
+<meta name="robots" content="noindex"/><meta name="theme-color" content="#1d1107"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--surface-lowest:#170c04;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+body::after{content:'';position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;background:radial-gradient(ellipse,rgba(201,148,58,0.05) 0%,transparent 70%);pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-back{font-family:'Inter',sans-serif;font-size:0.72rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
+.nav-back:hover{color:var(--primary);}
+/* MAIN */
+.page-wrap{position:relative;z-index:1;flex:1;display:flex;align-items:center;justify-content:center;padding:6rem 1.5rem 3rem;}
+.auth-box{width:100%;max-width:440px;}
+.auth-header{text-align:center;margin-bottom:2.5rem;}
+.auth-logo{font-family:'Noto Naskh Arabic',serif;font-size:3.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block;margin-bottom:0.5rem;}
+.auth-title{font-family:'Cinzel',serif;font-size:1.4rem;color:var(--cream);font-weight:600;margin-bottom:0.25rem;}
+.auth-sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:1rem;line-height:1.6;}
+/* TABS */
+.auth-tabs{display:flex;background:var(--surface-low);border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:2rem;}
+.auth-tab{flex:1;padding:0.75rem;font-family:'Inter',sans-serif;font-size:0.76rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);border:none;background:transparent;cursor:pointer;transition:all 0.2s;}
+.auth-tab.active{background:var(--primary-grad);color:#432c00;}
+/* FORM */
+.auth-form{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;}
+.auth-form::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.auth-form::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;}
+.form-field{margin-bottom:1.25rem;}
+.form-label{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:0.4rem;}
+.form-input{width:100%;background:var(--surface-low);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1rem;padding:0.7rem 0.85rem;outline:none;transition:border-color 0.2s;}
+.form-input:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(201,148,58,0.08);}
+.form-input::placeholder{color:rgba(184,168,138,0.35);font-style:italic;}
+.form-submit{width:100%;padding:0.9rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;transition:opacity 0.2s,transform 0.2s;box-shadow:0 6px 20px rgba(201,148,58,0.22);margin-top:0.5rem;}
+.form-submit:hover{opacity:0.9;transform:translateY(-1px);}
+.form-submit:disabled{opacity:0.5;transform:none;cursor:not-allowed;}
+/* DIVIDER */
+.or-div{display:flex;align-items:center;gap:1rem;margin:1.5rem 0;}
+.or-line{flex:1;height:1px;background:var(--border);}
+.or-text{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;}
+/* GOOGLE BTN */
+.google-btn{width:100%;padding:0.85rem;background:var(--surface-low);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:0.75rem;transition:border-color 0.2s,background 0.2s;}
+.google-btn:hover{border-color:rgba(201,148,58,0.35);background:rgba(201,148,58,0.04);}
+.google-icon{width:18px;height:18px;flex-shrink:0;}
+/* WHY SECTION */
+.why-section{margin-top:2rem;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;}
+.why-title{font-family:'Cinzel',serif;font-size:0.75rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;}
+.why-row{display:flex;align-items:flex-start;gap:0.75rem;margin-bottom:0.65rem;}
+.why-row:last-child{margin-bottom:0;}
+.why-icon{font-size:1rem;flex-shrink:0;margin-top:1px;}
+.why-text{font-family:'Cormorant Garamond',serif;font-size:0.97rem;color:var(--muted);font-style:italic;line-height:1.5;}
+/* MESSAGES */
+.auth-msg{font-family:'Inter',sans-serif;font-size:0.75rem;padding:0.75rem 1rem;border-radius:3px;margin-bottom:1rem;display:none;}
+.auth-msg.error{background:rgba(220,50,50,0.1);border:1px solid rgba(220,50,50,0.3);color:#ff8a8a;}
+.auth-msg.success{background:rgba(26,92,42,0.15);border:1px solid rgba(147,214,151,0.25);color:var(--emerald-light);}
+.auth-msg.show{display:block;}
+/* COMING SOON NOTICE */
+.coming-notice{background:rgba(201,148,58,0.06);border:1px solid rgba(201,148,58,0.2);border-radius:4px;padding:1rem 1.25rem;margin-bottom:1.5rem;text-align:center;}
+.cn-title{font-family:'Cinzel',serif;font-size:0.8rem;color:var(--primary);font-weight:600;margin-bottom:0.3rem;}
+.cn-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:0.92rem;color:var(--muted);line-height:1.5;}
+/* PROFILE (logged in state) */
+.profile-box{display:none;}
+.profile-box.show{display:block;}
+.auth-form-wrap{display:block;}
+.auth-form-wrap.hide{display:none;}
+.profile-header{text-align:center;padding:1.5rem;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;margin-bottom:1.5rem;position:relative;}
+.profile-header::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.profile-avatar{width:64px;height:64px;background:linear-gradient(135deg,rgba(201,148,58,0.2),rgba(201,148,58,0.05));border:1.5px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 0.75rem;font-size:1.8rem;}
+.profile-email{font-family:'Inter',sans-serif;font-size:0.75rem;color:var(--muted);letter-spacing:0.05em;}
+.profile-name{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--cream);font-weight:600;margin-bottom:0.2rem;}
+.sync-status{background:rgba(26,92,42,0.15);border:1px solid rgba(147,214,151,0.2);border-radius:3px;padding:0.6rem 1rem;margin-top:0.75rem;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--emerald-light);letter-spacing:0.08em;text-transform:uppercase;}
+.profile-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+.ps-item{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1rem;text-align:center;}
+.ps-val{font-family:'Cinzel',serif;font-size:1.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.2rem;}
+.ps-label{font-family:'Inter',sans-serif;font-size:0.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;}
+.logout-btn{width:100%;padding:0.75rem;background:transparent;border:1px solid rgba(201,148,58,0.25);border-radius:3px;color:var(--muted);font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;transition:all 0.2s;}
+.logout-btn:hover{border-color:rgba(220,50,50,0.4);color:#ff8a8a;}
+footer{position:relative;z-index:1;text-align:center;padding:2rem;border-top:1px solid var(--border);font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.38);}
+footer a{color:var(--primary);text-decoration:none;}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="auth-box">
+
+    <!-- HEADER -->
+    <div class="auth-header">
+      <span class="auth-logo">ذِكر</span>
+      <div class="auth-title">Your Dhikr Account</div>
+      <p class="auth-sub">One account syncs everything across all your devices — Quran progress, Tasbih count, challenges, and prayer history.</p>
+    </div>
+
+    <!-- LOGGED IN PROFILE -->
+    <div class="profile-box" id="profile-box">
+      <div class="profile-header">
+        <div class="profile-avatar">🤲</div>
+        <div class="profile-name" id="profile-name">Welcome back</div>
+        <div class="profile-email" id="profile-email"></div>
+        <div class="sync-status">✅ Account Active · Sync Ready</div>
+      </div>
+      <div class="profile-stats">
+        <div class="ps-item"><div class="ps-val" id="stat-quran">--</div><div class="ps-label">Last Surah</div></div>
+        <div class="ps-item"><div class="ps-val" id="stat-tasbih">--</div><div class="ps-label">Tasbih Total</div></div>
+        <div class="ps-item"><div class="ps-val" id="stat-challenges">--</div><div class="ps-label">Challenges</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.75rem;">
+        <a href="quran.html" style="display:block;text-align:center;padding:0.75rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;text-decoration:none;">Continue Reading Quran</a>
+        <a href="challenges.html" style="display:block;text-align:center;padding:0.75rem;background:transparent;color:var(--primary);font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;border:1px solid rgba(201,148,58,0.3);text-decoration:none;">View My Challenges</a>
+        <button class="logout-btn" onclick="logout()">Sign Out</button>
+      </div>
+    </div>
+
+    <!-- AUTH FORMS -->
+    <div class="auth-form-wrap" id="auth-form-wrap">
+      <!-- Coming soon notice -->
+      <div class="coming-notice">
+        <div class="cn-title">⚙️ Backend Connecting Soon</div>
+        <p class="cn-sub">Full account sync is launching with the app. Sign up now and your account will be ready when cross-device sync goes live — إن شاء الله</p>
+      </div>
+
+      <!-- TABS -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="setTab('login')">Sign In</button>
+        <button class="auth-tab" onclick="setTab('signup')">Create Account</button>
+      </div>
+
+      <!-- MESSAGE -->
+      <div class="auth-msg" id="auth-msg"></div>
+
+      <!-- LOGIN FORM -->
+      <div class="auth-form" id="login-form">
+        <div class="form-field">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" type="email" id="login-email" placeholder="your@email.com" autocomplete="email"/>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Password</label>
+          <input class="form-input" type="password" id="login-pass" placeholder="Your password"/>
+        </div>
+        <button class="form-submit" onclick="handleLogin()">Sign In</button>
+        <div class="or-div"><div class="or-line"></div><div class="or-text">or</div><div class="or-line"></div></div>
+        <button class="google-btn" onclick="handleGoogle()">
+          <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Continue with Google
+        </button>
+      </div>
+
+      <!-- SIGNUP FORM -->
+      <div class="auth-form" id="signup-form" style="display:none;">
+        <div class="form-field">
+          <label class="form-label">Full Name</label>
+          <input class="form-input" type="text" id="signup-name" placeholder="Ahmed" autocomplete="name"/>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" type="email" id="signup-email" placeholder="your@email.com" autocomplete="email"/>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Password</label>
+          <input class="form-input" type="password" id="signup-pass" placeholder="Min. 8 characters"/>
+        </div>
+        <button class="form-submit" onclick="handleSignup()">Create Free Account</button>
+        <div class="or-div"><div class="or-line"></div><div class="or-text">or</div><div class="or-line"></div></div>
+        <button class="google-btn" onclick="handleGoogle()">
+          <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+          Sign up with Google
+        </button>
+        <p style="font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(184,168,138,0.4);text-align:center;margin-top:1rem;">By creating an account you agree to our <a href="privacy.html" style="color:var(--primary);">Privacy Policy</a>. We never sell your data.</p>
+      </div>
+
+      <!-- WHY SIGN UP -->
+      <div class="why-section">
+        <div class="why-title">Why Create a Free Account?</div>
+        <div class="why-row"><span class="why-icon">📖</span><span class="why-text">Start reading Quran on web — continue exactly where you left off on your phone</span></div>
+        <div class="why-row"><span class="why-icon">📿</span><span class="why-text">Your Tasbih count and dhikr streaks sync automatically across all devices</span></div>
+        <div class="why-row"><span class="why-icon">🏆</span><span class="why-text">Track your worship challenges on web and app — one joined count</span></div>
+        <div class="why-row"><span class="why-icon">🔒</span><span class="why-text">All data encrypted and private — only you can see it. We never share your worship data</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+
+<script>
+// ── TAB SWITCHING ───────────────────────────────────────────
+function setTab(t){
+  document.getElementById('login-form').style.display=t==='login'?'block':'none';
+  document.getElementById('signup-form').style.display=t==='signup'?'block':'none';
+  document.querySelectorAll('.auth-tab').forEach((tab,i)=>tab.classList.toggle('active',(t==='login'&&i===0)||(t==='signup'&&i===1)));
+  showMsg('','');
+}
+
+function showMsg(text,type){
+  const el=document.getElementById('auth-msg');
+  el.textContent=text;el.className='auth-msg'+(text?' show':'')+' '+(type||'');
+}
+
+// ── LOCAL AUTH (no backend yet) ─────────────────────────────
+// When Supabase is connected, replace these functions with real API calls
+
+function handleLogin(){
+  const email=document.getElementById('login-email').value.trim();
+  const pass=document.getElementById('login-pass').value;
+  if(!email||!pass){showMsg('Please fill in all fields.','error');return;}
+  
+  // Check local storage for registered user
+  const users=JSON.parse(localStorage.getItem('dhikr_users')||'{}');
+  if(users[email]&&users[email].pass===btoa(pass)){
+    loginUser({email,name:users[email].name});
+  } else if(users[email]){
+    showMsg('Incorrect password.','error');
+  } else {
+    showMsg('No account found. Please create a free account.','error');
+  }
+}
+
+function handleSignup(){
+  const name=document.getElementById('signup-name').value.trim();
+  const email=document.getElementById('signup-email').value.trim();
+  const pass=document.getElementById('signup-pass').value;
+  if(!name||!email||!pass){showMsg('Please fill in all fields.','error');return;}
+  if(pass.length<8){showMsg('Password must be at least 8 characters.','error');return;}
+  
+  const users=JSON.parse(localStorage.getItem('dhikr_users')||'{}');
+  if(users[email]){showMsg('An account with this email already exists.','error');return;}
+  
+  users[email]={name,pass:btoa(pass),created:new Date().toISOString()};
+  localStorage.setItem('dhikr_users',JSON.stringify(users));
+  loginUser({email,name});
+  showMsg('Account created! JazakAllahu Khayran. Welcome to Dhikr.','success');
+}
+
+function handleGoogle(){
+  showMsg('Google sign-in will be available when the app launches. Please use email for now.','error');
+}
+
+function loginUser(user){
+  localStorage.setItem('dhikr_session',JSON.stringify({...user,loginTime:Date.now()}));
+  renderProfile(user);
+}
+
+function logout(){
+  localStorage.removeItem('dhikr_session');
+  document.getElementById('profile-box').classList.remove('show');
+  document.getElementById('auth-form-wrap').classList.remove('hide');
+  showMsg('You have been signed out.','success');
+}
+
+function renderProfile(user){
+  document.getElementById('profile-name').textContent=user.name||'Bismillah';
+  document.getElementById('profile-email').textContent=user.email;
+  // Pull local stats
+  const prog=JSON.parse(localStorage.getItem('quran_progress')||'{}');
+  const tasbih=JSON.parse(localStorage.getItem('tasbih_state')||'{}');
+  const challenges=JSON.parse(localStorage.getItem('ch_state')||'{}');
+  const surahs=['Al-Fatiha','Al-Baqarah','Ali Imran','An-Nisa','Al-Maidah','Al-Anam','Al-Araf','Al-Anfal','At-Tawbah','Yunus'];
+  document.getElementById('stat-quran').textContent=prog.lastSurah?`S${prog.lastSurah}`:'S1';
+  const total=(tasbih.counts||[0,0,0]).reduce((a,b)=>a+b,0)+(tasbih.sets||[0,0,0]).reduce((a,b)=>a+b,0)*33;
+  document.getElementById('stat-tasbih').textContent=total>999?Math.round(total/1000)+'k':total;
+  const joined=Object.values(challenges).filter(c=>c.joined).length;
+  document.getElementById('stat-challenges').textContent=joined;
+  document.getElementById('profile-box').classList.add('show');
+  document.getElementById('auth-form-wrap').classList.add('hide');
+}
+
+// ── CHECK EXISTING SESSION ──────────────────────────────────
+const session=JSON.parse(localStorage.getItem('dhikr_session')||'null');
+if(session&&Date.now()-session.loginTime<86400000*30){
+  renderProfile(session);
+}
+
+// ── KEYBOARD ENTER ──────────────────────────────────────────
+document.addEventListener('keydown',e=>{
+  if(e.key!=='Enter')return;
+  if(document.getElementById('login-form').style.display!=='none')handleLogin();
+  else handleSignup();
+});
+</script>
+</body>
+</html>

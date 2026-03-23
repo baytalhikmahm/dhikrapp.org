@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Tasbih Counter — Dhikr | ذِكر · Digital Dhikr Beads</title>
+<meta name="description" content="Digital Tasbih counter. SubhanAllah, Alhamdulillah, Allahu Akbar. 33 count sets with haptic feedback. Progress syncs to your account. Free."/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/tasbih.html"/>
+<meta property="og:title" content="Tasbih Counter — Dhikr | ذِكر"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 2rem;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:0.5rem;}
+main{position:relative;z-index:1;max-width:500px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+/* DHIKR SELECTOR */
+.dhikr-tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;margin-bottom:2rem;}
+.dhikr-tab{padding:0.85rem 0.5rem;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;cursor:pointer;text-align:center;transition:all 0.2s;}
+.dhikr-tab.active{border-color:var(--primary);background:rgba(201,148,58,0.08);}
+.dt-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.9rem;color:var(--cream);direction:rtl;display:block;margin-bottom:0.3rem;}
+.dt-en{font-family:'Inter',sans-serif;font-size:0.55rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;display:block;}
+/* COUNTER */
+.counter-area{text-align:center;margin-bottom:2rem;}
+.dhikr-text-ar{font-family:'Noto Naskh Arabic',serif;font-size:2.2rem;color:var(--cream);direction:rtl;margin-bottom:0.25rem;line-height:1.6;}
+.dhikr-text-en{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--muted);margin-bottom:0.5rem;}
+.dhikr-meaning{font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(201,148,58,0.6);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2rem;}
+.count-display{position:relative;width:200px;height:200px;margin:0 auto 1.5rem;}
+.count-ring{position:absolute;inset:0;}
+.count-num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.count-big{font-family:'Cinzel',serif;font-size:4.5rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.count-of{font-family:'Inter',sans-serif;font-size:0.7rem;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.count-sets{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--primary);margin-top:0.25rem;}
+/* TAP BUTTON */
+.tap-btn{width:100%;padding:2rem;background:var(--surface-high);border:2px solid var(--border);border-radius:4px;cursor:pointer;position:relative;transition:all 0.15s;overflow:hidden;user-select:none;-webkit-user-select:none;}
+.tap-btn:active,.tap-btn.tapped{border-color:var(--primary);background:rgba(201,148,58,0.1);transform:scale(0.98);}
+.tap-inner{font-family:'Noto Naskh Arabic',serif;font-size:1.8rem;color:var(--primary);direction:rtl;display:block;}
+.tap-hint{font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.35rem;display:block;}
+/* RIPPLE */
+.ripple{position:absolute;border-radius:50%;background:rgba(201,148,58,0.2);transform:scale(0);animation:ripple-anim 0.5s ease-out forwards;pointer-events:none;}
+@keyframes ripple-anim{to{transform:scale(4);opacity:0;}}
+/* BEADS */
+.beads-wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:5px;margin:1.5rem 0;}
+.bead{width:14px;height:14px;border-radius:50%;background:rgba(201,148,58,0.15);border:1.5px solid rgba(201,148,58,0.25);transition:all 0.2s;}
+.bead.done{background:var(--primary);border-color:var(--primary-light, #f7bc5e);box-shadow:0 0 6px rgba(201,148,58,0.4);}
+/* CONTROLS */
+.controls{display:flex;gap:0.75rem;justify-content:center;margin-top:1.5rem;}
+.ctrl-btn{padding:0.65rem 1.25rem;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;border-radius:3px;cursor:pointer;transition:all 0.2s;}
+.ctrl-reset{background:transparent;color:var(--muted);border:1px solid rgba(184,168,138,0.2);}
+.ctrl-reset:hover{border-color:rgba(201,148,58,0.35);color:var(--primary);}
+.ctrl-custom{background:var(--surface-high);color:var(--primary);border:1px solid var(--border);}
+/* HADITH */
+.hadith-box{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin-top:2rem;position:relative;}
+.hadith-box::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.hadith-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.95rem;color:var(--cream);direction:rtl;line-height:1.9;margin-bottom:0.5rem;}
+.hadith-en{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-style:italic;color:var(--muted);line-height:1.6;margin-bottom:0.5rem;}
+.hadith-src{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;}
+/* CUSTOM MODAL */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.75);z-index:200;display:none;align-items:center;justify-content:center;padding:1rem;}
+.modal.show{display:flex;}
+.modal-box{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:2rem;max-width:360px;width:100%;}
+.modal-title{font-family:'Cinzel',serif;font-size:1rem;color:var(--primary);margin-bottom:1rem;font-weight:600;}
+.modal-input{width:100%;background:var(--surface-low);border:1px solid var(--border);border-radius:3px;padding:0.65rem;color:var(--cream);font-family:'Inter',sans-serif;font-size:1rem;outline:none;margin-bottom:1rem;}
+.modal-input:focus{border-color:var(--primary);}
+.modal-btns{display:flex;gap:0.5rem;}
+.modal-save{flex:1;padding:0.65rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.78rem;font-weight:700;border:none;border-radius:3px;cursor:pointer;}
+.modal-cancel{padding:0.65rem 1rem;background:transparent;color:var(--muted);font-family:'Inter',sans-serif;font-size:0.78rem;border:1px solid var(--border);border-radius:3px;cursor:pointer;}
+footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--border);text-align:center;font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.4);}
+footer a{color:var(--primary);text-decoration:none;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}}
+
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html" class="active">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">Tap · Count · Remember Allah</p>
+  <h1>Tasbih Counter</h1>
+  <p class="h1-ar">عداد التسبيح</p>
+</div>
+
+<main>
+  <!-- DHIKR SELECTOR -->
+  <div class="dhikr-tabs">
+    <div class="dhikr-tab active" onclick="setDhikr(0)"><span class="dt-ar">سُبْحَانَ اللَّهِ</span><span class="dt-en">SubhanAllah</span></div>
+    <div class="dhikr-tab" onclick="setDhikr(1)"><span class="dt-ar">الْحَمْدُ لِلَّهِ</span><span class="dt-en">Alhamdulillah</span></div>
+    <div class="dhikr-tab" onclick="setDhikr(2)"><span class="dt-ar">اللَّهُ أَكْبَرُ</span><span class="dt-en">Allahu Akbar</span></div>
+  </div>
+
+  <div class="counter-area">
+    <div class="dhikr-text-ar" id="dhikr-ar">سُبْحَانَ اللَّهِ</div>
+    <div class="dhikr-text-en" id="dhikr-en">SubhanAllah</div>
+    <div class="dhikr-meaning" id="dhikr-meaning">Glory be to Allah</div>
+
+    <!-- CIRCULAR PROGRESS -->
+    <div class="count-display">
+      <svg class="count-ring" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="85" fill="none" stroke="rgba(201,148,58,0.1)" stroke-width="8"/>
+        <circle id="progress-circle" cx="100" cy="100" r="85" fill="none" stroke="url(#pg)" stroke-width="8"
+          stroke-dasharray="534" stroke-dashoffset="534" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+        <defs>
+          <linearGradient id="pg" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#c9943a"/><stop offset="100%" stop-color="#f7bc5e"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <div class="count-num">
+        <div class="count-big" id="count-num">0</div>
+        <div class="count-of" id="count-of">of 33</div>
+        <div class="count-sets" id="count-sets"></div>
+      </div>
+    </div>
+
+    <!-- BEADS -->
+    <div class="beads-wrap" id="beads"></div>
+
+    <!-- TAP BUTTON -->
+    <button class="tap-btn" id="tap-btn" onclick="tap(event)" onkeydown="if(e.key===' ')tap(event)">
+      <span class="tap-inner" id="tap-ar">سُبْحَانَ اللَّهِ</span>
+      <span class="tap-hint">Tap anywhere · Press Space</span>
+    </button>
+
+    <div class="controls">
+      <button class="ctrl-btn ctrl-reset" onclick="resetCurrent()">Reset</button>
+      <button class="ctrl-btn ctrl-reset" onclick="resetAll()">Reset All</button>
+      <button class="ctrl-btn ctrl-custom" onclick="showCustom()">Custom Count</button>
+    </div>
+  </div>
+
+  <!-- HADITH -->
+  <div class="hadith-box">
+    <div class="hadith-ar">مَنْ سَبَّحَ اللَّهَ فِي دُبُرِ كُلِّ صَلَاةٍ ثَلَاثًا وَثَلَاثِينَ</div>
+    <div class="hadith-en">"Whoever glorifies Allah (says SubhanAllah) after every prayer thirty-three times…"</div>
+    <div class="hadith-src">Sahih Muslim 597 · Authenticated</div>
+  </div>
+</main>
+
+<!-- CUSTOM MODAL -->
+<div class="modal" id="custom-modal">
+  <div class="modal-box">
+    <div class="modal-title">Set Custom Count</div>
+    <input type="number" class="modal-input" id="custom-input" placeholder="e.g. 100" min="1" max="9999"/>
+    <div class="modal-btns">
+      <button class="modal-save" onclick="saveCustom()">Set</button>
+      <button class="modal-cancel" onclick="closeCustom()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+<script>
+const dhikrs=[
+  {ar:'سُبْحَانَ اللَّهِ',en:'SubhanAllah',meaning:'Glory be to Allah'},
+  {ar:'الْحَمْدُ لِلَّهِ',en:'Alhamdulillah',meaning:'All praise is due to Allah'},
+  {ar:'اللَّهُ أَكْبَرُ',en:'Allahu Akbar',meaning:'Allah is the Greatest'}
+];
+let current=0,count=0,sets=0,target=33;
+const saved=JSON.parse(localStorage.getItem('tasbih_state')||'{}');
+if(saved.count!==undefined){count=saved.count;sets=saved.sets||0;current=saved.current||0;target=saved.target||33;}
+
+function updateUI(){
+  const d=dhikrs[current];
+  document.getElementById('dhikr-ar').textContent=d.ar;
+  document.getElementById('dhikr-en').textContent=d.en;
+  document.getElementById('dhikr-meaning').textContent=d.meaning;
+  document.getElementById('tap-ar').textContent=d.ar;
+  document.getElementById('count-num').textContent=count;
+  document.getElementById('count-of').textContent='of '+target;
+  document.getElementById('count-sets').textContent=sets>0?sets+(sets===1?' set':' sets'):'';
+  // Progress circle
+  const circ=document.getElementById('progress-circle');
+  const pct=Math.min(count/target,1);
+  circ.setAttribute('stroke-dashoffset',534-(534*pct));
+  // Beads
+  renderBeads();
+  // Tabs
+  document.querySelectorAll('.dhikr-tab').forEach((t,i)=>t.classList.toggle('active',i===current));
+  save();
+}
+function renderBeads(){
+  const el=document.getElementById('beads');
+  let html='';
+  for(let i=0;i<target&&i<99;i++){
+    html+=`<div class="bead${i<count?' done':''}"></div>`;
+  }
+  el.innerHTML=html;
+}
+function tap(e){
+  count++;
+  if(count>=target){sets++;count=0;}
+  // Ripple effect
+  const btn=document.getElementById('tap-btn');
+  const ripple=document.createElement('div');
+  ripple.className='ripple';
+  const rect=btn.getBoundingClientRect();
+  const x=(e.clientX||rect.left+rect.width/2)-rect.left;
+  const y=(e.clientY||rect.top+rect.height/2)-rect.top;
+  ripple.style.left=x+'px';ripple.style.top=y+'px';
+  btn.appendChild(ripple);
+  setTimeout(()=>ripple.remove(),500);
+  // Haptic
+  if(navigator.vibrate)navigator.vibrate(15);
+  btn.classList.add('tapped');
+  setTimeout(()=>btn.classList.remove('tapped'),100);
+  updateUI();
+}
+function setDhikr(i){current=i;count=0;sets=0;updateUI();}
+function resetCurrent(){count=0;updateUI();}
+function resetAll(){count=0;sets=0;updateUI();}
+function showCustom(){document.getElementById('custom-modal').classList.add('show');}
+function closeCustom(){document.getElementById('custom-modal').classList.remove('show');}
+function saveCustom(){
+  const v=parseInt(document.getElementById('custom-input').value);
+  if(v&&v>0&&v<=9999){target=v;count=0;sets=0;closeCustom();updateUI();}
+}
+function save(){localStorage.setItem('tasbih_state',JSON.stringify({count,sets,current,target}));}
+// Keyboard
+document.addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();tap(e);}});
+updateUI();
+</script>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- PRIMARY SEO -->
+<title>About — Bayt al-Hikmah | بيت الحكمة · Islamic Media & Technology</title>
+<meta name="description" content="Bayt al-Hikmah builds free Islamic apps, educational content and tools for Muslims worldwide. Creators of the Dhikr app. Dubai, UAE."/>
+<meta name="author" content="Bayt al-Hikmah"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/about.html"/>
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://dhikrapp.org/about.html"/>
+<meta property="og:title" content="About — Bayt al-Hikmah | بيت الحكمة · Islamic Media & Technology"/>
+<meta property="og:description" content="Bayt al-Hikmah builds free Islamic apps, educational content and tools for Muslims worldwide. Creators of the Dhikr app. Dubai, UAE."/>
+<meta property="og:image" content="https://dhikrapp.org/logo.svg"/>
+<meta property="og:site_name" content="Dhikr · ذِكر"/>
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="About — Bayt al-Hikmah | بيت الحكمة · Islamic Media & Technology"/>
+<meta name="twitter:description" content="Bayt al-Hikmah builds free Islamic apps, educational content and tools for Muslims worldwide. Creators of the Dhikr app. Dubai, UAE."/>
+<meta name="twitter:image" content="https://dhikrapp.org/logo.svg"/>
+
+<!-- FAVICON -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="apple-touch-icon" href="logo.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--surface-lowest:#170c04;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(29,17,7,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.6rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.82rem;letter-spacing:0.25em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.nav-right{display:flex;align-items:center;gap:0.75rem;}
+.nav-back{font-family:'Inter',sans-serif;font-size:0.78rem;color:var(--muted);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s;}
+.nav-back:hover{color:var(--primary);}
+.hero{position:relative;z-index:1;text-align:center;padding:9rem 2rem 5rem;}
+.hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:500px;height:400px;background:radial-gradient(ellipse,rgba(201,148,58,0.06) 0%,transparent 70%);pointer-events:none;}
+.hero-badge{font-family:'Inter',sans-serif;font-size:0.68rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);border:1px solid rgba(201,148,58,0.35);padding:0.4rem 1.2rem;border-radius:2px;margin-bottom:2rem;display:inline-block;background:rgba(201,148,58,0.05);}
+.hero-ar{font-family:'Noto Naskh Arabic',serif;font-size:clamp(3rem,8vw,5rem);font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.3rem;direction:rtl;}
+.hero-en{font-family:'Cinzel',serif;font-size:clamp(1rem,2.5vw,1.4rem);letter-spacing:0.4em;color:var(--muted);text-transform:uppercase;margin-bottom:2rem;}
+.hero-sub{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--muted);max-width:600px;margin:0 auto;line-height:1.7;}
+main{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 2rem 5rem;}
+.divider{width:80px;height:1px;background:var(--primary-grad);margin:0 auto 4rem;opacity:0.5;}
+.card{background:var(--surface-high);padding:2rem;border-radius:4px;border:1px solid var(--border);position:relative;margin-bottom:1.5rem;}
+.card::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.card::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;}
+h2{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--primary);margin-bottom:1rem;font-weight:600;letter-spacing:0.06em;}
+.ar-h{font-family:'Noto Naskh Arabic',serif;font-size:0.95rem;color:rgba(201,148,58,0.6);direction:rtl;margin-bottom:1rem;}
+p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--muted);line-height:1.8;margin-bottom:0.75rem;}
+.mission-box{background:var(--surface-low);border:1px solid rgba(201,148,58,0.3);border-radius:4px;padding:2.5rem;text-align:center;margin:3rem 0;}
+.mission-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.6rem;color:var(--cream);direction:rtl;line-height:2;margin-bottom:1rem;}
+.mission-en{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-style:italic;color:var(--muted);line-height:1.7;margin-bottom:1rem;}
+.mission-source{font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.12em;border:1px solid rgba(201,148,58,0.25);padding:0.3rem 0.75rem;border-radius:2px;display:inline-block;}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.25rem;margin-top:2rem;}
+.product-card{background:var(--surface-lowest);border:1px solid var(--border);border-radius:4px;padding:1.5rem;text-align:center;}
+.product-icon{font-size:1.8rem;margin-bottom:0.75rem;}
+.product-name-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;font-weight:700;color:var(--primary);direction:rtl;margin-bottom:0.2rem;}
+.product-name-en{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--cream);font-weight:600;margin-bottom:0.5rem;letter-spacing:0.06em;}
+.product-desc{font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);font-style:italic;line-height:1.5;}
+.social-section{margin-top:3rem;}
+.social-link{display:flex;align-items:center;gap:0.85rem;text-decoration:none;padding:0.75rem 1rem;border-radius:4px;border:1px solid var(--border);background:var(--surface-high);transition:border-color 0.2s,transform 0.2s;margin-bottom:0.75rem;}
+.social-link:hover{border-color:rgba(201,148,58,0.4);transform:translateX(4px);}
+.social-icon{width:36px;height:36px;border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.social-text{flex:1;}
+.social-name{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--cream);font-weight:600;display:block;}
+.social-handle{font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);letter-spacing:0.05em;display:block;margin-top:1px;}
+.social-arr{color:rgba(201,148,58,0.4);}
+footer{position:relative;z-index:1;text-align:center;padding:3rem 2rem;border-top:1px solid var(--border);font-family:'Inter',sans-serif;font-size:0.7rem;color:rgba(184,168,138,0.4);letter-spacing:0.05em;}
+a.text-link{color:var(--primary);text-decoration:none;}
+a.text-link:hover{text-decoration:underline;}
+
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <div class="hero-badge">The House of Wisdom</div>
+  <div class="hero-ar">بيت الحكمة</div>
+  <p class="hero-en">Bayt al-Hikmah</p>
+  <p class="hero-sub">An Islamic media and technology company building educational content, apps, and tools for Muslims worldwide.</p>
+</div>
+
+<main>
+  <div class="divider"></div>
+
+  <!-- Mission -->
+  <div class="mission-box">
+    <div class="mission-ar">وَاذْكُرُوا اللَّهَ كَثِيرًا لَعَلَّكُمْ تُفْلِحُونَ</div>
+    <div class="mission-en">"And remember Allah often so that you may succeed."</div>
+    <span class="mission-source">Al-Jumu'ah 62:10 · Sahih</span>
+  </div>
+
+  <!-- Our Story -->
+  <div class="card">
+    <h2>Our Story</h2>
+    <div class="ar-h">قصتنا</div>
+    <p>Bayt al-Hikmah was founded with a simple vision: to build Islamic tools and content that are beautiful, trustworthy, and free for every Muslim on earth.</p>
+    <p>We believe the Ummah deserves world-class digital experiences that help them remember Allah, learn their deen, and build consistent worship habits — without ads hijacking their attention or subscriptions locking them out.</p>
+    <p>Everything we build is guided by three principles: authenticity (Sahih and Hasan sources only), accessibility (free to every Muslim, regardless of income), and excellence (the highest quality we can produce).</p>
+    <p style="font-family:'Noto Naskh Arabic',serif;direction:rtl;font-size:1rem;color:var(--muted);">بيت الحكمة — محتوى إسلامي وتقنية للمسلمين حول العالم · مجاني · موثوق · للأمة</p>
+  </div>
+
+  <!-- What We Build -->
+  <h2 style="font-family:'Cinzel',serif;color:var(--primary);font-size:1rem;letter-spacing:0.1em;text-transform:uppercase;margin:3rem 0 1.5rem;">What We Build</h2>
+  <div class="products-grid">
+    <div class="product-card">
+      <div class="product-icon">📱</div>
+      <div class="product-name-ar">ذِكر</div>
+      <div class="product-name-en">Dhikr App</div>
+      <p class="product-desc">Islamic companion app. Prayer times, Quran, Tasbih, Hadith, Qibla. Free forever.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-icon">📺</div>
+      <div class="product-name-ar">يوتيوب</div>
+      <div class="product-name-en">YouTube Channel</div>
+      <p class="product-desc">Islamic educational content. Quran stories, history, and daily reminders.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-icon">📲</div>
+      <div class="product-name-ar">المحتوى القصير</div>
+      <div class="product-name-en">Short Form Content</div>
+      <p class="product-desc">TikTok and Instagram — bite-sized Islamic knowledge for the next generation.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-icon">🎮</div>
+      <div class="product-name-ar">الألعاب</div>
+      <div class="product-name-en">Games (Coming Soon)</div>
+      <p class="product-desc">Islamic and cultural mobile games. Clean, halal entertainment for the family.</p>
+    </div>
+  </div>
+
+  <!-- Our Commitment -->
+  <div class="card" style="margin-top:3rem;">
+    <h2>Our Commitment to You</h2>
+    <div class="ar-h">التزامنا تجاهك</div>
+    <p><strong style="color:var(--cream);">Sahih and Hasan only.</strong> Every hadith, dua, and Islamic fact in our apps is sourced exclusively from authenticated scholarship. No weak or fabricated narrations — ever.</p>
+    <p><strong style="color:var(--cream);">No haram content.</strong> We do not display ads for gambling, dating, alcohol, music, or anything prohibited in Islam. Every sponsor is manually reviewed.</p>
+    <p><strong style="color:var(--cream);">Your data is yours.</strong> We do not sell your data. We do not track you across apps. Your worship is between you and Allah.</p>
+    <p><strong style="color:var(--cream);">Free for the Ummah.</strong> Core features are free forever. We are sustained by halal sponsors and an optional Pro version — never by locking Muslims out of their deen.</p>
+  </div>
+
+  <!-- Follow Us -->
+  <div class="social-section">
+    <h2 style="font-family:'Cinzel',serif;color:var(--primary);font-size:1rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;">Follow Bayt al-Hikmah</h2>
+
+    <a href="https://www.youtube.com/@BaytAlHikmahMedia" target="_blank" rel="noopener" class="social-link">
+      <div class="social-icon" style="background:#ff0000;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.75 15.5V8.5l6.5 3.5-6.5 3.5z"/></svg>
+      </div>
+      <div class="social-text"><span class="social-name">YouTube</span><span class="social-handle">@BaytAlHikmahMedia</span></div>
+      <span class="social-arr">→</span>
+    </a>
+
+    <a href="https://www.tiktok.com/@baytalhikmahmedia" target="_blank" rel="noopener" class="social-link">
+      <div class="social-icon" style="background:#000;">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.01-.05z"/></svg>
+      </div>
+      <div class="social-text"><span class="social-name">TikTok</span><span class="social-handle">@baytalhikmahmedia</span></div>
+      <span class="social-arr">→</span>
+    </a>
+
+    <a href="https://www.instagram.com/baytalhikmahm/" target="_blank" rel="noopener" class="social-link">
+      <div class="social-icon" style="background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </div>
+      <div class="social-text"><span class="social-name">Instagram</span><span class="social-handle">@baytalhikmahm</span></div>
+      <span class="social-arr">→</span>
+    </a>
+  </div>
+
+  <!-- Contact -->
+  <div class="card" style="margin-top:2rem;text-align:center;">
+    <h2>Get in Touch</h2>
+    <p>For partnerships, sponsorships, media enquiries, or any questions:</p>
+    <p><a href="mailto:baytalhikmahm@gmail.com" class="text-link" style="font-size:1.1rem;">baytalhikmahm@gmail.com</a></p>
+    <p style="margin-top:0.5rem;font-family:'Inter',sans-serif;font-size:0.7rem;color:rgba(184,168,138,0.4);letter-spacing:0.08em;text-transform:uppercase;">Dubai, United Arab Emirates</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Scale of Hasanat — Dhikr | ذِكر · Good Deeds Multiplier</title>
+<meta name="description" content="Discover how many hasanat your good deeds are worth. Prayer in Masjid al-Haram, Quran recitation, Dhikr rewards. All sourced from authenticated hadiths."/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/hasanat.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--surface-lowest:#170c04;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 2.5rem;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:0.5rem;}
+main{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+/* CALCULATOR */
+.calc-box{background:linear-gradient(135deg,rgba(201,148,58,0.08),rgba(201,148,58,0.03));border:1px solid rgba(201,148,58,0.35);border-radius:4px;padding:2rem;margin-bottom:2.5rem;position:relative;}
+.calc-box::before{content:'';position:absolute;top:6px;left:6px;width:12px;height:12px;border-top:2px solid var(--primary);border-left:2px solid var(--primary);opacity:0.5;}
+.calc-box::after{content:'';position:absolute;bottom:6px;right:6px;width:12px;height:12px;border-bottom:2px solid var(--primary);border-right:2px solid var(--primary);opacity:0.5;}
+.calc-title{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;text-align:center;}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;margin-bottom:1.5rem;}
+.calc-field label{font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:0.35rem;}
+.calc-input,.calc-select{width:100%;background:var(--surface-high);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Inter',sans-serif;font-size:0.8rem;padding:0.55rem 0.7rem;outline:none;}
+.calc-input:focus,.calc-select:focus{border-color:var(--primary);}
+.calc-btn{width:100%;padding:0.85rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;transition:opacity 0.2s;}
+.calc-btn:hover{opacity:0.9;}
+.calc-result{display:none;margin-top:1.5rem;text-align:center;background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;}
+.calc-result.show{display:block;}
+.cr-num{font-family:'Cinzel',serif;font-size:3rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.cr-label{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.12em;margin-top:0.3rem;}
+.cr-detail{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--muted);margin-top:0.5rem;line-height:1.6;}
+/* DEEDS TABLE */
+.sec-title{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin:2.5rem 0 1.25rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border);}
+.deed-card{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:0.75rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.75rem;position:relative;transition:border-color 0.2s;}
+.deed-card:hover{border-color:rgba(201,148,58,0.35);}
+.deed-left{}
+.deed-title{font-family:'Cinzel',serif;font-size:0.88rem;color:var(--cream);font-weight:600;margin-bottom:0.2rem;}
+.deed-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.82rem;color:var(--primary);direction:rtl;display:block;margin-bottom:0.3rem;}
+.deed-desc{font-family:'Cormorant Garamond',serif;font-size:0.92rem;color:var(--muted);font-style:italic;line-height:1.5;}
+.deed-right{text-align:right;flex-shrink:0;}
+.deed-multiplier{font-family:'Cinzel',serif;font-size:1.75rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block;}
+.deed-unit{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-top:0.2rem;}
+.deed-source{display:block;font-family:'Inter',sans-serif;font-size:0.58rem;color:rgba(201,148,58,0.5);margin-top:0.3rem;text-decoration:none;}
+.deed-source:hover{color:var(--primary);}
+.unlimited{font-family:'Cinzel',serif;font-size:1.4rem;color:var(--emerald-light);background:none;-webkit-text-fill-color:var(--emerald-light);}
+footer{position:relative;z-index:1;padding:2rem 2rem 1rem;border-top:1px solid var(--border);background:var(--surface-lowest);}
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}.deed-card{flex-direction:column;align-items:flex-start;}.deed-right{text-align:left;}}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">Calculate · Multiply · Increase</p>
+  <h1>Scale of Hasanat</h1>
+  <p class="h1-ar">ميزان الحسنات</p>
+</div>
+
+<main>
+  <!-- DEED CALCULATOR -->
+  <div class="calc-box">
+    <div class="calc-title">Calculate Your Hasanat</div>
+    <div class="calc-grid">
+      <div class="calc-field">
+        <label>Deed Type</label>
+        <select class="calc-select" id="deed-type">
+          <option value="quran">Quran Recitation (per letter)</option>
+          <option value="prayer-home">Prayer at home (alone)</option>
+          <option value="prayer-jama">Prayer in congregation</option>
+          <option value="prayer-masjid">Prayer in a mosque</option>
+          <option value="prayer-aqsa">Prayer in Masjid al-Aqsa</option>
+          <option value="prayer-nabawi">Prayer in Masjid an-Nabawi</option>
+          <option value="prayer-haram">Prayer in Masjid al-Haram</option>
+          <option value="subhanallah">SubhanAllah (once)</option>
+          <option value="sadaqah">Sadaqah (per amount)</option>
+          <option value="fasting">Day of fasting (Ramadan)</option>
+        </select>
+      </div>
+      <div class="calc-field">
+        <label>Quantity / Amount</label>
+        <input class="calc-input" type="number" id="deed-qty" placeholder="e.g. 10" min="1" value="1"/>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcHasanat()">Calculate Hasanat</button>
+    <div class="calc-result" id="calc-result">
+      <div class="cr-num" id="cr-num"></div>
+      <div class="cr-label">Hasanat (minimum)</div>
+      <div class="cr-detail" id="cr-detail"></div>
+    </div>
+  </div>
+
+  <!-- DEED LIST -->
+  <div class="sec-title">🕌 Prayer Rewards</div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Prayer in Masjid al-Haram</div><span class="deed-ar">الصلاة في المسجد الحرام</span><div class="deed-desc">Each prayer in Masjid al-Haram equals 100,000 prayers elsewhere.</div></div><div class="deed-right"><span class="deed-multiplier">100,000×</span><span class="deed-unit">per prayer</span><a href="https://sunnah.com/ibnmajah/5/5" target="_blank" class="deed-source">Sunan Ibn Majah 1406 · Sahih ↗</a></div></div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Prayer in Masjid an-Nabawi</div><span class="deed-ar">الصلاة في المسجد النبوي</span><div class="deed-desc">Each prayer in the Prophet's Mosque ﷺ equals 1,000 prayers elsewhere.</div></div><div class="deed-right"><span class="deed-multiplier">1,000×</span><span class="deed-unit">per prayer</span><a href="https://sunnah.com/bukhari/20/2" target="_blank" class="deed-source">Sahih al-Bukhari 1190 · Sahih ↗</a></div></div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Prayer in Masjid al-Aqsa</div><span class="deed-ar">الصلاة في المسجد الأقصى</span><div class="deed-desc">Each prayer in al-Aqsa equals 500 prayers elsewhere.</div></div><div class="deed-right"><span class="deed-multiplier">500×</span><span class="deed-unit">per prayer</span><a href="https://sunnah.com/ibnmajah/5/7" target="_blank" class="deed-source">Sunan Ibn Majah 1408 · Hasan ↗</a></div></div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Prayer in Congregation</div><span class="deed-ar">الصلاة في جماعة</span><div class="deed-desc">Prayer with congregation is 27 degrees (or 25) superior to prayer performed alone.</div></div><div class="deed-right"><span class="deed-multiplier">27×</span><span class="deed-unit">vs praying alone</span><a href="https://sunnah.com/bukhari/10/127" target="_blank" class="deed-source">Sahih al-Bukhari 645 · Sahih ↗</a></div></div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">2 Sunnah of Fajr</div><span class="deed-ar">ركعتا الفجر</span><div class="deed-desc">"The two rak'ahs before Fajr prayer are better than this world and all it contains."</div></div><div class="deed-right"><span class="deed-multiplier">∞</span><span class="deed-unit">better than the world</span><a href="https://sunnah.com/muslim/6/184" target="_blank" class="deed-source">Sahih Muslim 725 · Sahih ↗</a></div></div>
+
+  <div class="sec-title">📖 Quran Recitation</div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Every Letter of Quran</div><span class="deed-ar">كل حرف من القرآن</span><div class="deed-desc">"Whoever recites a letter from Allah's Book, then he receives the reward from it, and the reward of ten the like of it." Alif is a letter, Lam is a letter, Mim is a letter.</div></div><div class="deed-right"><span class="deed-multiplier">10×</span><span class="deed-unit">per letter</span><a href="https://sunnah.com/tirmidhi/42/3" target="_blank" class="deed-source">Jami al-Tirmidhi 2910 · Sahih ↗</a></div></div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Surah Al-Ikhlas</div><span class="deed-ar">سورة الإخلاص</span><div class="deed-desc">Reciting Surah Al-Ikhlas once equals one third of the Quran in reward.</div></div><div class="deed-right"><span class="deed-multiplier">⅓ Quran</span><span class="deed-unit">per recitation</span><a href="https://sunnah.com/bukhari/66/22" target="_blank" class="deed-source">Sahih al-Bukhari 5013 · Sahih ↗</a></div></div>
+
+  <div class="sec-title">💰 Charity & Sadaqah</div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Sadaqah — General</div><span class="deed-ar">الصدقة</span><div class="deed-desc">"The likeness of those who spend their wealth in the way of Allah is as the likeness of a grain which grows seven ears, in every ear a hundred grains."</div></div><div class="deed-right"><span class="deed-multiplier">700×</span><span class="deed-unit">minimum</span><a href="https://quran.com/2/261" target="_blank" class="deed-source">Al-Quran 2:261 ↗</a></div></div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Sadaqah Jariyah</div><span class="deed-ar">الصدقة الجارية</span><div class="deed-desc">Ongoing charity that continues after death — building a mosque, planting a tree, teaching knowledge, raising a righteous child.</div></div><div class="deed-right"><span class="deed-multiplier unlimited">∞</span><span class="deed-unit">continues after death</span><a href="https://sunnah.com/muslim/25/75" target="_blank" class="deed-source">Sahih Muslim 1631 · Sahih ↗</a></div></div>
+
+  <div class="sec-title">🌙 Fasting</div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Every Day of Ramadan Fasting</div><span class="deed-ar">صيام رمضان</span><div class="deed-desc">"Whoever fasts Ramadan out of faith and seeking reward, his previous sins will be forgiven."</div></div><div class="deed-right"><span class="deed-multiplier unlimited">∞</span><span class="deed-unit">Allah multiplies without limit</span><a href="https://sunnah.com/bukhari/31/1" target="_blank" class="deed-source">Sahih al-Bukhari 1901 · Sahih ↗</a></div></div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">Fasting Monday & Thursday</div><span class="deed-ar">صيام الإثنين والخميس</span><div class="deed-desc">The Prophet ﷺ fasted on Mondays and Thursdays, saying deeds are presented to Allah on those days.</div></div><div class="deed-right"><span class="deed-multiplier">700×</span><span class="deed-unit">+ deeds reviewed by Allah</span><a href="https://sunnah.com/tirmidhi/6/47" target="_blank" class="deed-source">Jami al-Tirmidhi 747 · Sahih ↗</a></div></div>
+
+  <div class="sec-title">📿 Dhikr</div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">SubhanAllah, Alhamdulillah, Allahu Akbar</div><span class="deed-ar">سبحان الله · الحمد لله · الله أكبر</span><div class="deed-desc">Each is rewarded 10 times. Together they fill the scales. "SubhanAllah fills half the Scale, Alhamdulillah fills it completely."</div></div><div class="deed-right"><span class="deed-multiplier">10×</span><span class="deed-unit">per utterance</span><a href="https://sunnah.com/muslim/2/2" target="_blank" class="deed-source">Sahih Muslim 223 · Sahih ↗</a></div></div>
+  <div class="deed-card"><div class="deed-left"><div class="deed-title">La ilaha illallah</div><span class="deed-ar">لا إله إلا الله</span><div class="deed-desc">"Whoever says 'La ilaha illallah' sincerely, will enter Paradise." The best dhikr.</div></div><div class="deed-right"><span class="deed-multiplier unlimited">∞</span><span class="deed-unit">opens gates of Jannah</span><a href="https://sunnah.com/tirmidhi/48/100" target="_blank" class="deed-source">Jami al-Tirmidhi 3590 · Sahih ↗</a></div></div>
+
+  <p style="font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;margin-top:2rem;letter-spacing:0.07em;">All rewards mentioned are minimums. Allah multiplies for whoever He wills. Sources verified from Sahih and Hasan hadiths only.</p>
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+
+<script>
+const DEEDS={
+  'quran':{base:10,unit:'per letter',detail:'Every letter of the Quran brings 10 hasanat minimum. "Alif is a letter, Lam is a letter, Mim is a letter" — so Bismillah alone = 190+ hasanat.',source:'Tirmidhi 2910'},
+  'prayer-home':{base:1,unit:'unit prayer',detail:'Prayer alone at home.',source:''},
+  'prayer-jama':{base:27,unit:'hasanat',detail:'Prayer in congregation equals 27 times prayer alone. In some narrations, 25 times.',source:'Bukhari 645'},
+  'prayer-masjid':{base:27,unit:'hasanat',detail:'Prayer in a local mosque with congregation.',source:'Bukhari 645'},
+  'prayer-aqsa':{base:500,unit:'hasanat',detail:'500 times the reward of prayer elsewhere.',source:'Ibn Majah 1408'},
+  'prayer-nabawi':{base:1000,unit:'hasanat',detail:'1,000 times the reward of prayer elsewhere — in the Prophet\'s Mosque ﷺ.',source:'Bukhari 1190'},
+  'prayer-haram':{base:100000,unit:'hasanat',detail:'100,000 times the reward of prayer elsewhere — in Masjid al-Haram in Makkah.',source:'Ibn Majah 1406'},
+  'subhanallah':{base:10,unit:'hasanat',detail:'"Whoever says SubhanAllah 100 times, 1,000 hasanat are written for him and 1,000 sins are wiped away." — Sahih Muslim.',source:'Muslim 2691'},
+  'sadaqah':{base:700,unit:'minimum × amount',detail:'700x multiplier minimum. Allah multiplies for whom He wills without limit (Al-Quran 2:261).',source:'Quran 2:261'},
+  'fasting':{base:0,unit:'',detail:'Allah said: "All the deeds of the son of Adam are for him, except fasting, which is for Me and I shall reward for it." — The reward is immeasurable.',source:'Bukhari 1904'},
+};
+
+function calcHasanat(){
+  const type=document.getElementById('deed-type').value;
+  const qty=parseInt(document.getElementById('deed-qty').value)||1;
+  const d=DEEDS[type];
+  const result=document.getElementById('calc-result');
+  result.classList.add('show');
+  if(d.base===0){
+    document.getElementById('cr-num').textContent='∞';
+    document.getElementById('cr-detail').textContent=d.detail;
+  } else {
+    const total=(d.base*qty).toLocaleString();
+    document.getElementById('cr-num').textContent=total;
+    document.getElementById('cr-detail').textContent=`${qty.toLocaleString()} × ${d.base.toLocaleString()} hasanat each = ${total} hasanat minimum. ${d.detail}`;
+  }
+}
+</script>
+</body>
+</html>

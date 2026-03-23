@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Qibla Direction — Dhikr | ذِكر · Find Makkah from Anywhere</title>
+<meta name="description" content="Find the Qibla direction from your exact location. Live compass + AR camera overlay. Shows exact bearing in degrees and distance to Makkah in km. Free."/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/qibla.html"/>
+<meta property="og:title" content="Qibla Finder — Dhikr | ذِكر"/><meta property="og:description" content="Find Qibla direction with AR camera overlay. Free."/><meta property="og:image" content="https://dhikrapp.org/logo.svg"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 2rem;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,3rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:1rem;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);max-width:480px;margin:0 auto;}
+main{position:relative;z-index:1;max-width:700px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+/* MODE TABS */
+.mode-tabs{display:flex;gap:0;border:1px solid var(--border);border-radius:4px;overflow:hidden;margin-bottom:2rem;background:var(--surface-low);}
+.mode-tab{flex:1;padding:0.7rem;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);border:none;background:transparent;cursor:pointer;transition:all 0.2s;}
+.mode-tab.active{background:var(--primary-grad);color:#432c00;}
+/* COMPASS VIEW */
+#compass-view{display:block;}
+.compass-wrap{position:relative;width:300px;height:300px;margin:0 auto 2rem;}
+.compass-bg{position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle,var(--surface-high),var(--surface-lowest));border:2px solid var(--border);box-shadow:0 0 40px rgba(201,148,58,0.1),inset 0 0 40px rgba(0,0,0,0.3);}
+.compass-ring{position:absolute;inset:8px;border-radius:50%;border:1px solid rgba(201,148,58,0.2);}
+#compass-dial{position:absolute;inset:0;border-radius:50%;transition:transform 0.3s ease;}
+.compass-n{position:absolute;top:12px;left:50%;transform:translateX(-50%);font-family:'Cinzel',serif;font-size:0.8rem;color:var(--primary);font-weight:700;}
+.compass-s{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);font-family:'Cinzel',serif;font-size:0.7rem;color:var(--muted);}
+.compass-e{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-family:'Cinzel',serif;font-size:0.7rem;color:var(--muted);}
+.compass-w{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-family:'Cinzel',serif;font-size:0.7rem;color:var(--muted);}
+/* Tick marks */
+.tick{position:absolute;width:1px;height:8px;background:rgba(201,148,58,0.3);top:16px;left:50%;transform-origin:0 134px;}
+/* Qibla arrow */
+#qibla-arrow{position:absolute;inset:0;pointer-events:none;transition:transform 0.3s ease;}
+.q-arrow-line{position:absolute;left:50%;top:50%;width:3px;height:110px;background:var(--primary-grad);border-radius:2px;transform:translateX(-50%) translateY(-100%);transform-origin:bottom center;box-shadow:0 0 12px rgba(201,148,58,0.5);}
+.q-arrow-head{position:absolute;left:50%;top:calc(50% - 110px);transform:translateX(-50%);width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-bottom:12px solid #f7bc5e;}
+.q-kaaba{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:28px;height:28px;background:var(--surface-high);border:2px solid var(--primary);border-radius:3px;display:flex;align-items:center;justify-content:center;font-size:14px;z-index:2;}
+/* Stats */
+.qibla-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;margin-bottom:2rem;}
+.qs-card{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1rem;text-align:center;}
+.qs-val{font-family:'Cinzel',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:0.25rem;}
+.qs-label{font-family:'Inter',sans-serif;font-size:0.58rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;}
+/* AR VIEW */
+#ar-view{display:none;position:relative;}
+.ar-container{position:relative;width:100%;max-width:600px;margin:0 auto;border-radius:8px;overflow:hidden;border:1px solid var(--border);background:#000;aspect-ratio:9/16;max-height:70vh;}
+#ar-video{width:100%;height:100%;object-fit:cover;}
+#ar-canvas{position:absolute;inset:0;width:100%;height:100%;}
+.ar-permission-msg{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;padding:2rem;text-align:center;}
+.ar-perm-title{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--cream);}
+.ar-perm-sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:0.95rem;}
+.ar-start-btn{padding:0.8rem 2rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;}
+footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--border);text-align:center;font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.4);}
+footer a{color:var(--primary);text-decoration:none;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}.compass-wrap{width:260px;height:260px;}.q-arrow-line{height:95px;}.q-arrow-head{top:calc(50% - 95px);}}
+
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html" class="active">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">Live Compass · AR Camera · Your Location</p>
+  <h1>Qibla Direction</h1>
+  <p class="h1-ar">اتجاه القبلة</p>
+  <p class="sub">Find the exact direction of the Kaaba from anywhere on earth. Uses your GPS for precision.</p>
+</div>
+
+<main>
+  <!-- MODE TABS -->
+  <div class="mode-tabs">
+    <button class="mode-tab active" onclick="setMode('compass')">🧭 Compass</button>
+    <button class="mode-tab" onclick="setMode('ar')">📷 AR Camera</button>
+  </div>
+
+  <!-- COMPASS VIEW -->
+  <div id="compass-view">
+    <div class="qibla-stats">
+      <div class="qs-card"><div class="qs-val" id="qibla-deg">--°</div><div class="qs-label">Qibla Bearing</div></div>
+      <div class="qs-card"><div class="qs-val" id="qibla-dist">--</div><div class="qs-label">km to Makkah</div></div>
+      <div class="qs-card"><div class="qs-val" id="device-deg">--°</div><div class="qs-label">You're Facing</div></div>
+    </div>
+
+    <div class="compass-wrap">
+      <div class="compass-bg"></div>
+      <div class="compass-ring"></div>
+      <div id="compass-dial">
+        <div class="compass-n">N</div>
+        <div class="compass-s">S</div>
+        <div class="compass-e">E</div>
+        <div class="compass-w">W</div>
+      </div>
+      <div id="qibla-arrow">
+        <div class="q-arrow-head"></div>
+        <div class="q-arrow-line"></div>
+        <div class="q-kaaba">🕋</div>
+      </div>
+    </div>
+
+    <div id="compass-msg" style="text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);margin-bottom:1.5rem;">Detecting your location…</div>
+    <div style="background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1rem 1.25rem;margin-bottom:1.5rem;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);line-height:1.6;">
+      <strong style="color:var(--primary);">📱 On mobile:</strong> Tap "Enable Compass Sensor" and allow motion access. The arrow rotates live.<br/>
+      <strong style="color:var(--primary);">💻 On laptop/desktop:</strong> Laptops have no compass hardware. The Qibla bearing and distance are shown above — face that direction manually.
+    </div>
+    <div style="text-align:center;">
+      <button class="nav-cta" style="display:inline-block;" onclick="requestSensors()">Enable Compass Sensor (Mobile)</button>
+    </div>
+  </div>
+
+  <!-- AR VIEW -->
+  <div id="ar-view">
+    <div class="ar-container">
+      <video id="ar-video" autoplay playsinline muted></video>
+      <canvas id="ar-canvas"></canvas>
+      <div class="ar-permission-msg" id="ar-msg">
+        <div class="ar-perm-title">AR Qibla Finder</div>
+        <p class="ar-perm-sub">Points the Qibla direction on your live camera feed. Allow camera and motion access.</p>
+        <button class="ar-start-btn" onclick="startAR()">Start AR Camera</button>
+      </div>
+    </div>
+    <p style="font-family:'Inter',sans-serif;font-size:0.6rem;color:rgba(184,168,138,0.35);text-align:center;margin-top:1rem;letter-spacing:0.08em;">Works best on mobile. Hold phone upright. Gold arrow = Qibla direction.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+<script>
+const KAABA_LAT=21.4225,KAABA_LNG=39.8262;
+let userLat=null,userLng=null,qiblaBearing=0,deviceHeading=0,compassActive=false;
+
+function toRad(d){return d*Math.PI/180;}
+function toDeg(r){return r*180/Math.PI;}
+function calcQibla(lat,lng){
+  const dLng=toRad(KAABA_LNG-lng);
+  const la1=toRad(lat),la2=toRad(KAABA_LAT);
+  const x=Math.sin(dLng)*Math.cos(la2);
+  const y=Math.cos(la1)*Math.sin(la2)-Math.sin(la1)*Math.cos(la2)*Math.cos(dLng);
+  let b=toDeg(Math.atan2(x,y));
+  return (b+360)%360;
+}
+function calcDist(lat,lng){
+  const R=6371;
+  const dLat=toRad(KAABA_LAT-lat),dLng=toRad(KAABA_LNG-lng);
+  const a=Math.sin(dLat/2)**2+Math.cos(toRad(lat))*Math.cos(toRad(KAABA_LAT))*Math.sin(dLng/2)**2;
+  return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
+}
+function initLocation(){
+  if(!navigator.geolocation){fallbackDubai();return;}
+  navigator.geolocation.getCurrentPosition(
+    p=>{userLat=p.coords.latitude;userLng=p.coords.longitude;onLocationReady();},
+    ()=>fallbackDubai()
+  );
+}
+function fallbackDubai(){userLat=25.2048;userLng=55.2708;onLocationReady();document.getElementById('compass-msg').textContent='Using Dubai, UAE (default). Allow location for accuracy.';}
+function onLocationReady(){
+  qiblaBearing=calcQibla(userLat,userLng);
+  const dist=calcDist(userLat,userLng);
+  document.getElementById('qibla-deg').textContent=Math.round(qiblaBearing)+'°';
+  document.getElementById('qibla-dist').textContent=Math.round(dist).toLocaleString();
+  document.getElementById('compass-msg').textContent=`Qibla is at ${Math.round(qiblaBearing)}° from your location. Face that direction for prayer.`;
+  // Set static qibla arrow
+  document.getElementById('qibla-arrow').style.transform=`rotate(${qiblaBearing}deg)`;
+}
+function requestSensors(){
+  if(typeof DeviceOrientationEvent!=='undefined'&&typeof DeviceOrientationEvent.requestPermission==='function'){
+    DeviceOrientationEvent.requestPermission().then(p=>{
+      if(p==='granted')startCompass();
+      else document.getElementById('compass-msg').textContent='Sensor permission denied. Use the bearing shown above.';
+    }).catch(()=>document.getElementById('compass-msg').textContent='Could not access sensors.');
+  }else{startCompass();}
+}
+function startCompass(){
+  compassActive=true;
+  document.getElementById('compass-msg').textContent='Compass active. Point phone north for calibration.';
+  window.addEventListener('deviceorientationabsolute',handleOrientation,true);
+  window.addEventListener('deviceorientation',handleOrientation,true);
+}
+function handleOrientation(e){
+  let heading=e.alpha;
+  if(e.webkitCompassHeading)heading=e.webkitCompassHeading;
+  else if(e.alpha)heading=(360-e.alpha)%360;
+  else return;
+  deviceHeading=heading;
+  document.getElementById('device-deg').textContent=Math.round(heading)+'°';
+  // Rotate dial opposite to heading so N stays at real north
+  document.getElementById('compass-dial').style.transform=`rotate(${-heading}deg)`;
+  // Qibla arrow: show bearing relative to device
+  document.getElementById('qibla-arrow').style.transform=`rotate(${qiblaBearing-heading}deg)`;
+}
+function setMode(m){
+  document.querySelectorAll('.mode-tab').forEach(t=>t.classList.remove('active'));
+  event.target.classList.add('active');
+  document.getElementById('compass-view').style.display=m==='compass'?'block':'none';
+  document.getElementById('ar-view').style.display=m==='ar'?'block':'none';
+}
+async function startAR(){
+  try{
+    const stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:'environment'}});
+    document.getElementById('ar-video').srcObject=stream;
+    document.getElementById('ar-msg').style.display='none';
+    if(!compassActive)requestSensors();
+    drawAROverlay();
+  }catch(e){
+    document.getElementById('ar-msg').innerHTML='<div class="ar-perm-title">Camera Access Denied</div><p class="ar-perm-sub">Allow camera access to use AR Qibla finder.</p>';
+  }
+}
+function drawAROverlay(){
+  const canvas=document.getElementById('ar-canvas');
+  const ctx=canvas.getContext('2d');
+  function draw(){
+    canvas.width=canvas.offsetWidth;
+    canvas.height=canvas.offsetHeight;
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    // Draw qibla indicator
+    const diff=((qiblaBearing-deviceHeading)+360)%360;
+    const cx=canvas.width/2,cy=canvas.height/2;
+    // Map bearing diff to screen position
+    const screenX=cx+((diff>180?diff-360:diff)/90)*cx;
+    if(Math.abs(diff>180?diff-360:diff)<60){
+      ctx.beginPath();
+      ctx.moveTo(screenX,40);ctx.lineTo(screenX-15,70);ctx.lineTo(screenX+15,70);ctx.closePath();
+      ctx.fillStyle='rgba(201,148,58,0.85)';ctx.fill();
+      ctx.font='bold 14px Cinzel';ctx.textAlign='center';
+      ctx.fillStyle='rgba(201,148,58,0.9)';
+      ctx.fillText('🕋 QIBLA',screenX,95);
+      ctx.fillText(Math.round(qiblaBearing)+'°',screenX,115);
+    }
+    // Compass at bottom
+    ctx.fillStyle='rgba(0,0,0,0.5)';
+    ctx.fillRect(0,canvas.height-50,canvas.width,50);
+    ctx.font='12px Inter, sans-serif';ctx.textAlign='center';
+    ctx.fillStyle='#c9943a';
+    ctx.fillText(`Facing: ${Math.round(deviceHeading)}° · Qibla: ${Math.round(qiblaBearing)}°`,cx,canvas.height-20);
+    requestAnimationFrame(draw);
+  }
+  draw();
+}
+initLocation();
+</script>

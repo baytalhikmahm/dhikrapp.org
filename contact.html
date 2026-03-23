@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact — Dhikr | ذِكر · Bayt al-Hikmah</title>
+<meta name="description" content="Contact Bayt al-Hikmah. Sponsorships, partnerships, feedback, bug reports. We read every message. baytalhikmahm@gmail.com"/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/contact.html"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 2rem;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:0.5rem;}
+main{position:relative;z-index:1;max-width:680px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2.5rem;}
+.ct-card{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;text-align:center;transition:border-color 0.2s,transform 0.2s;text-decoration:none;display:block;}
+.ct-card:hover{border-color:rgba(201,148,58,0.4);transform:translateY(-3px);}
+.ct-icon{font-size:1.8rem;margin-bottom:0.65rem;display:block;}
+.ct-title{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--cream);font-weight:600;margin-bottom:0.3rem;display:block;}
+.ct-sub{font-family:'Cormorant Garamond',serif;font-size:0.92rem;color:var(--muted);font-style:italic;}
+.form-box{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:2rem;position:relative;}
+.form-box::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.45;}
+.form-box::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.45;}
+.form-title{font-family:'Cinzel',serif;font-size:0.85rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1.5rem;}
+.form-row{margin-bottom:1.25rem;}
+.form-label{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;display:block;margin-bottom:0.4rem;}
+.form-input,.form-select,.form-textarea{width:100%;background:var(--surface-low);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Cormorant Garamond',serif;font-size:1rem;padding:0.65rem 0.85rem;outline:none;transition:border-color 0.2s;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--primary);}
+.form-input::placeholder,.form-textarea::placeholder{color:rgba(184,168,138,0.3);}
+.form-select{cursor:pointer;font-family:'Inter',sans-serif;font-size:0.8rem;}
+.form-textarea{height:140px;resize:vertical;}
+.form-submit{width:100%;padding:0.9rem;background:var(--primary-grad);color:#432c00;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;border:none;border-radius:3px;cursor:pointer;margin-top:0.5rem;transition:opacity 0.2s,transform 0.2s;box-shadow:0 6px 20px rgba(201,148,58,0.22);}
+.form-submit:hover{opacity:0.9;transform:translateY(-1px);}
+.form-success{display:none;background:rgba(26,92,42,0.15);border:1px solid rgba(147,214,151,0.25);border-radius:4px;padding:1.5rem;text-align:center;margin-top:1rem;}
+.form-success.show{display:block;}
+.direct-email{text-align:center;margin-top:1.5rem;font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--muted);font-style:italic;}
+.direct-email a{color:var(--primary);text-decoration:none;font-style:normal;}
+footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--border);text-align:center;font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.4);}
+footer a{color:var(--primary);text-decoration:none;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}}
+
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">We Read Every Message</p>
+  <h1>Get in Touch</h1>
+  <p class="h1-ar">تواصل معنا</p>
+</div>
+
+<main>
+  <div class="contact-grid">
+    <a href="mailto:baytalhikmahm@gmail.com" class="ct-card"><span class="ct-icon">🤝</span><span class="ct-title">Sponsorships</span><span class="ct-sub">Halal brands & Islamic orgs</span></a>
+    <a href="mailto:baytalhikmahm@gmail.com" class="ct-card"><span class="ct-icon">🌐</span><span class="ct-title">Partnerships</span><span class="ct-sub">Charities & media</span></a>
+    <a href="mailto:baytalhikmahm@gmail.com" class="ct-card"><span class="ct-icon">🐛</span><span class="ct-title">Bug Reports</span><span class="ct-sub">Help us improve</span></a>
+    <a href="mailto:baytalhikmahm@gmail.com" class="ct-card"><span class="ct-icon">💬</span><span class="ct-title">Feedback</span><span class="ct-sub">We listen to everything</span></a>
+  </div>
+
+  <div class="form-box">
+    <div class="form-title">Send a Message</div>
+    <form id="contact-form" onsubmit="submitForm(event)">
+      <div class="form-row"><label class="form-label">Your Name</label><input class="form-input" type="text" placeholder="Ahmed" required/></div>
+      <div class="form-row"><label class="form-label">Email Address</label><input class="form-input" type="email" id="f-email" placeholder="your@email.com" required/></div>
+      <div class="form-row"><label class="form-label">Subject</label>
+        <select class="form-select" id="f-subject">
+          <option>Sponsorship Enquiry</option>
+          <option>Partnership</option>
+          <option>Bug Report</option>
+          <option>Feature Request</option>
+          <option>General Feedback</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-row"><label class="form-label">Message</label><textarea class="form-textarea" id="f-message" placeholder="Assalamu Alaykum…" required></textarea></div>
+      <button type="submit" class="form-submit">Send Message · JazakAllahu Khayran</button>
+    </form>
+    <div class="form-success" id="form-success">
+      <div style="font-family:'Cinzel',serif;font-size:1rem;color:var(--primary);margin-bottom:0.4rem;">JazakAllahu Khayran 🤲</div>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--muted);">Your message has been sent. We'll get back to you within 48 hours — إن شاء الله</div>
+    </div>
+  </div>
+
+  <p class="direct-email">Or email directly: <a href="mailto:baytalhikmahm@gmail.com">baytalhikmahm@gmail.com</a></p>
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Worship Challenges — Dhikr | ذِكر · Build Ibadah Habits</title>
+<meta name="description" content="Free Islamic worship challenges. 40-day Fajr, 21-day Adhkar, Tahajjud, Sadaqah, Ramadan. Track your streak. For the sake of Allah only."/>
+<meta name="robots" content="index,follow"/><meta name="theme-color" content="#1d1107"/>
+<link rel="canonical" href="https://dhikrapp.org/challenges.html"/>
+<meta property="og:title" content="Worship Challenges — Dhikr | ذِكر"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Naskh+Arabic:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{--surface:#1d1107;--surface-low:#26190e;--surface-high:#36271b;--primary:#c9943a;--primary-grad:linear-gradient(135deg,#c9943a,#f7bc5e);--cream:#f0e8d6;--muted:#b8a88a;--emerald:#1a5c2a;--emerald-light:#93d697;--border:rgba(201,148,58,0.18);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--surface);color:var(--cream);font-family:'Cormorant Garamond',serif;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 2px 2px,rgba(201,148,58,0.04) 1px,transparent 0);background-size:28px 28px;pointer-events:none;z-index:0;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;background:rgba(29,17,7,0.93);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;align-items:center;gap:0.65rem;text-decoration:none;}
+.nav-logo img{width:32px;height:32px;border-radius:50%;}
+.nav-logo-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.4rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.nav-logo-en{font-family:'Cinzel',serif;font-size:0.75rem;letter-spacing:0.2em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:1.5rem;list-style:none;align-items:center;}
+.nav-links a{font-family:'Inter',sans-serif;font-size:0.7rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.nav-cta{font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:0.5rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;text-decoration:none;}
+.hero{position:relative;z-index:1;text-align:center;padding:7rem 2rem 2rem;}
+.hero::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);width:500px;height:300px;background:radial-gradient(ellipse,rgba(201,148,58,0.06) 0%,transparent 70%);pointer-events:none;}
+.lbl{font-family:'Inter',sans-serif;font-size:0.65rem;font-weight:600;letter-spacing:0.25em;text-transform:uppercase;color:var(--primary);margin-bottom:0.5rem;}
+h1{font-family:'Cinzel',serif;font-size:clamp(2rem,5vw,2.8rem);color:var(--cream);font-weight:700;margin-bottom:0.3rem;}
+.h1-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.2rem;color:var(--primary);direction:rtl;margin-bottom:0.75rem;}
+.sub{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-style:italic;color:var(--muted);max-width:520px;margin:0 auto;}
+main{position:relative;z-index:1;max-width:1000px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+/* ACTIVE BANNER */
+.active-banner{background:linear-gradient(135deg,rgba(26,92,42,0.2),rgba(26,92,42,0.08));border:1px solid rgba(147,214,151,0.25);border-radius:4px;padding:1.25rem 1.5rem;margin-bottom:2.5rem;display:none;}
+.active-banner.show{display:block;}
+.ab-title{font-family:'Cinzel',serif;font-size:0.8rem;color:var(--emerald-light);font-weight:600;margin-bottom:0.75rem;letter-spacing:0.08em;text-transform:uppercase;}
+.ab-items{display:flex;flex-wrap:wrap;gap:0.6rem;}
+.ab-item{font-family:'Inter',sans-serif;font-size:0.65rem;color:var(--emerald-light);background:rgba(26,92,42,0.2);border:1px solid rgba(147,214,151,0.2);padding:0.3rem 0.7rem;border-radius:2px;}
+/* GRID */
+.ch-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;}
+.ch-card{background:var(--surface-high);padding:1.75rem;border-radius:4px;border:1px solid var(--border);position:relative;transition:transform 0.25s,border-color 0.25s;}
+.ch-card::before{content:'';position:absolute;top:6px;left:6px;width:10px;height:10px;border-top:1.5px solid var(--primary);border-left:1.5px solid var(--primary);opacity:0.4;}
+.ch-card::after{content:'';position:absolute;bottom:6px;right:6px;width:10px;height:10px;border-bottom:1.5px solid var(--primary);border-right:1.5px solid var(--primary);opacity:0.4;}
+.ch-card:hover{transform:translateY(-4px);border-color:rgba(201,148,58,0.4);}
+.ch-card.featured{border-color:rgba(201,148,58,0.45);background:linear-gradient(135deg,rgba(201,148,58,0.06),var(--surface-high));}
+.ch-card.joined{border-color:rgba(147,214,151,0.35);}
+.ch-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.75rem;}
+.ch-days{font-family:'Cinzel',serif;font-size:3rem;font-weight:700;background:var(--primary-grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;}
+.ch-tag{font-family:'Inter',sans-serif;font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.22rem 0.55rem;border-radius:2px;background:rgba(201,148,58,0.12);color:var(--primary);border:1px solid rgba(201,148,58,0.25);}
+.ch-tag.ramadan{background:rgba(26,92,42,0.3);color:var(--emerald-light);border-color:rgba(147,214,151,0.2);}
+.ch-title-en{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--cream);font-weight:600;margin-bottom:0.2rem;}
+.ch-title-ar{font-family:'Noto Naskh Arabic',serif;font-size:0.85rem;color:var(--primary);direction:rtl;margin-bottom:0.75rem;}
+.ch-desc{font-family:'Cormorant Garamond',serif;font-size:0.97rem;color:var(--muted);font-style:italic;line-height:1.6;margin-bottom:1rem;}
+.ch-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;}
+.ch-ic{font-family:'Inter',sans-serif;font-size:0.58rem;color:var(--muted);background:var(--surface-low);padding:0.2rem 0.5rem;border-radius:2px;}
+/* STREAK TRACKER */
+.streak-dots{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:1rem;}
+.sd{width:10px;height:10px;border-radius:50%;background:rgba(201,148,58,0.15);border:1px solid rgba(201,148,58,0.2);cursor:pointer;transition:all 0.15s;}
+.sd.done{background:var(--primary);border-color:#f7bc5e;}
+.sd:hover{border-color:var(--primary);}
+.ch-footer{display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid rgba(201,148,58,0.08);}
+.ch-btn{font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.55rem 1.1rem;background:var(--primary-grad);color:#432c00;border:none;border-radius:3px;cursor:pointer;transition:opacity 0.2s;}
+.ch-btn:hover{opacity:0.9;}
+.ch-btn.joined-btn{background:rgba(26,92,42,0.3);color:var(--emerald-light);border:1px solid rgba(147,214,151,0.25);}
+.ch-count{font-family:'Inter',sans-serif;font-size:0.62rem;color:var(--muted);}
+/* HADITH */
+.hadith-strip{background:var(--surface-high);border:1px solid var(--border);border-radius:4px;padding:1.5rem;margin-bottom:2.5rem;text-align:center;}
+.hs-ar{font-family:'Noto Naskh Arabic',serif;font-size:1.05rem;color:var(--cream);direction:rtl;line-height:2;margin-bottom:0.5rem;}
+.hs-en{font-family:'Cormorant Garamond',serif;font-size:0.95rem;font-style:italic;color:var(--muted);margin-bottom:0.35rem;}
+.hs-src{font-family:'Inter',sans-serif;font-size:0.6rem;color:var(--primary);text-transform:uppercase;letter-spacing:0.1em;}
+footer{position:relative;z-index:1;padding:2rem;border-top:1px solid var(--border);text-align:center;font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.4);}
+footer a{color:var(--primary);text-decoration:none;}
+@media(max-width:768px){nav{padding:0.85rem 1rem;}.nav-links{display:none;}}
+
+.footer-sitemap{max-width:900px;margin:0 auto 1.5rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.5rem;}
+.fs-col-title{font-family:'Cinzel',serif;font-size:0.7rem;color:var(--primary);font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem;}
+.fs-col a{display:block;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s;}
+.fs-col a:hover{color:var(--primary);}
+.footer-copy{font-family:'Inter',sans-serif;font-size:0.65rem;color:rgba(184,168,138,0.35);text-align:center;padding-top:1.25rem;border-top:1px solid var(--border);max-width:900px;margin:0 auto;letter-spacing:0.05em;}
+.nav-signin{display:none;font-family:'Inter',sans-serif;font-size:0.68rem;color:var(--muted);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s;padding:0.35rem 0.75rem;border:1px solid var(--border);border-radius:3px;}
+.nav-signin:hover{color:var(--primary);border-color:rgba(201,148,58,0.4);}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><img src="logo.svg" alt="Dhikr"/><span class="nav-logo-ar">ذِكر</span><span class="nav-logo-en">Dhikr</span></a>
+  <ul class="nav-links">
+    <li><a href="prayer.html">Prayer</a></li>
+    <li><a href="quran.html">Quran</a></li>
+    <li><a href="dua.html">Dua</a></li>
+    <li><a href="tasbih.html">Tasbih</a></li>
+    <li><a href="qibla.html">Qibla</a></li>
+    <li><a href="books.html">Books</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <a href="index.html#download" class="nav-cta">Get App</a>
+</nav>
+
+<div class="hero">
+  <p class="lbl">Free · For the Sake of Allah</p>
+  <h1>Worship Challenges</h1>
+  <p class="h1-ar">تحديات العبادة</p>
+  <p class="sub">Build consistent worship habits. Track your streak honestly. No prizes. No leaderboards. Just you, your niyyah, and Allah.</p>
+</div>
+
+<main>
+  <!-- HADITH -->
+  <div class="hadith-strip">
+    <div class="hs-ar">أَحَبُّ الْأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ</div>
+    <div class="hs-en">"The most beloved deeds to Allah are the most consistent ones, even if they are small."</div>
+    <div class="hs-src">Sahih al-Bukhari 6464 · Sahih Muslim 783 · Authenticated</div>
+  </div>
+
+  <!-- ACTIVE CHALLENGES -->
+  <div class="active-banner" id="active-banner">
+    <div class="ab-title">✅ Your Active Challenges</div>
+    <div class="ab-items" id="active-items"></div>
+  </div>
+
+  <!-- GRID -->
+  <div class="ch-grid" id="ch-grid"></div>
+
+  <p style="font-family:'Inter',sans-serif;font-size:0.62rem;color:rgba(184,168,138,0.3);text-align:center;margin-top:2.5rem;letter-spacing:0.08em;text-transform:uppercase;">All challenges free · No data sold · Streak saved locally · For Allah only</p>
+</main>
+
+<footer>
+  <div class="footer-sitemap">
+    <div class="fs-col"><div class="fs-col-title">Worship</div><a href="prayer.html">Prayer Times</a><a href="quran.html">Quran Reader</a><a href="dua.html">Dua Collection</a><a href="tasbih.html">Tasbih Counter</a><a href="qibla.html">Qibla Finder</a><a href="laylat-al-qadar.html">Laylat al-Qadar</a></div>
+    <div class="fs-col"><div class="fs-col-title">Tools</div><a href="zakat.html">Zakat Calculator</a><a href="hasanat.html">Scale of Hasanat</a></div>
+    <div class="fs-col"><div class="fs-col-title">Resources</div><a href="books.html">Islamic Books</a><a href="about.html">About Bayt al-Hikmah</a><a href="sponsor.html">Sponsor Us</a><a href="contact.html">Contact</a></div>
+    <div class="fs-col"><div class="fs-col-title">Legal</div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+  <p class="footer-copy">&copy; 2026 Bayt al-Hikmah &middot; dhikrapp.org &middot; Free for every Muslim, forever &middot; Made with إخلاص in Dubai, UAE</p>
+</footer>
+<script>
+const CHALLENGES=[
+  {id:'fajr40',days:40,tag:'Core',titleEn:'40-Day Fajr Challenge',titleAr:'تحدي الفجر ٤٠ يوماً',desc:'Pray Fajr on time every day for 40 days. The Prophet ﷺ said whoever prays Fajr is under Allah\'s protection.',tags:['Salah','Consistency','Dawn'],featured:true},
+  {id:'adhkar21',days:21,tag:'Core',titleEn:'21-Day Adhkar Habit',titleAr:'تحدي الأذكار ٢١ يوماً',desc:'Complete your morning and evening adhkar for 21 consecutive days. Build the habit of daily remembrance.',tags:['Dhikr','Morning','Evening']},
+  {id:'tahajjud14',days:14,tag:'Advanced',titleEn:'14-Night Tahajjud',titleAr:'تحدي التهجد ١٤ ليلة',desc:'Wake for Tahajjud prayer in the last third of the night for 14 days. Even 2 rakaat counts.',tags:['Qiyam','Night Prayer','Devotion']},
+  {id:'sadaqah30',days:30,tag:'Ramadan',titleEn:'30-Day Sadaqah',titleAr:'تحدي الصدقة ٣٠ يوماً',desc:'Give sadaqah every single day for 30 days — any amount, even a smile. Consistency over size.',tags:['Charity','Generosity','Daily'],ramadan:true},
+  {id:'quran30',days:30,tag:'Ramadan',titleEn:'Complete Quran in 30 Days',titleAr:'ختم القرآن في ٣٠ يوماً',desc:'Read one juz per day to complete the entire Quran in one month. Track your daily progress.',tags:['Quran','Reading','Juz'],ramadan:true},
+  {id:'tongue7',days:7,tag:'Starter',titleEn:'7-Day Tongue Guard',titleAr:'تحدي حفظ اللسان ٧ أيام',desc:'No backbiting, lying, or harsh words for 7 days. The Prophet ﷺ said: whoever guards their tongue, I guarantee them Jannah.',tags:['Character','Speech','Akhlaq']}
+];
+let joined=JSON.parse(localStorage.getItem('ch_joined')||'{}');
+function renderChallenges(){
+  const grid=document.getElementById('ch-grid');
+  grid.innerHTML=CHALLENGES.map(c=>{
+    const isJoined=!!joined[c.id];
+    const streak=joined[c.id]?.streak||0;
+    return `<div class="ch-card${c.featured?' featured':''}${isJoined?' joined':''}">
+      <div class="ch-top">
+        <div class="ch-days">${c.days}</div>
+        <span class="ch-tag${c.ramadan?' ramadan':''}">${c.tag}</span>
+      </div>
+      <div class="ch-title-en">${c.titleEn}</div>
+      <div class="ch-title-ar">${c.titleAr}</div>
+      <p class="ch-desc">${c.desc}</p>
+      <div class="ch-tags">${c.tags.map(t=>`<span class="ch-ic">${t}</span>`).join('')}</div>
+      ${isJoined?`<div class="streak-dots">${Array.from({length:Math.min(c.days,42)},(_,i)=>`<div class="sd${i<streak?' done':''}" onclick="toggleDay('${c.id}',${i})"></div>`).join('')}</div>`:''}
+      <div class="ch-footer">
+        <button class="ch-btn${isJoined?' joined-btn':''}" onclick="${isJoined?`markToday('${c.id}')`:`joinChallenge('${c.id}',${c.days})`}">${isJoined?'✓ Mark Today':'Join Challenge'}</button>
+        <span class="ch-count">${isJoined?`Day ${streak}/${c.days}`:`${c.days} days`}</span>
+      </div>
+    </div>`;
+  }).join('');
+  updateActiveBanner();
+}
+function joinChallenge(id,days){
+  joined[id]={streak:0,days,started:new Date().toISOString()};
+  localStorage.setItem('ch_joined',JSON.stringify(joined));
+  renderChallenges();
+}
+function markToday(id){
+  if(!joined[id])return;
+  joined[id].streak=Math.min(joined[id].streak+1,joined[id].days);
+  joined[id].lastMarked=new Date().toISOString();
+  localStorage.setItem('ch_joined',JSON.stringify(joined));
+  renderChallenges();
+}
+function toggleDay(id,dayIdx){
+  if(!joined[id])return;
+  if(dayIdx<joined[id].streak){joined[id].streak=dayIdx;}
+  else{joined[id].streak=dayIdx+1;}
+  localStorage.setItem('ch_joined',JSON.stringify(joined));
+  renderChallenges();
+}
+function updateActiveBanner(){
+  const active=Object.keys(joined);
+  const banner=document.getElementById('active-banner');
+  if(active.length===0){banner.classList.remove('show');return;}
+  banner.classList.add('show');
+  document.getElementById('active-items').innerHTML=active.map(id=>{
+    const ch=CHALLENGES.find(c=>c.id===id);
+    return ch?`<span class="ab-item">${ch.titleEn} — Day ${joined[id].streak}/${joined[id].days}</span>`:'';
+  }).join('');
+}
+renderChallenges();
+</script>

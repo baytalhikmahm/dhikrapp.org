@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#080f1c">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>هل هي ليلة القدر؟ — Is It Laylat al-Qadr?</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Cinzel:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #080f1c;
+  --navy-mid: #0e1a2e;
+  --navy-light: #162038;
+  --navy-card: #0a1525;
+  --gold: #c9943a;
+  --gold-light: #e2b86a;
+  --gold-dim: #7a5820;
+  --gold-glow: rgba(201,148,58,0.12);
+  --cream: #f0e8d6;
+  --cream-dim: #b8a88a;
+  --muted: rgba(240,232,214,0.4);
+  --border: rgba(201,148,58,0.18);
+  --border-bright: rgba(201,148,58,0.5);
+  --danger: #c04040;
+  --success: #3a7a5a;
+  --r: 2px;
+}
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--navy);
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding-bottom: 80px;
+}
+
+/* ── STARS BG ── */
+.stars-bg {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image:
+    radial-gradient(1px 1px at 10% 8%, rgba(255,255,255,.7) 0%, transparent 100%),
+    radial-gradient(1px 1px at 28% 5%, rgba(255,255,255,.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 3%, rgba(201,148,58,.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 72% 9%, rgba(255,255,255,.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 4%, rgba(255,255,255,.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 85% 22%, rgba(255,255,255,.5) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 60% 15%, rgba(201,148,58,.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 30%, rgba(255,255,255,.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 95% 35%, rgba(255,255,255,.4) 0%, transparent 100%);
+}
+.geo-bg {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .025;
+  background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+  background-size: 28px 28px;
+}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(8,15,28,.97);
+  border-top: 0.5px solid var(--border);
+  display: flex; align-items: stretch;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.nav-item {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 10px 4px 8px; cursor: pointer;
+  transition: color .2s; color: var(--muted); gap: 3px;
+  font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: .08em;
+  border: none; background: none;
+}
+.nav-item.active { color: var(--gold-light); }
+.nav-icon { font-size: 18px; line-height: 1; }
+
+/* ── CONTAINER ── */
+.page { display: none; position: relative; z-index: 1; min-height: calc(100vh - 80px); }
+.page.active { display: block; animation: fadeUp .4s ease both; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 1.25rem 2rem; }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
+@keyframes pulse { 0%,100% { transform:scale(1); opacity:1; } 50% { transform:scale(1.05); opacity:.85; } }
+@keyframes spin { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
+@keyframes moonGlow { 0%,100% { box-shadow: 0 0 20px rgba(201,148,58,.3), 0 0 40px rgba(201,148,58,.1); } 50% { box-shadow: 0 0 35px rgba(201,148,58,.5), 0 0 70px rgba(201,148,58,.2); } }
+
+/* ── ORNAMENT ── */
+.ornament { display:flex; align-items:center; gap:10px; margin:.75rem 0; }
+.orn-line { flex:1; height:.5px; background:linear-gradient(90deg,transparent,var(--gold-dim),transparent); }
+.orn-diamond { width:7px; height:7px; border:1px solid var(--gold); transform:rotate(45deg); flex-shrink:0; }
+.orn-dot { width:3px; height:3px; border-radius:50%; background:var(--gold); flex-shrink:0; }
+
+/* ── PAGE HEADER ── */
+.page-header { text-align:center; padding: 2.5rem 0 1.5rem; }
+.page-arabic { font-family:'Noto Naskh Arabic',serif; font-size:1.6rem; font-weight:600; color:var(--gold-light); direction:rtl; line-height:2; margin-bottom:.25rem; }
+.page-title { font-family:'Cinzel',serif; font-size:1.5rem; font-weight:400; letter-spacing:.1em; color:var(--cream); margin-bottom:.3rem; }
+.page-sub { font-size:.9rem; font-style:italic; color:var(--cream-dim); }
+
+/* ── CARDS ── */
+.card {
+  border: .5px solid var(--border);
+  border-radius: var(--r);
+  padding: 1.25rem;
+  background: var(--navy-card);
+  position: relative;
+  margin-bottom: 1rem;
+}
+.card.gold-border { border-color: var(--border-bright); }
+.card::before, .card.corners::after {
+  content:''; position:absolute; width:12px; height:12px; border:1px solid var(--gold);
+}
+.card::before { top:-1px; left:-1px; border-right:none; border-bottom:none; }
+.card.corners::after { bottom:-1px; right:-1px; border-left:none; border-top:none; }
+.card-label { font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:.18em; color:var(--gold-dim); margin-bottom:.5rem; text-transform:uppercase; }
+.card-title { font-size:1.1rem; font-weight:500; color:var(--cream); margin-bottom:.4rem; }
+.card-body { font-size:.9rem; color:var(--cream-dim); line-height:1.75; }
+
+/* ── SECTION LABEL ── */
+.section-label { font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.2em; color:var(--gold-dim); text-align:center; margin:1.5rem 0 .75rem; text-transform:uppercase; }
+
+/* ── BUTTONS ── */
+.btn {
+  font-family:'Cinzel',serif; font-size:.75rem; letter-spacing:.1em;
+  padding: 12px 24px; border-radius:var(--r);
+  border: .5px solid var(--border-bright); cursor:pointer;
+  transition: all .2s; text-transform:uppercase;
+}
+.btn-primary { background:var(--gold); color:var(--navy); border-color:var(--gold); font-weight:500; }
+.btn-primary:hover { background:var(--gold-light); }
+.btn-ghost { background:transparent; color:var(--cream-dim); }
+.btn-ghost:hover { background:var(--gold-glow); color:var(--cream); }
+.btn-block { display:block; width:100%; text-align:center; margin-top:.75rem; }
+
+/* ══════════════════════════
+   HOME PAGE
+══════════════════════════ */
+.moon-wrap { display:flex; justify-content:center; padding: 2.5rem 0 1.5rem; }
+.moon {
+  width:64px; height:64px; border-radius:50%;
+  background: radial-gradient(circle at 32% 32%, #fffde8, #e8d08a 45%, #c9943a 100%);
+  animation: moonGlow 4s ease-in-out infinite;
+}
+.hero-arabic { font-family:'Noto Naskh Arabic',serif; font-size:2rem; font-weight:600; color:var(--gold-light); direction:rtl; text-align:center; line-height:2; }
+.hero-title { font-family:'Cinzel',serif; font-size:1.8rem; font-weight:400; text-align:center; letter-spacing:.08em; color:var(--cream); margin:.25rem 0; }
+.hero-sub { text-align:center; font-style:italic; color:var(--cream-dim); font-size:.95rem; margin-bottom:1.5rem; }
+.hero-mission { border-left:2px solid var(--gold); padding-left:1rem; margin:1.5rem 0; font-style:italic; font-size:.95rem; color:var(--cream-dim); line-height:1.9; }
+
+/* Sunrise card */
+.sunrise-card {
+  border: .5px solid var(--border-bright); border-radius:var(--r);
+  padding: 1.25rem; background:var(--navy-card); margin-bottom:1rem;
+  position:relative; overflow:hidden;
+}
+.sunrise-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem; }
+.sunrise-city { font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.18em; color:var(--gold-dim); margin-bottom:3px; }
+.sunrise-time { font-size:2.2rem; font-weight:300; color:var(--cream); line-height:1; }
+.sunrise-label { font-size:.78rem; color:var(--cream-dim); margin-top:3px; }
+.night-badge { text-align:right; }
+.night-badge-num { font-size:2.2rem; font-weight:300; color:var(--gold-light); line-height:1; }
+.night-badge-sub { font-size:.78rem; color:var(--cream-dim); }
+.night-type-tag {
+  display:inline-block; font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:.12em;
+  padding:3px 8px; border-radius:1px; margin-top:4px;
+}
+.odd-tag { background:rgba(201,148,58,.15); color:var(--gold); border:.5px solid var(--border); }
+.even-tag { background:rgba(22,32,56,.8); color:var(--cream-dim); border:.5px solid var(--border); }
+
+.countdown-row { display:flex; gap:8px; }
+.count-block { flex:1; text-align:center; background:rgba(201,148,58,.06); border:.5px solid var(--border); border-radius:var(--r); padding:8px 4px; }
+.count-num { font-family:'Cinzel',serif; font-size:1.3rem; font-weight:400; color:var(--gold-light); }
+.count-lbl { font-size:.6rem; color:var(--muted); letter-spacing:.08em; font-family:'Cinzel',serif; }
+
+.photo-window { background:rgba(201,148,58,.06); border:.5px solid var(--border); border-radius:var(--r); padding:.75rem 1rem; margin-top:1rem; }
+.photo-window-title { font-family:'Cinzel',serif; font-size:.6rem; letter-spacing:.15em; color:var(--gold); margin-bottom:.3rem; }
+.photo-window-time { font-size:1rem; color:var(--cream); font-weight:300; }
+.photo-window-sub { font-size:.78rem; color:var(--cream-dim); margin-top:2px; }
+
+/* ══════════════════════════
+   SCORER PAGE
+══════════════════════════ */
+.upload-zone {
+  border: 1px dashed var(--border-bright); border-radius:var(--r);
+  padding: 2rem 1rem; text-align:center; cursor:pointer;
+  transition: all .2s; margin-bottom:1rem; position:relative;
+  background:rgba(201,148,58,.03);
+}
+.upload-zone:hover { background:var(--gold-glow); border-color:var(--gold); }
+.upload-zone input { position:absolute; inset:0; opacity:0; cursor:pointer; }
+.upload-icon { font-size:2rem; margin-bottom:.5rem; opacity:.6; }
+.upload-text { font-size:.9rem; color:var(--cream-dim); }
+.upload-sub { font-size:.75rem; color:var(--muted); margin-top:4px; }
+.photo-preview { width:100%; border-radius:var(--r); margin-bottom:1rem; max-height:280px; object-fit:cover; border:.5px solid var(--border); }
+.photo-count-guide { display:grid; grid-template-columns:repeat(5,1fr); gap:6px; margin-bottom:1rem; }
+.photo-slot { border:.5px solid var(--border); border-radius:var(--r); padding:6px 4px; text-align:center; }
+.photo-slot-num { font-family:'Cinzel',serif; font-size:.65rem; color:var(--gold-dim); margin-bottom:2px; }
+.photo-slot-time { font-size:.62rem; color:var(--muted); }
+.photo-slot.best { border-color:var(--gold); background:var(--gold-glow); }
+.photo-slot.best .photo-slot-num { color:var(--gold-light); }
+
+/* Sun visualizer */
+.sun-viz-wrap { display:flex; flex-direction:column; align-items:center; padding:1.5rem 0 1rem; }
+.sun-viz-label { font-size:.78rem; color:var(--muted); margin-bottom:1rem; font-style:italic; }
+.sun-disc-container { width:120px; height:120px; display:flex; align-items:center; justify-content:center; margin-bottom:.5rem; }
+.sun-disc {
+  border-radius:50%; transition: all .5s cubic-bezier(.4,0,.2,1);
+}
+.sun-rays { position:relative; }
+.sun-verdict { font-family:'Cinzel',serif; font-size:.7rem; letter-spacing:.12em; color:var(--gold-dim); text-align:center; }
+
+/* Sliders */
+.slider-group { margin-bottom:1.25rem; }
+.slider-header { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:.4rem; }
+.slider-name { font-family:'Cinzel',serif; font-size:.68rem; letter-spacing:.1em; color:var(--cream-dim); }
+.slider-val { font-size:.9rem; font-weight:500; color:var(--gold-light); }
+.slider-desc { font-size:.72rem; color:var(--muted); margin-bottom:.5rem; font-style:italic; }
+.slider-ends { display:flex; justify-content:space-between; font-size:.65rem; color:var(--muted); margin-top:3px; }
+input[type=range] {
+  width:100%; height:4px; border-radius:2px; outline:none; cursor:pointer;
+  -webkit-appearance:none; background:rgba(240,232,214,.12);
+  accent-color: var(--gold);
+}
+input[type=range]::-webkit-slider-thumb { -webkit-appearance:none; width:18px; height:18px; border-radius:50%; background:var(--gold); cursor:pointer; border:2px solid var(--navy); }
+
+/* Result card */
+.result-card { border:.5px solid var(--border-bright); border-radius:var(--r); padding:1.5rem; text-align:center; margin-top:1rem; position:relative; }
+.result-score-big { font-family:'Cormorant Garamond',serif; font-size:4rem; font-weight:300; line-height:1; margin-bottom:.25rem; }
+.result-denom { font-size:1.2rem; color:var(--muted); }
+.result-verdict { font-family:'Cinzel',serif; font-size:.8rem; letter-spacing:.12em; margin-bottom:.75rem; }
+.result-text { font-size:.88rem; color:var(--cream-dim); font-style:italic; line-height:1.75; }
+.result-disclaimer { font-size:.75rem; color:var(--muted); line-height:1.7; margin-top:1rem; padding-top:1rem; border-top:.5px solid var(--border); }
+.result-dua { font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:1.1rem; color:var(--gold-light); margin-top:.75rem; line-height:2; }
+
+/* ══════════════════════════
+   BENEFITS PAGE
+══════════════════════════ */
+.benefit-card { border:.5px solid var(--border); border-radius:var(--r); padding:1.25rem; margin-bottom:.875rem; background:var(--navy-card); position:relative; overflow:hidden; }
+.benefit-card::before { content:''; position:absolute; top:0; left:0; width:2px; height:100%; background:var(--gold); opacity:.4; }
+.benefit-num { font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:.15em; color:var(--gold-dim); margin-bottom:.4rem; }
+.benefit-arabic { font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:1.15rem; color:var(--cream); line-height:2; margin-bottom:.4rem; }
+.benefit-trans { font-style:italic; font-size:.88rem; color:var(--cream-dim); line-height:1.7; margin-bottom:.4rem; }
+.benefit-source { display:inline-block; font-family:'Cinzel',serif; font-size:.55rem; letter-spacing:.1em; padding:2px 8px; background:rgba(201,148,58,.1); border:.5px solid var(--border); color:var(--gold-dim); border-radius:1px; margin-bottom:.4rem; }
+.benefit-note { font-size:.8rem; color:var(--muted); line-height:1.7; }
+.benefit-icon { font-size:1.2rem; float:right; margin-left:.5rem; opacity:.5; }
+
+/* ══════════════════════════
+   FOUNDATION PAGE
+══════════════════════════ */
+.verse-card { border:.5px solid var(--border-bright); border-radius:var(--r); padding:1.25rem; margin-bottom:1rem; background:var(--navy-card); text-align:right; }
+.verse-arabic { font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:1.25rem; color:var(--cream); line-height:2.2; margin-bottom:.5rem; }
+.verse-ref { font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:.15em; color:var(--gold); margin-bottom:.4rem; text-align:left; }
+.verse-trans { font-style:italic; font-size:.88rem; color:var(--cream-dim); line-height:1.75; text-align:left; }
+.hadith-pull { border-left:2px solid var(--gold); padding-left:1rem; margin:1rem 0; }
+.hadith-pull-arabic { font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:1.1rem; color:var(--cream); line-height:2; margin-bottom:.4rem; }
+.hadith-pull-text { font-style:italic; font-size:.88rem; color:var(--cream-dim); line-height:1.75; }
+.hadith-pull-source { font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:.12em; color:var(--gold-dim); margin-top:.4rem; }
+
+/* ══════════════════════════
+   CALENDAR PAGE
+══════════════════════════ */
+.cal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:1.5rem; }
+.cal-night { border:.5px solid var(--border); border-radius:var(--r); padding:10px 8px; text-align:center; cursor:pointer; transition:all .2s; position:relative; overflow:hidden; }
+.cal-night.odd-night { border-color:rgba(201,148,58,.3); }
+.cal-night.has-score { background:var(--gold-glow); }
+.cal-night:hover { border-color:var(--border-bright); }
+.cal-night.active-night { border-color:var(--gold); border-width:1px; }
+.cal-n { font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:.12em; color:var(--gold-dim); }
+.cal-num { font-family:'Cormorant Garamond',serif; font-size:1.5rem; font-weight:300; color:var(--cream); line-height:1.1; }
+.cal-type { font-size:.6rem; color:var(--muted); }
+.cal-score-dot { width:8px; height:8px; border-radius:50%; margin:.3rem auto 0; }
+.cal-score-val { font-family:'Cinzel',serif; font-size:.65rem; color:var(--gold); margin-top:2px; }
+.cal-thumb { width:100%; height:40px; object-fit:cover; border-radius:1px; margin-top:4px; }
+
+/* ══════════════════════════
+   GUIDE PAGE
+══════════════════════════ */
+.step-card { display:flex; gap:1rem; margin-bottom:1rem; padding:1rem; border:.5px solid var(--border); border-radius:var(--r); background:var(--navy-card); }
+.step-num { font-family:'Cinzel',serif; font-size:1.4rem; color:var(--gold); flex-shrink:0; width:32px; text-align:center; }
+.step-content { flex:1; }
+.step-title { font-size:.95rem; font-weight:500; color:var(--cream); margin-bottom:.25rem; }
+.step-desc { font-size:.82rem; color:var(--cream-dim); line-height:1.7; }
+.step-time { display:inline-block; font-family:'Cinzel',serif; font-size:.58rem; letter-spacing:.1em; background:rgba(201,148,58,.1); color:var(--gold); padding:2px 7px; border-radius:1px; border:.5px solid var(--border); margin-top:.3rem; }
+
+/* ══════════════════════════
+   SETTINGS PAGE
+══════════════════════════ */
+.setting-row { display:flex; align-items:center; justify-content:space-between; padding:.875rem 0; border-bottom:.5px solid var(--border); }
+.setting-row:last-child { border-bottom:none; }
+.setting-label { font-size:.9rem; color:var(--cream); }
+.setting-sub { font-size:.75rem; color:var(--muted); margin-top:2px; }
+.toggle { position:relative; width:44px; height:24px; flex-shrink:0; }
+.toggle input { opacity:0; width:0; height:0; }
+.toggle-slider { position:absolute; inset:0; background:rgba(240,232,214,.15); border-radius:12px; cursor:pointer; transition:.3s; border:.5px solid var(--border); }
+.toggle-slider:before { content:''; position:absolute; height:18px; width:18px; left:3px; bottom:3px; background:var(--cream-dim); border-radius:50%; transition:.3s; }
+.toggle input:checked + .toggle-slider { background:var(--gold-dim); border-color:var(--gold); }
+.toggle input:checked + .toggle-slider:before { transform:translateX(20px); background:var(--gold-light); }
+.setting-input {
+  background:rgba(240,232,214,.06); border:.5px solid var(--border); border-radius:var(--r);
+  color:var(--cream); font-family:'Cormorant Garamond',serif; font-size:.95rem;
+  padding:6px 10px; width:150px; outline:none;
+}
+.setting-input:focus { border-color:var(--border-bright); }
+.location-display { font-size:.9rem; color:var(--gold-light); }
+
+/* ══════════════════════════
+   DONATE / REVENUE
+══════════════════════════ */
+.donate-card {
+  border:.5px solid var(--border-bright); border-radius:var(--r);
+  padding:1.25rem; background:rgba(201,148,58,.04); text-align:center; margin-top:1.5rem;
+}
+.donate-arabic { font-family:'Noto Naskh Arabic',serif; direction:rtl; font-size:1.1rem; color:var(--gold-light); margin-bottom:.4rem; }
+.donate-title { font-family:'Cinzel',serif; font-size:.8rem; letter-spacing:.14em; color:var(--cream-dim); margin-bottom:.5rem; }
+.donate-amounts { display:flex; gap:8px; justify-content:center; margin:.75rem 0; }
+.amount-btn { border:.5px solid var(--border); border-radius:var(--r); padding:6px 14px; font-family:'Cinzel',serif; font-size:.72rem; color:var(--cream-dim); cursor:pointer; transition:all .2s; background:transparent; }
+.amount-btn:hover, .amount-btn.selected { border-color:var(--gold); color:var(--gold-light); background:var(--gold-glow); }
+.notify-banner {
+  background:rgba(201,148,58,.08); border:.5px solid var(--border); border-radius:var(--r);
+  padding:.875rem 1rem; display:flex; align-items:center; gap:.75rem; margin-bottom:1rem;
+}
+.notify-icon { font-size:1.2rem; flex-shrink:0; }
+.notify-text { flex:1; font-size:.82rem; color:var(--cream-dim); line-height:1.6; }
+.notify-text strong { color:var(--cream); font-weight:500; }
+
+/* ── LOADING SPINNER ── */
+.spinner { width:20px; height:20px; border:2px solid var(--border); border-top-color:var(--gold); border-radius:50%; animation:spin .8s linear infinite; margin:0 auto; }
+
+/* ── TOAST ── */
+.toast {
+  position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(20px);
+  background:var(--navy-light); border:.5px solid var(--border-bright); border-radius:var(--r);
+  padding:.6rem 1.25rem; font-family:'Cinzel',serif; font-size:.68rem; letter-spacing:.1em;
+  color:var(--gold-light); z-index:200; opacity:0; transition:all .3s; white-space:nowrap;
+}
+.toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:400px) {
+  .cal-grid { grid-template-columns:repeat(2,1fr); }
+  .hero-title { font-size:1.5rem; }
+  .result-score-big { font-size:3rem; }
+  .photo-count-guide { grid-template-columns:repeat(5,1fr); gap:4px; }
+}
+</style>
+</head>
+<body>
+<div class="stars-bg"></div>
+<div class="geo-bg"></div>
+
+<!-- ═══ HOME PAGE ═══ -->
+<div class="page active" id="page-home">
+<div class="container">
+  <div class="moon-wrap"><div class="moon"></div></div>
+  <div class="hero-arabic">هل هي ليلة القدر؟</div>
+  <div class="hero-title">Is It Laylat al-Qadr?</div>
+  <div class="hero-sub">The Night of Power</div>
+  <div class="ornament"><div class="orn-line"></div><div class="orn-dot"></div><div class="orn-diamond"></div><div class="orn-dot"></div><div class="orn-line"></div></div>
+  <p class="hero-mission">
+    Only Allah knows when Laylat al-Qadr is.<br><br>
+    But the Prophet ﷺ left us a sign — the sun rising white and without rays the following morning. This app helps you observe that sign, reflect with intention, and hope.<br><br>
+    <em>We observe. We reflect. We leave the knowledge with Allah.</em>
+  </p>
+
+  <!-- Notify banner -->
+  <div class="notify-banner" id="notifyBanner" style="display:none">
+    <div class="notify-icon">🔔</div>
+    <div class="notify-text"><strong>Enable sunrise alerts</strong><br>Get notified 15 min before sunrise during the last 10 nights.</div>
+    <button class="btn btn-ghost" style="font-size:.65rem;padding:6px 10px;white-space:nowrap;" onclick="requestNotifications()">Enable</button>
+  </div>
+
+  <!-- Sunrise card -->
+  <div class="sunrise-card corners" id="sunriseCard">
+    <div class="sunrise-top">
+      <div>
+        <div class="sunrise-city" id="cityName">DETECTING LOCATION...</div>
+        <div class="sunrise-time" id="sunriseTime"><div class="spinner" style="margin:8px 0;"></div></div>
+        <div class="sunrise-label">Tomorrow's Shuruq</div>
+        <div class="photo-window-sub" id="photoWindowShort"></div>
+      </div>
+      <div class="night-badge">
+        <div class="night-badge-num" id="nightNum">—</div>
+        <div class="night-badge-sub">Ramadan Night</div>
+        <div id="nightTypeTag"></div>
+      </div>
+    </div>
+    <div class="countdown-row" id="countdown">
+      <div class="count-block"><div class="count-num" id="ch">--</div><div class="count-lbl">HRS</div></div>
+      <div class="count-block"><div class="count-num" id="cm">--</div><div class="count-lbl">MIN</div></div>
+      <div class="count-block"><div class="count-num" id="cs">--</div><div class="count-lbl">SEC</div></div>
+    </div>
+    <div class="photo-window" id="photoWindow" style="display:none">
+      <div class="photo-window-title">📸 BEST PHOTO WINDOW</div>
+      <div class="photo-window-time" id="photoWindowTime">—</div>
+      <div class="photo-window-sub">2 min before to 4 min after sunrise — photograph the horizon</div>
+    </div>
+  </div>
+
+  <button class="btn btn-primary btn-block" onclick="goToPage('score')">📸 Score Today's Sunrise</button>
+  <button class="btn btn-ghost btn-block" style="margin-top:.5rem;" onclick="goToPage('guide')">Camera Guide — How to Photograph</button>
+
+  <!-- Manual location -->
+  <div class="card" style="margin-top:1rem;">
+    <div class="card-label">Set Location Manually</div>
+    <div style="display:flex;gap:8px;margin-top:.5rem;">
+      <input class="setting-input" style="flex:1;width:auto;" id="cityInput" placeholder="City name e.g. Dubai" onkeydown="if(event.key==='Enter')setManualCity()">
+      <button class="btn btn-ghost" style="padding:6px 14px;" onclick="setManualCity()">Search</button>
+    </div>
+  </div>
+
+  <!-- Donate -->
+  <div class="donate-card">
+    <div class="donate-arabic">صَدَقَةٌ جَارِيَة</div>
+    <div class="donate-title">This app is sadaqah jariyah — keep it free for all Muslims</div>
+    <div style="font-size:.82rem;color:var(--cream-dim);margin-bottom:.5rem;">If this tool helped you reflect, please support it.</div>
+    <div class="donate-amounts">
+      <button class="amount-btn" onclick="selectDonate(this,'10')">AED 10</button>
+      <button class="amount-btn selected" onclick="selectDonate(this,'25')">AED 25</button>
+      <button class="amount-btn" onclick="selectDonate(this,'50')">AED 50</button>
+    </div>
+    <button class="btn btn-primary" style="font-size:.72rem;padding:10px 20px;" onclick="showToast('جزاك الله خيراً — Jazak Allah Khayr')">Support This Project</button>
+  </div>
+</div>
+</div>
+
+<!-- ═══ SCORER PAGE ═══ -->
+<div class="page" id="page-score">
+<div class="container">
+  <div class="page-header">
+    <div class="page-arabic">تَقْيِيمُ الشُّرُوق</div>
+    <div class="page-title">Score the Sunrise</div>
+    <div class="page-sub">Upload your photo and rate what you observed</div>
+  </div>
+
+  <!-- Photo upload -->
+  <div class="section-label">Step 1 — Upload Your Sunrise Photo</div>
+  <div class="upload-zone" id="uploadZone" onclick="document.getElementById('photoInput').click()">
+    <input type="file" id="photoInput" accept="image/*" onchange="handlePhoto(event)">
+    <div class="upload-icon">📷</div>
+    <div class="upload-text">Tap to upload your sunrise photo</div>
+    <div class="upload-sub">Take 5 photos at sunrise — see Guide for timing</div>
+  </div>
+  <img id="photoPreview" class="photo-preview" style="display:none;">
+
+  <!-- 5 photo guide -->
+  <div class="section-label">5-Photo Timing Guide</div>
+  <div class="photo-count-guide" id="photoCountGuide">
+    <div class="photo-slot best"><div class="photo-slot-num">1 ★</div><div class="photo-slot-time">+0 min</div></div>
+    <div class="photo-slot best"><div class="photo-slot-num">2 ★</div><div class="photo-slot-time">+1 min</div></div>
+    <div class="photo-slot"><div class="photo-slot-num">3</div><div class="photo-slot-time">+2 min</div></div>
+    <div class="photo-slot"><div class="photo-slot-num">4</div><div class="photo-slot-time">+3 min</div></div>
+    <div class="photo-slot"><div class="photo-slot-num">5</div><div class="photo-slot-time">Wide</div></div>
+  </div>
+  <p style="font-size:.75rem;color:var(--muted);text-align:center;margin-bottom:1rem;">★ Photos 1–2 capture the hadith sign most clearly</p>
+
+  <!-- Sun visualizer -->
+  <div class="section-label">Step 2 — Rate What You Saw</div>
+  <div class="card gold-border corners">
+    <div class="sun-viz-wrap">
+      <div class="sun-viz-label">Live sun reconstruction from your ratings</div>
+      <div class="sun-disc-container">
+        <div class="sun-disc" id="sunDisc" style="width:80px;height:80px;background:#f5b833;box-shadow:0 0 30px rgba(245,184,51,0.6);"></div>
+      </div>
+      <div class="sun-verdict" id="sunVerdictLabel">Rate below to see reconstruction</div>
+    </div>
+
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-name">SUN COLOR</span><span class="slider-val" id="v1">0</span></div>
+      <div class="slider-desc">0 = vivid golden/orange &nbsp;→&nbsp; 10 = pure white</div>
+      <input type="range" min="0" max="10" value="0" id="s1" oninput="updateScorer()">
+      <div class="slider-ends"><span>Golden</span><span>White</span></div>
+    </div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-name">RAY INTENSITY</span><span class="slider-val" id="v2">0</span></div>
+      <div class="slider-desc">0 = full blazing rays &nbsp;→&nbsp; 10 = completely absent</div>
+      <input type="range" min="0" max="10" value="0" id="s2" oninput="updateScorer()">
+      <div class="slider-ends"><span>Full rays</span><span>No rays</span></div>
+    </div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-name">DISC DEFINITION</span><span class="slider-val" id="v3">0</span></div>
+      <div class="slider-desc">0 = too bright to see shape &nbsp;→&nbsp; 10 = clear plate-like disc</div>
+      <input type="range" min="0" max="10" value="0" id="s3" oninput="updateScorer()">
+      <div class="slider-ends"><span>Blinding</span><span>Clear disc</span></div>
+    </div>
+    <div class="slider-group">
+      <div class="slider-header"><span class="slider-name">ATMOSPHERE</span><span class="slider-val" id="v4">0</span></div>
+      <div class="slider-desc">0 = heavy cloud or haze &nbsp;→&nbsp; 10 = calm and perfectly clear</div>
+      <input type="range" min="0" max="10" value="0" id="s4" oninput="updateScorer()">
+      <div class="slider-ends"><span>Cloudy</span><span>Crystal clear</span></div>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="result-card corners" id="resultCard" style="display:none;">
+    <div class="card-label">HADITH ALIGNMENT SCORE</div>
+    <div class="result-score-big" id="resultScore">0</div>
+    <div class="result-verdict" id="resultVerdict"></div>
+    <div class="result-text" id="resultText"></div>
+    <div class="result-dua">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</div>
+    <div class="result-disclaimer">
+      Only Allah knows when Laylat al-Qadr truly occurs. This score is a tool for reflection — not a religious ruling. Whether or not this was the night, your worship was not wasted. Allah rewards the intention.
+    </div>
+    <button class="btn btn-primary btn-block" style="margin-top:1rem;" onclick="saveToCalendar()">Save to My Calendar</button>
+    <button class="btn btn-ghost btn-block" style="margin-top:.4rem;" onclick="shareResult()">Share Result</button>
+  </div>
+</div>
+</div>
+
+<!-- ═══ BENEFITS PAGE ═══ -->
+<div class="page" id="page-benefits">
+<div class="container">
+  <div class="page-header">
+    <div class="page-arabic">فَضَائِلُ لَيْلَةِ الْقَدْرِ</div>
+    <div class="page-title">What This Night Carries</div>
+    <div class="page-sub">From the Quran and authenticated Sunnah</div>
+  </div>
+  <div class="ornament"><div class="orn-line"></div><div class="orn-dot"></div><div class="orn-diamond"></div><div class="orn-dot"></div><div class="orn-line"></div></div>
+
+  <div class="benefit-card">
+    <div class="benefit-num">BENEFIT I</div>
+    <div class="benefit-icon">🌙</div>
+    <div class="benefit-arabic">لَيْلَةُ ٱلْقَدْرِ خَيْرٌ مِّنْ أَلْفِ شَهْرٍ</div>
+    <div class="benefit-source">Surah Al-Qadr 97:3</div>
+    <div class="benefit-trans">"The Night of Decree is better than a thousand months."</div>
+    <div class="benefit-note">One thousand months is 83 years and 4 months — more than a full human lifetime. A single night of worship surpasses a lifetime of deeds.</div>
+  </div>
+
+  <div class="benefit-card">
+    <div class="benefit-num">BENEFIT II</div>
+    <div class="benefit-icon">📖</div>
+    <div class="benefit-arabic">إِنَّآ أَنزَلْنَـٰهُ فِى لَيْلَةٍ مُّبَـٰرَكَةٍ</div>
+    <div class="benefit-source">Surah Ad-Dukhan 44:3</div>
+    <div class="benefit-trans">"Indeed, We sent it down on a blessed night."</div>
+    <div class="benefit-note">The Quran — every word of which is mercy and guidance for all of humanity — was first revealed to the Prophet ﷺ on this very night. The night is blessed because the Book is blessed.</div>
+  </div>
+
+  <div class="benefit-card">
+    <div class="benefit-num">BENEFIT III</div>
+    <div class="benefit-icon">✨</div>
+    <div class="benefit-arabic">تَنَزَّلُ ٱلْمَلَـٰٓئِكَةُ وَٱلرُّوحُ فِيهَا بِإِذْنِ رَبِّهِم</div>
+    <div class="benefit-source">Surah Al-Qadr 97:4</div>
+    <div class="benefit-trans">"The angels and the Spirit descend therein by permission of their Lord."</div>
+    <div class="benefit-note">Jibreel (عليه السلام) himself descends. The scholars explain that the angels descend in numbers greater than the pebbles of the earth — and their passage through the atmosphere is what subdues the sun's rays the following morning.</div>
+  </div>
+
+  <div class="benefit-card">
+    <div class="benefit-num">BENEFIT IV</div>
+    <div class="benefit-icon">🤲</div>
+    <div class="benefit-arabic">مَنْ قَامَ لَيْلَةَ الْقَدْرِ إِيمَانًا وَاحْتِسَابًا غُفِرَ لَهُ مَا تَقَدَّمَ مِنْ ذَنْبِهِ</div>
+    <div class="benefit-source">Sahih Bukhari & Sahih Muslim — Mutawatir</div>
+    <div class="benefit-trans">"Whoever stands in prayer on Laylat al-Qadr out of faith and seeking reward, his previous sins are forgiven."</div>
+    <div class="benefit-note">This is among the most authenticated narrations in all of Islam — narrated by multiple companions through multiple chains. Complete forgiveness of past sins in a single night.</div>
+  </div>
+
+  <div class="benefit-card">
+    <div class="benefit-num">BENEFIT V</div>
+    <div class="benefit-icon">☮️</div>
+    <div class="benefit-arabic">سَلَـٰمٌ هِىَ حَتَّىٰ مَطْلَعِ ٱلْفَجْرِ</div>
+    <div class="benefit-source">Surah Al-Qadr 97:5</div>
+    <div class="benefit-trans">"It is peace until the emergence of dawn."</div>
+    <div class="benefit-note">Ibn Kathir explains that the angels greet every believer in worship throughout the entire night. The night is filled with salaam — peace descends on every soul that stands, prays, and remembers.</div>
+  </div>
+
+  <div class="benefit-card">
+    <div class="benefit-num">BENEFIT VI</div>
+    <div class="benefit-icon">💫</div>
+    <div class="benefit-arabic">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</div>
+    <div class="benefit-source">Sahih Ibn Majah — Aisha (رضي الله عنها)</div>
+    <div class="benefit-trans">"O Allah, You are Pardoning, You love to pardon, so pardon me."</div>
+    <div class="benefit-note">Aisha asked the Prophet ﷺ what to say if she knew it was Laylat al-Qadr. This dua was his answer. The best dua for this night is not a request for wealth or health — it is a request for pardon. That is the wisdom of the Prophet ﷺ.</div>
+  </div>
+
+  <div class="benefit-card">
+    <div class="benefit-num">BENEFIT VII</div>
+    <div class="benefit-icon">📋</div>
+    <div class="benefit-arabic">فِيهَا يُفْرَقُ كُلُّ أَمْرٍ حَكِيمٍ</div>
+    <div class="benefit-source">Surah Ad-Dukhan 44:4</div>
+    <div class="benefit-trans">"Every precise matter is decided on that night."</div>
+    <div class="benefit-note">Ibn Abbas explained that provisions, lifespans, and all affairs of the coming year are decreed on this night and handed to the angels for execution. What you do on this night may shape what is written for your entire year.</div>
+  </div>
+
+  <div class="card" style="text-align:center;margin-top:1.5rem;">
+    <div class="card-label" style="text-align:center;">THE DUA OF THIS NIGHT</div>
+    <div style="font-family:'Noto Naskh Arabic',serif;direction:rtl;font-size:1.4rem;color:var(--gold-light);line-height:2.2;margin:.75rem 0;">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</div>
+    <div style="font-style:italic;font-size:.9rem;color:var(--cream-dim);">Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni</div>
+    <div style="font-size:.82rem;color:var(--muted);margin-top:.4rem;">"O Allah, You are Pardoning and You love pardon, so pardon me."</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ FOUNDATION PAGE ═══ -->
+<div class="page" id="page-basis">
+<div class="container">
+  <div class="page-header">
+    <div class="page-arabic">الأَسَاسُ الشَّرْعِيّ</div>
+    <div class="page-title">The Basis</div>
+    <div class="page-sub">Why we observe the sky — and why the date is hidden</div>
+  </div>
+
+  <div class="section-label">Allah's Command to Look at the Sky</div>
+  <p style="font-size:.88rem;color:var(--cream-dim);line-height:1.8;margin-bottom:1rem;">Allah commands the believer to look at the sky with reflection (tadabbur). This app is an act of worship — purposeful observation of what Allah has placed in the heavens as signs.</p>
+
+  <div class="verse-card">
+    <div class="verse-ref">SURAH QAF 50:6</div>
+    <div class="verse-arabic">أَفَلَمْ يَنظُرُوا إِلَى ٱلسَّمَآءِ فَوْقَهُمْ كَيْفَ بَنَيْنَـٰهَا وَزَيَّنَّـٰهَا وَمَا لَهَا مِن فُرُوجٍ</div>
+    <div class="verse-trans">"Have they not looked at the sky above them — how We structured it and adorned it, and it has no rifts?"</div>
+  </div>
+
+  <div class="verse-card">
+    <div class="verse-ref">SURAH AL-MULK 67:3–4</div>
+    <div class="verse-arabic">فَٱرْجِعِ ٱلْبَصَرَ هَلْ تَرَىٰ مِن فُطُورٍ ثُمَّ ٱرْجِعِ ٱلْبَصَرَ كَرَّتَيْنِ يَنقَلِبْ إِلَيْكَ ٱلْبَصَرُ خَاسِئًا وَهُوَ حَسِيرٌ</div>
+    <div class="verse-trans">"Return your vision to the sky — do you see any breaks? Then look again and again. Your vision will return to you humbled and exhausted."</div>
+  </div>
+
+  <div class="ornament"><div class="orn-line"></div><div class="orn-dot"></div><div class="orn-diamond"></div><div class="orn-dot"></div><div class="orn-line"></div></div>
+
+  <div class="section-label">Why the Date is Hidden</div>
+  <div class="hadith-pull">
+    <div class="hadith-pull-arabic">خَرَجْتُ لِأُخْبِرَكُمْ بِلَيْلَةِ الْقَدْرِ فَتَلَاحَى فُلَانٌ وَفُلَانٌ فَرُفِعَتْ</div>
+    <div class="hadith-pull-text">"I came out to tell you the night of Laylat al-Qadr, but two men were arguing and it was lifted from me. Perhaps that is better for you — so seek it in the 7th, 9th, and 5th from the end."</div>
+    <div class="hadith-pull-source">Sahih Bukhari — narrated by 'Ubadah ibn as-Samit</div>
+  </div>
+  <div class="hadith-pull" style="margin-top:1rem;">
+    <div class="hadith-pull-text">"Allah concealed Laylat al-Qadr from this ummah as a mercy — so that they would give life to all ten nights in seeking it, not just one."</div>
+    <div class="hadith-pull-source">Ibn Khuzaymah — authenticated</div>
+  </div>
+
+  <div class="ornament" style="margin-top:1.5rem;"><div class="orn-line"></div><div class="orn-dot"></div><div class="orn-diamond"></div><div class="orn-dot"></div><div class="orn-line"></div></div>
+
+  <div class="section-label">The Prophet's Sign — The Sunrise</div>
+  <div class="card gold-border corners">
+    <div class="card-label">Primary Sign — Sahih Muslim</div>
+    <div class="hadith-pull-arabic" style="font-family:'Noto Naskh Arabic',serif;direction:rtl;font-size:1.2rem;color:var(--cream);line-height:2;margin-bottom:.5rem;">تَطْلُعُ الشَّمْسُ يَوْمَئِذٍ لَا شُعَاعَ لَهَا كَأَنَّهَا طَسْتٌ</div>
+    <div class="verse-trans" style="text-align:left;">"The sun rises that morning with no rays, white, as if it were a plate (tast)." — Ubayy ibn Ka'b (رضي الله عنه)</div>
+  </div>
+  <div class="card" style="margin-top:.75rem;">
+    <div class="card-label">Additional Detail — Sunan Abu Dawud</div>
+    <div class="card-body">"The night is calm, neither hot nor cold. The sun rises in the morning without its piercing radiance — pale, like the full moon on the night of badr (14th night)."</div>
+  </div>
+  <div class="card" style="margin-top:.75rem;">
+    <div class="card-label">Scholarly Explanation — Musnad Ahmad</div>
+    <div class="card-body">"The angels on that night are more numerous than the pebbles of the earth — and their presence is what subdues the sun's rays the following morning." This is why the sign appears the day after, not during the night itself.</div>
+  </div>
+  <div class="card" style="margin-top:.75rem;background:rgba(201,148,58,.04);border-color:var(--border-bright);">
+    <div class="card-label">Important Note</div>
+    <div class="card-body">This is an observational sign given <em>after</em> the night has passed — not a way to predict it, but a way to reflect on whether it has already occurred. The sign is a gift of hope, not a certificate of certainty.</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ CALENDAR PAGE ═══ -->
+<div class="page" id="page-calendar">
+<div class="container">
+  <div class="page-header">
+    <div class="page-arabic">الْعَشْرُ الأَوَاخِر</div>
+    <div class="page-title">Last 10 Nights</div>
+    <div class="page-sub">Your Ramadan sunrise record</div>
+  </div>
+
+  <div class="section-label">Tap a night to view your score</div>
+  <div class="cal-grid" id="calGrid"></div>
+
+  <div id="calDetail" style="display:none;">
+    <div class="ornament"><div class="orn-line"></div><div class="orn-dot"></div><div class="orn-diamond"></div><div class="orn-dot"></div><div class="orn-line"></div></div>
+    <div class="card gold-border corners" id="calDetailCard"></div>
+  </div>
+
+  <div class="card" style="margin-top:1rem;text-align:center;">
+    <div class="card-label">Strive in All Ten</div>
+    <div class="card-body" style="font-style:italic;">"Seek Laylat al-Qadr in the odd nights of the last ten nights of Ramadan." — Sahih Bukhari</div>
+    <div style="font-size:.78rem;color:var(--muted);margin-top:.5rem;">Odd nights are highlighted. Even nights count too — the Prophet ﷺ stood in all ten.</div>
+  </div>
+</div>
+</div>
+
+<!-- ═══ GUIDE PAGE ═══ -->
+<div class="page" id="page-guide">
+<div class="container">
+  <div class="page-header">
+    <div class="page-arabic">دَلِيلُ التَّصْوِير</div>
+    <div class="page-title">Camera Guide</div>
+    <div class="page-sub">How to photograph the sign correctly</div>
+  </div>
+
+  <div class="card gold-border" style="text-align:center;margin-bottom:1.5rem;">
+    <div class="card-label">Why 5 Photos</div>
+    <div class="card-body">The sun changes within seconds at sunrise. The hadith sign — if present — is most visible in the first 2 minutes. Five photos ensures you capture the clearest possible frame for scoring.</div>
+  </div>
+
+  <div class="section-label">The 5-Photo Method</div>
+
+  <div class="step-card">
+    <div class="step-num">1</div>
+    <div class="step-content">
+      <div class="step-title">The moment of Shuruq</div>
+      <div class="step-desc">Take your first photo the instant the sun's disc clears the horizon. This is the most critical shot — it captures the sun at its weakest and most diagnostic.</div>
+      <div class="step-time">AT EXACT SUNRISE TIME</div>
+    </div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">2</div>
+    <div class="step-content">
+      <div class="step-title">One minute after</div>
+      <div class="step-desc">The sun is now a full disc above the horizon. Capture sun color, ray presence, and disc definition. This is often the clearest shot for scoring.</div>
+      <div class="step-time">+1 MINUTE</div>
+    </div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">3</div>
+    <div class="step-content">
+      <div class="step-title">Two minutes after</div>
+      <div class="step-desc">The sun is strengthening. If the hadith sign is present, rays will still be absent. If they appear now, take note — this is diagnostic information.</div>
+      <div class="step-time">+2 MINUTES</div>
+    </div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">4</div>
+    <div class="step-content">
+      <div class="step-title">Three minutes after</div>
+      <div class="step-desc">By now the sign should be fully visible or clearly absent. A sun still rayless and white at this point is a strong indicator.</div>
+      <div class="step-time">+3 MINUTES</div>
+    </div>
+  </div>
+  <div class="step-card">
+    <div class="step-num">5</div>
+    <div class="step-content">
+      <div class="step-title">Wide sky shot</div>
+      <div class="step-desc">Step back. Photograph the full sky and horizon. This captures atmosphere quality — the calm, clear sky that the hadith describes as part of the night's character.</div>
+      <div class="step-time">+3–4 MINUTES</div>
+    </div>
+  </div>
+
+  <div class="section-label">Best Practices</div>
+  <div class="card">
+    <div class="card-body">
+      <strong style="color:var(--cream);">Do:</strong> Face east directly. Same spot each day. No zoom (zoom distorts color). No filters. Photograph before the sun rises too high — the window closes fast.<br><br>
+      <strong style="color:var(--cream);">Don't:</strong> Use night mode or HDR. Apply any filter or enhancement. Wait until the sun is bright — you'll miss the window.<br><br>
+      <strong style="color:var(--cream);">If cloudy:</strong> Heavy cloud cover gives no useful data. Light haze is actually relevant — the hadith describes a clear calm atmosphere. Rate your atmosphere score low for heavy cloud, and note the uncertainty.
+    </div>
+  </div>
+
+  <button class="btn btn-primary btn-block" style="margin-top:1rem;" onclick="goToPage('score')">Go to Scorer →</button>
+</div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- ═══ BOTTOM NAV ═══ -->
+<nav class="bottom-nav">
+  <button class="nav-item active" onclick="goToPage('home')" data-page="home">
+    <span class="nav-icon">🌙</span><span>Home</span>
+  </button>
+  <button class="nav-item" onclick="goToPage('score')" data-page="score">
+    <span class="nav-icon">📸</span><span>Score</span>
+  </button>
+  <button class="nav-item" onclick="goToPage('benefits')" data-page="benefits">
+    <span class="nav-icon">✨</span><span>Benefits</span>
+  </button>
+  <button class="nav-item" onclick="goToPage('basis')" data-page="basis">
+    <span class="nav-icon">📖</span><span>Basis</span>
+  </button>
+  <button class="nav-item" onclick="goToPage('calendar')" data-page="calendar">
+    <span class="nav-icon">📅</span><span>Calendar</span>
+  </button>
+  <button class="nav-item" onclick="goToPage('guide')" data-page="guide">
+    <span class="nav-icon">🎯</span><span>Guide</span>
+  </button>
+</nav>
+
+<script>
+// ── STATE ──
+let state = {
+  city: '', lat: null, lng: null,
+  sunriseUTC: null, tomorrowSunrise: null,
+  scores: JSON.parse(localStorage.getItem('lq_scores') || '{}'),
+  currentNight: null,
+  notificationsEnabled: localStorage.getItem('lq_notif') === '1',
+  donateAmt: 25
+};
+
+// ── NAVIGATION ──
+function goToPage(pg) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => {
+    n.classList.toggle('active', n.dataset.page === pg);
+  });
+  document.getElementById('page-' + pg).classList.add('active');
+  window.scrollTo(0,0);
+  if (pg === 'calendar') renderCalendar();
+}
+
+// ── SUNRISE API ──
+async function fetchSunrise(lat, lng) {
+  const today = new Date();
+  const tomorrow = new Date(today); tomorrow.setDate(today.getDate() + 1);
+  const fmt = d => d.toISOString().split('T')[0];
+  try {
+    const r = await fetch(`https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=${fmt(tomorrow)}&formatted=0`);
+    const d = await r.json();
+    if (d.status === 'OK') {
+      state.tomorrowSunrise = new Date(d.results.sunrise);
+      displaySunrise();
+    }
+  } catch(e) {
+    // fallback: estimate from Dubai
+    const base = new Date(); base.setHours(6,10,0,0); base.setDate(base.getDate()+1);
+    state.tomorrowSunrise = base;
+    displaySunrise();
+  }
+}
+
+function displaySunrise() {
+  if (!state.tomorrowSunrise) return;
+  const sr = state.tomorrowSunrise;
+  const h = sr.getHours(), m = sr.getMinutes();
+  const fmt = (hh,mm) => `${hh}:${String(mm).padStart(2,'0')} ${hh<12?'AM':'PM'}`;
+  const fmtAdj = (mins) => {
+    const t = new Date(sr); t.setMinutes(t.getMinutes()+mins);
+    return fmt(t.getHours(), t.getMinutes());
+  };
+
+  document.getElementById('sunriseTime').textContent = fmt(h,m);
+  document.getElementById('photoWindowTime').textContent = `${fmtAdj(-2)} – ${fmtAdj(4)}`;
+  document.getElementById('photoWindowShort').textContent = `Photo window: ${fmtAdj(-2)} – ${fmtAdj(4)}`;
+  document.getElementById('photoWindow').style.display = 'block';
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+  updatePhotoGuide();
+}
+
+function updateCountdown() {
+  if (!state.tomorrowSunrise) return;
+  const now = new Date(), diff = state.tomorrowSunrise - now;
+  if (diff <= 0) {
+    document.getElementById('ch').textContent = '00';
+    document.getElementById('cm').textContent = '00';
+    document.getElementById('cs').textContent = '00';
+    return;
+  }
+  const h = Math.floor(diff/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
+  document.getElementById('ch').textContent = String(h).padStart(2,'0');
+  document.getElementById('cm').textContent = String(m).padStart(2,'0');
+  document.getElementById('cs').textContent = String(s).padStart(2,'0');
+}
+
+function updatePhotoGuide() {
+  if (!state.tomorrowSunrise) return;
+  const sr = state.tomorrowSunrise;
+  const slots = [0,1,2,3,3.5];
+  const guide = document.getElementById('photoCountGuide');
+  const cards = guide.querySelectorAll('.photo-slot');
+  slots.forEach((mins, i) => {
+    const t = new Date(sr); t.setMinutes(t.getMinutes()+mins);
+    const h = t.getHours(), m = t.getMinutes();
+    const label = `${h}:${String(m).padStart(2,'0')}`;
+    cards[i].querySelector('.photo-slot-time').textContent = i < 4 ? label : 'Wide';
+  });
+}
+
+// ── GEOLOCATION ──
+function initLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      pos => {
+        state.lat = pos.coords.latitude;
+        state.lng = pos.coords.longitude;
+        reverseGeocode(state.lat, state.lng);
+        fetchSunrise(state.lat, state.lng);
+      },
+      () => {
+        // Dubai fallback
+        state.lat = 25.2048; state.lng = 55.2708; state.city = 'Dubai';
+        document.getElementById('cityName').textContent = 'DUBAI, UAE (DEFAULT)';
+        fetchSunrise(state.lat, state.lng);
+      }
+    );
+  } else {
+    state.lat = 25.2048; state.lng = 55.2708; state.city = 'Dubai';
+    document.getElementById('cityName').textContent = 'DUBAI, UAE';
+    fetchSunrise(state.lat, state.lng);
+  }
+}
+
+async function reverseGeocode(lat, lng) {
+  try {
+    const r = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`);
+    const d = await r.json();
+    const city = d.address?.city || d.address?.town || d.address?.village || d.address?.county || 'Your Location';
+    const country = d.address?.country_code?.toUpperCase() || '';
+    state.city = city;
+    document.getElementById('cityName').textContent = `${city.toUpperCase()}${country ? ', ' + country : ''}`;
+  } catch(e) {
+    document.getElementById('cityName').textContent = 'YOUR LOCATION';
+  }
+}
+
+async function setManualCity() {
+  const city = document.getElementById('cityInput').value.trim();
+  if (!city) return;
+  try {
+    const r = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(city)}&format=json&limit=1`);
+    const d = await r.json();
+    if (d.length > 0) {
+      state.lat = parseFloat(d[0].lat);
+      state.lng = parseFloat(d[0].lon);
+      state.city = city;
+      document.getElementById('cityName').textContent = city.toUpperCase();
+      document.getElementById('sunriseTime').innerHTML = '<div class="spinner" style="margin:8px 0;"></div>';
+      fetchSunrise(state.lat, state.lng);
+      showToast('Location updated: ' + city);
+    } else {
+      showToast('City not found — try another name');
+    }
+  } catch(e) {
+    showToast('Could not search location');
+  }
+}
+
+// ── RAMADAN NIGHT ──
+function getRamadanNight() {
+  // Ramadan 2025: March 1 – March 30 approx
+  // We use a reference: Ramadan 1 = March 1, 2025 (approximate)
+  // For 2026, use user's local convention
+  const ref = new Date('2025-03-01');
+  const now = new Date();
+  const diff = Math.floor((now - ref) / 86400000) + 1;
+  if (diff >= 1 && diff <= 30) return diff;
+  // Try 2026
+  const ref26 = new Date('2026-02-19');
+  const diff26 = Math.floor((now - ref26) / 86400000) + 1;
+  if (diff26 >= 1 && diff26 <= 30) return diff26;
+  return 27; // default for demo
+}
+
+function setNightDisplay() {
+  const n = getRamadanNight();
+  state.currentNight = n;
+  document.getElementById('nightNum').textContent = n;
+  const isOdd = n % 2 !== 0;
+  const tag = document.getElementById('nightTypeTag');
+  tag.className = 'night-type-tag ' + (isOdd ? 'odd-tag' : 'even-tag');
+  tag.textContent = isOdd ? 'ODD NIGHT' : 'EVEN NIGHT';
+  if (!state.notificationsEnabled) {
+    document.getElementById('notifyBanner').style.display = 'flex';
+  }
+}
+
+// ── NOTIFICATIONS ──
+function requestNotifications() {
+  if (!('Notification' in window)) { showToast('Notifications not supported on this browser'); return; }
+  Notification.requestPermission().then(p => {
+    if (p === 'granted') {
+      state.notificationsEnabled = true;
+      localStorage.setItem('lq_notif', '1');
+      document.getElementById('notifyBanner').style.display = 'none';
+      scheduleNotifications();
+      showToast('Sunrise alerts enabled — جزاك الله خيراً');
+    } else {
+      showToast('Please allow notifications in browser settings');
+    }
+  });
+}
+
+function scheduleNotifications() {
+  if (!state.tomorrowSunrise || !state.notificationsEnabled) return;
+  const sr = state.tomorrowSunrise;
+  const now = new Date();
+
+  const notify15 = new Date(sr); notify15.setMinutes(notify15.getMinutes() - 15);
+  const notifyNow = new Date(sr);
+  const notify30 = new Date(sr); notify30.setMinutes(notify30.getMinutes() + 30);
+
+  const schedule = (time, title, body) => {
+    const delay = time - now;
+    if (delay > 0) setTimeout(() => new Notification(title, { body, icon: '🌙' }), delay);
+  };
+
+  schedule(notify15, '🌙 Sunrise in 15 minutes', 'Prepare your camera. Tonight may be Laylat al-Qadr.');
+  schedule(notifyNow, '📸 Photograph the sun NOW', 'Look east and take 5 photos over 3 minutes.');
+  schedule(notify30, 'Score your sunrise', 'Upload your photo and get your Laylat al-Qadr score.');
+}
+
+// ── SCORER ──
+function handlePhoto(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    const img = document.getElementById('photoPreview');
+    img.src = ev.target.result;
+    img.style.display = 'block';
+    document.getElementById('uploadZone').style.display = 'none';
+    state.currentPhoto = ev.target.result;
+    showToast('Photo loaded — now rate what you see');
+  };
+  reader.readAsDataURL(file);
+}
+
+function updateScorer() {
+  const s1 = +document.getElementById('s1').value;
+  const s2 = +document.getElementById('s2').value;
+  const s3 = +document.getElementById('s3').value;
+  const s4 = +document.getElementById('s4').value;
+
+  document.getElementById('v1').textContent = s1;
+  document.getElementById('v2').textContent = s2;
+  document.getElementById('v3').textContent = s3;
+  document.getElementById('v4').textContent = s4;
+
+  // Update sun disc
+  const disc = document.getElementById('sunDisc');
+  const total = s1 + s2 + s3 + s4;
+  const maxScore = 40;
+  const pct = total / maxScore;
+
+  // Size: high score = small disc (rayless weak sun), low score = large bright sun
+  const size = Math.round(120 - (pct * 80)); // 120px (bright) down to 40px (weak)
+  
+  // Color: 0 = vivid gold, 10 = near white
+  const r1 = Math.round(245 + (s1 * 1));
+  const g1 = Math.round(184 - (s1 * 10));
+  const b1 = Math.round(51 + (s1 * 20));
+  const color = `rgb(${Math.min(255,r1)}, ${Math.max(220,g1)}, ${Math.min(255,b1)})`;
+  
+  // Glow: low score = huge glow, high score = no glow
+  const glowSize = Math.round(40 - (pct * 38));
+  const glowOpacity = (1 - pct) * 0.7;
+  const glow = `0 0 ${glowSize}px rgba(245,184,51,${glowOpacity.toFixed(2)})`;
+
+  disc.style.width = size + 'px';
+  disc.style.height = size + 'px';
+  disc.style.background = color;
+  disc.style.boxShadow = glow;
+
+  // Verdict label
+  const label = document.getElementById('sunVerdictLabel');
+  if (pct >= 0.8) label.textContent = 'Matches hadith description closely';
+  else if (pct >= 0.5) label.textContent = 'Partial match to hadith sign';
+  else if (pct > 0) label.textContent = 'Does not strongly match the sign';
+  else label.textContent = 'Rate below to see reconstruction';
+
+  // Show result card
+  if (total > 0) {
+    const rc = document.getElementById('resultCard');
+    rc.style.display = 'block';
+    const scoreEl = document.getElementById('resultScore');
+    scoreEl.innerHTML = `${total}<span class="result-denom">/40</span>`;
+
+    let verdictText, verdictColor, text;
+    if (total >= 32) {
+      verdictText = 'STRONG SIGN — MAY HAVE BEEN LAYLAT AL-QADR';
+      verdictColor = '#e2b86a';
+      text = 'The sunrise you observed closely matches the hadith description given by Ubayy ibn Ka\'b (رضي الله عنه) in Sahih Muslim — white, rayless, like a plate. This is a meaningful sign. Reflect with gratitude and hope.';
+    } else if (total >= 20) {
+      verdictText = 'PARTIAL SIGN — SOME INDICATORS PRESENT';
+      verdictColor = '#9aa8b8';
+      text = 'Some elements of the hadith sign are present but not all criteria are fully met. This night remains a strong candidate. The Prophet ﷺ said to seek Laylat al-Qadr in all of the odd nights of the last ten.';
+    } else {
+      verdictText = 'WEAK SIGN — DOES NOT STRONGLY MATCH';
+      verdictColor = '#5a6a7a';
+      text = 'The sunrise you observed does not strongly match the hadith sign. This does not mean the night was absent of blessings — only Allah knows. Continue striving in all ten nights.';
+    }
+
+    document.getElementById('resultVerdict').textContent = verdictText;
+    document.getElementById('resultVerdict').style.color = verdictColor;
+    scoreEl.style.color = verdictColor;
+    document.getElementById('resultText').textContent = text;
+  }
+}
+
+function saveToCalendar() {
+  const night = state.currentNight || getRamadanNight();
+  const s1 = +document.getElementById('s1').value;
+  const s2 = +document.getElementById('s2').value;
+  const s3 = +document.getElementById('s3').value;
+  const s4 = +document.getElementById('s4').value;
+  const total = s1+s2+s3+s4;
+  state.scores[night] = { s1,s2,s3,s4, total, photo: state.currentPhoto || null, date: new Date().toISOString() };
+  localStorage.setItem('lq_scores', JSON.stringify(state.scores));
+  showToast(`Night ${night} saved to calendar`);
+}
+
+function shareResult() {
+  const total = +document.getElementById('s1').value + +document.getElementById('s2').value + +document.getElementById('s3').value + +document.getElementById('s4').value;
+  const text = `My Laylat al-Qadr sunrise score: ${total}/40\n\nCheck yours at: Is It Laylat al-Qadr?\nاللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي`;
+  if (navigator.share) {
+    navigator.share({ title: 'Is It Laylat al-Qadr?', text });
+  } else {
+    navigator.clipboard?.writeText(text).then(() => showToast('Copied to clipboard'));
+  }
+}
+
+// ── CALENDAR ──
+function renderCalendar() {
+  const grid = document.getElementById('calGrid');
+  const nights = [21,22,23,24,25,26,27,28,29,30];
+  const current = state.currentNight || getRamadanNight();
+  grid.innerHTML = nights.map(n => {
+    const isOdd = n % 2 !== 0;
+    const sc = state.scores[n];
+    const isCurrent = n === current;
+    let dotColor = 'transparent';
+    if (sc) {
+      const pct = sc.total / 40;
+      dotColor = pct >= 0.8 ? '#c9943a' : pct >= 0.5 ? '#6a8aac' : '#3a4558';
+    }
+    return `<div class="cal-night${isOdd?' odd-night':''}${sc?' has-score':''}${isCurrent?' active-night':''}" onclick="showCalDetail(${n})">
+      <div class="cal-n">NIGHT</div>
+      <div class="cal-num">${n}</div>
+      <div class="cal-type">${isOdd?'odd':'even'}${isCurrent?' · today':''}</div>
+      ${sc ? `
+        <div class="cal-score-dot" style="background:${dotColor};"></div>
+        <div class="cal-score-val">${sc.total}/40</div>
+        ${sc.photo ? `<img class="cal-thumb" src="${sc.photo}">` : ''}
+      ` : '<div style="height:18px;"></div>'}
+    </div>`;
+  }).join('');
+}
+
+function showCalDetail(n) {
+  const sc = state.scores[n];
+  const panel = document.getElementById('calDetail');
+  const card = document.getElementById('calDetailCard');
+  panel.style.display = 'block';
+  if (!sc) {
+    card.innerHTML = `<div class="card-label">NIGHT ${n}</div><div class="card-body">No score recorded yet. <a href="#" onclick="goToPage('score');return false;" style="color:var(--gold);">Score this sunrise →</a></div>`;
+    return;
+  }
+  const pct = sc.total/40;
+  const col = pct>=0.8?'#e2b86a':pct>=0.5?'#9aa8b8':'#5a6a7a';
+  const verdict = pct>=0.8?'STRONG SIGN':pct>=0.5?'PARTIAL SIGN':'WEAK SIGN';
+  card.innerHTML = `
+    <div class="card-label">NIGHT ${n} — ${n%2!==0?'ODD NIGHT':'EVEN NIGHT'}</div>
+    ${sc.photo ? `<img src="${sc.photo}" style="width:100%;max-height:200px;object-fit:cover;border-radius:1px;margin-bottom:.75rem;border:.5px solid var(--border);">` : ''}
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.75rem;">
+      <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;color:${col};">${verdict}</div>
+      <div style="font-size:1.8rem;font-weight:300;color:${col};">${sc.total}<span style="font-size:.9rem;color:var(--muted);">/40</span></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+      ${['Sun color','Ray intensity','Disc definition','Atmosphere'].map((nm,i)=>{
+        const v = [sc.s1,sc.s2,sc.s3,sc.s4][i], mx = 10;
+        const bw = Math.round((v/mx)*100);
+        const bc = bw>=70?'#c9943a':bw>=40?'#3d5470':'#2d3748';
+        return `<div style="background:rgba(240,232,214,.04);border:.5px solid var(--border);border-radius:1px;padding:8px;">
+          <div style="font-family:'Cinzel',serif;font-size:.55rem;letter-spacing:.1em;color:var(--gold-dim);margin-bottom:4px;">${nm.toUpperCase()}</div>
+          <div style="height:3px;background:rgba(240,232,214,.1);border-radius:2px;margin-bottom:4px;overflow:hidden;"><div style="width:${bw}%;height:100%;background:${bc};border-radius:2px;"></div></div>
+          <div style="font-size:.8rem;color:var(--cream);">${v}/10</div>
+        </div>`;
+      }).join('')}
+    </div>
+  `;
+}
+
+// ── UTILS ──
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+function selectDonate(btn, amt) {
+  document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected'); state.donateAmt = amt;
+}
+
+// ── INIT ──
+setNightDisplay();
+initLocation();
+</script>
+</body>
+</html>
